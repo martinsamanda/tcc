@@ -1,0 +1,16 @@
+**/*
+!**/
+!**/*.pdf
+!**/*.tex
+!**/*.sty
+!**/*.bib
+!**/*.json
+!**/*.py
+!**/*.toml
+!**/*.zip
+!**/*.png
+!**/*.md
+!**/LICENSE
+!.vscode
+!.gitignore
+tccmateus/

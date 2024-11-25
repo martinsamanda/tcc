@@ -1,0 +1,410 @@
+\documentclass[
+	12pt,
+	openright,
+	twoside,
+	a4paper,
+	english,
+	brazil
+	]{abntex2}
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst}
+\usepackage{color}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage[brazilian,hyperpageref]{backref}
+\usepackage[alf]{abntex2cite}
+\usepackage{amsmath}
+\usepackage{ufsc}
+\usepackage{listings}
+\usepackage{cleveref}
+
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+\renewcommand{\backref}{}
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1
+		Nenhuma citação no texto.
+	\or
+		Citado na página #2.
+	\else
+		Citado #1 vezes nas páginas #2.
+	\fi}
+
+%------------------------------------------------------------------------------%
+
+\titulo{Aprimorando a Qualidade de Software com Agilidade: Desenvolvimento de uma UI Intuitiva para Testes de Performance com Gatling}
+\autor{Samuel Vieira Bernardo}
+\local{Florianópolis, Brasil}
+\data{2024}
+\orientador{Raul Sidnei Wazlawick}
+%\coorientador{}
+\instituicao{
+  Universidade de Santa Catarina -- UFSC
+  \par
+  Faculdade de Ciência da Computação
+  \par
+  Programa de Graduação}
+\tipotrabalho{Tese (Bacharel)}
+\preambulo{Trabalho de Conclusão do Curso de Graduação em Ciências da Computação da Universidade Federal de Santa Catarina, requisito parcial à obtenção do título de Bacharel em Ciências da Computação.}
+
+% ABNT ------------------------------------------------------------------------%
+
+\graphicspath{ {./images/} }
+\definecolor{blue}{RGB}{41,5,195}
+
+\makeatletter
+  \hypersetup{
+    pdftitle={\@title},
+    pdfauthor={\@author},
+    pdfsubject={\imprimirpreambulo},
+    pdfcreator={LaTeX with abnTeX2},
+    pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico},
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    filecolor=magenta,
+    urlcolor=blue,
+    bookmarksdepth=4
+  }
+\makeatother
+
+\makeatletter
+  \setlength{\@fptop}{5pt}
+\makeatother
+
+\setlength{\parindent}{1.3cm}
+\setlength{\parskip}{0.2cm}
+
+% Other settings --------------------------------------------------------------%
+
+\crefformat{footnote}{#2\footnotemark[#1]#3}
+\lstset{
+  basicstyle=\small\ttfamily,
+  columns=flexible,
+  breaklines=true,
+  literate=
+    {á}{{\'a}}1
+    {à}{{\`a}}1
+    {ã}{{\~a}}1
+    {é}{{\'e}}1
+    {ê}{{\^e}}1
+    {í}{{\'i}}1
+    {ó}{{\'o}}1
+    {õ}{{\~o}}1
+    {ú}{{\'u}}1
+    {ü}{{\"u}}1
+    {ç}{{\c{c}}}1
+}
+
+%------------------------------------------------------------------------------%
+
+\makeindex
+
+%------------------------------------------------------------------------------%
+
+\begin{document}
+\selectlanguage{brazil}
+\frenchspacing
+
+%------------------------------------------------------------------------------%
+
+\imprimircapa
+
+%------------------------------------------------------------------------------%
+
+\imprimirfolhaderosto*
+
+%------------------------------------------------------------------------------%
+
+\setlength{\absparsep}{18pt}
+\begin{resumo}
+  Este trabalho tem como objetivo desenvolver uma solução intuitiva e acessível para a criação e execução de testes de performance utilizando o Gatling, uma ferramenta amplamente reconhecida para testes de carga em sistemas. A solução proposta consiste em uma interface gráfica que permite aos profissionais, mesmo sem conhecimentos avançados de programação, configurar e realizar testes de forma eficiente, eliminando a necessidade de codificação manual. Por meio de recursos como a geração automática de scripts e a visualização interativa dos resultados, busca-se otimizar o processo de testes de carga, aumentando a produtividade e reduzindo a ocorrência de erros. A interface será avaliada qualitativamente em uma equipe de teste, com o objetivo de verificar sua eficácia em termos de usabilidade, tempo de configuração dos testes e impacto na qualidade geral dos sistemas testados. Espera-se, com essa abordagem, facilitar o uso do Gatling, democratizando o acesso a testes de performance e contribuindo para a melhoria contínua da qualidade de software.
+  \vspace{\onelineskip}
+
+  \noindent\textbf{Palavras-chave}: Testes de performance. APIs REST. Interface gráfica. Gatling. Ferramentas gráficas em testes de performance
+\end{resumo}
+
+%------------------------------------------------------------------------------%
+
+\begin{resumo}[Abstract]
+  \begin{otherlanguage*}{english}
+    This study aims to develop an intuitive and accessible solution for creating and executing performance tests using Gatling, a widely recognized tool for load testing in systems. The proposed solution consists of a graphical interface that enables professionals, even those without advanced programming skills, to configure and run tests efficiently, eliminating the need for manual coding. Through features such as automatic script generation and interactive result visualization, the solution seeks to optimize the load testing process, enhancing productivity and reducing the occurrence of errors. The interface will undergo qualitative evaluation within a test team to assess its effectiveness in terms of usability, test configuration time, and impact on overall system quality. This approach aims to facilitate the use of Gatling, democratizing access to performance testing and contributing to the continuous improvement of software quality.
+    \vspace{\onelineskip}
+
+    \noindent\textbf{Keywords}: %TODO fazer as palavras chaves
+  \end{otherlanguage*}
+\end{resumo}
+
+% Figuras ---------------------------------------------------------------------%
+
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+
+% Quadros ---------------------------------------------------------------------%
+
+% \pdfbookmark[0]{\listofquadrosname}{loq}
+% \listofquadros*
+% \cleardoublepage
+
+% % Tabelas ---------------------------------------------------------------------%
+
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
+
+% Siglas ----------------------------------------------------------------------%
+
+\begin{siglas}
+  \item[API] Application Programming Interface
+  \item[GUI] Graphical User Interface
+  \item[UI] User Interface
+  \item[REST] Representational State Transfer
+  \item[HTTP] HyperText Transfer Protocol
+\end{siglas}
+
+% Sumário ---------------------------------------------------------------------%
+
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+\textual
+
+%------------------------------------------------------------------------------%
+
+\chapter{Introdução} % Ideias gerais e por quê fazer?
+
+\section{Contexto}
+Na era dos sistemas conectados, a capacidade de um software de suportar altos volumes de tráfego e manter a estabilidade sob diferentes cargas de trabalho é essencial para garantir sua qualidade e confiabilidade. Testes de carga e performance são fundamentais para avaliar como um sistema se comporta sob condições de uso intensivo, identificando possíveis gargalos e problemas de desempenho que poderiam comprometer a experiência do usuário final. Para esse propósito, ferramentas como o Gatling se destacam devido à sua eficiência e escalabilidade, especialmente no contexto de testes de performance para APIs REST \cite{Banias}.
+
+O Gatling é amplamente reconhecido por sua capacidade de simular grandes volumes de usuários simultâneos, fornecendo uma visão detalhada do desempenho do sistema sob carga \cite{Cazzola}. Sua estrutura escalável e facilidade de integração com outros sistemas tornam-no uma escolha ideal para empresas que buscam soluções robustas para testar a resiliência de suas aplicações. Comparado com outras ferramentas de mercado, como JMeter, K6 e Locust, o Gatling apresenta vantagens significativas em termos de eficiência e facilidade de configuração. O JMeter, apesar de oferecer uma interface gráfica e uma ampla gama de funcionalidades, pode ter dificuldades em cenários de alta concorrência em APIs REST, onde o Gatling mostra-se mais eficaz. Por outro lado, o K6 é uma ferramenta moderna e poderosa para testes de carga, mas sua interface limitada à linha de comando reduz a acessibilidade para usuários que preferem um ambiente gráfico. Já o Locust, embora muito robusto e flexível, apresenta uma curva de aprendizado mais acentuada devido à dependência de Python para configuração de cenários, o que também pode dificultar sua adoção por equipes multidisciplinares.
+
+\section{Problema}
+
+Apesar de suas vantagens, o Gatling possui uma limitação importante: a ausência de uma interface gráfica intuitiva, o que restringe seu uso a profissionais com conhecimentos avançados em programação. Atualmente, o uso do Gatling exige a criação de scripts em Scala, o que representa uma barreira significativa para usuários sem habilidades técnicas avançadas. Esse obstáculo torna o Gatling menos acessível para equipes multidisciplinares que exigem uma abordagem colaborativa e ágil para os testes de performance. Nesse sentido, o desenvolvimento de uma interface gráfica para o Gatling é essencial, pois poderia democratizar o acesso à ferramenta e aprimorar a experiência do usuário, permitindo que profissionais de diferentes perfis configurem e executem testes de carga sem a necessidade de codificação \cite{Zhao}.
+
+\section{Justificativa e Motivação}
+
+A criação de uma interface gráfica intuitiva para o Gatling pode transformar a forma como os testes de carga são realizados, facilitando a configuração de testes, a visualização de resultados e o gerenciamento de cenários de teste. \cite{Cazzola} destacam a importância de interfaces amigáveis em ferramentas de performance, pois ajudam os usuários a identificar problemas de desempenho de forma mais sistemática e compreensível. Além disso, uma interface gráfica para o Gatling poderia incorporar métodos automatizados de configuração de testes a partir de especificações de API, como as fornecidas pelo OpenAPI, simplificando ainda mais o processo e permitindo que usuários de diferentes níveis técnicos utilizem a ferramenta \cite{Banias}.
+
+A relevância de uma interface gráfica consistente também é enfatizada por \cite{Nordby}, que discutem a importância da consistência no design de interfaces para reduzir erros humanos e melhorar a eficiência. Essa consistência é crucial para o desenvolvimento da interface do Gatling, garantindo que os usuários possam navegar e acessar funcionalidades de forma intuitiva. \cite{Hossain} também apontam que a usabilidade é um fator essencial para o sucesso de ferramentas de análise de performance, indicando que uma interface bem projetada pode aumentar o engajamento e a satisfação dos usuários, inclusive para aqueles que acham desafiadora a interface de linha de comando atual do Gatling.
+
+Portanto, o desenvolvimento de uma interface gráfica intuitiva para o Gatling é uma solução necessária para tornar a ferramenta mais acessível e eficiente. Ao integrar metodologias automatizadas e uma experiência de usuário aprimorada, a interface proposta pode democratizar o uso do Gatling, permitindo que equipes de diferentes perfis técnicos adotem a ferramenta com facilidade. Essa democratização do uso dos testes de performance contribui para a melhoria da qualidade e confiabilidade do software em um cenário onde sistemas robustos e escaláveis são cada vez mais essenciais.
+
+
+%------------------------------------------------------------------------------%
+
+\section{Objetivos}
+\subsection{Objetivo geral}
+
+Desenvolver uma interface gráfica intuitiva para o Gatling, destinada à criação e execução de testes de carga sem a necessidade de conhecimentos avançados em programação. A interface permitirá que os usuários configurem cenários de teste, definam métricas de análise e visualizem os resultados de maneira simplificada e interativa.
+
+\subsection{Objetivos específicos}
+\begin{itemize}
+  \item \textbf{Facilitar a Configuração de Testes}: Desenvolver uma interface que simplifique o processo de configuração de cenários de teste, permitindo que usuários com diferentes níveis de experiência técnica criem testes de carga de maneira intuitiva.
+  \item \textbf{Automatizar a Geração de Scripts}: Implementar uma funcionalidade de geração automática de scripts de teste, eliminando a necessidade de codificação manual e permitindo que os testes sejam executados com base nas interações do usuário.
+  \item \textbf{Visualizar Resultados de Forma Intuitiva}: Incorporar elementos visuais que possibilitem a análise dos resultados de desempenho, facilitando a identificação de gargalos e a interpretação das métricas de performance.
+  \item \textbf{Ampliar a Acessibilidade da Ferramenta}: Democratizar o uso do Gatling, tornando-o acessível para profissionais sem conhecimentos em programação e para equipes multidisciplinares que precisam realizar testes de performance de forma ágil.
+\end{itemize}
+
+\section{Metodologia}
+
+Para alcançar os resultados desejados neste trabalho, será adotada uma abordagem que combina metodologias de pesquisa e desenvolvimento, estruturadas em etapas alinhadas aos objetivos específicos do projeto. Essas etapas serão conduzidas da seguinte maneira:
+
+\textbf{Etapa 1 -- Fundamentação Teórica}: Nesta etapa, será realizada uma análise da literatura acadêmica e técnica para fundamentar os conceitos e métodos utilizados no desenvolvimento da solução. O objetivo é compreender os desafios associados à usabilidade em ferramentas de teste de carga, bem como as melhores práticas em design de interfaces gráficas e automação de testes.
+
+\begin{itemize}
+  \item[] Atividade 1.1: Sintetizar conceitos relacionados a testes de carga e performance, com foco nas especificidades de APIs REST.
+  \item[] Atividade 1.2: Analisar as características técnicas e vantagens do Gatling em comparação com ferramentas como JMeter, K6 e Locust.
+  \item[] Atividade 1.3: Estudar princípios de usabilidade e design centrado no usuário, utilizando referências como Nielsen (1994) e Norman (2013).
+  \item[] Atividade 1.4: Revisar metodologias de desenvolvimento ágil para aplicação no desenvolvimento da interface gráfica.
+\end{itemize}
+
+
+\textbf{Etapa 2 -- Levantamento do Estado da Arte}: Essa etapa consiste em identificar e analisar soluções existentes que tratem de interfaces gráficas para ferramentas de automação de testes ou de problemas semelhantes ao proposto neste trabalho. O objetivo é compreender as lacunas e desafios que o projeto pretende abordar.
+
+\begin{itemize}
+  \item[] Atividade 2.1: Definir o protocolo de busca para levantamento de ferramentas e soluções existentes.
+  \item[] Atividade 2.2: Executar a busca de trabalhos correlatos, considerando artigos acadêmicos, relatórios técnicos e documentações de ferramentas.
+  \item[] Atividade 2.3: Analisar as informações coletadas, focando nas limitações e pontos fortes das interfaces existentes em ferramentas de teste de carga.
+    \begin{itemize}
+      \item Identificar as técnicas de visualização de resultados utilizadas.
+      \item Mapear as funcionalidades automatizadas disponíveis (e ausentes) em outras ferramentas.
+      \item Verificar como outras ferramentas lidam com a curva de aprendizado e acessibilidade.
+    \end{itemize}
+\end{itemize}
+
+\textbf{Etapa 3 -- Desenvolvimento da Solução}: Nesta etapa será realizada a modelagem, implementação e validação da interface gráfica proposta, incluindo a integração com o Gatling e a implementação de funcionalidades como geração automática de scripts e visualização de resultados.
+
+\begin{itemize}
+
+  \item[] Atividade 3.1: Modelar a proposta de solução.
+
+    \begin{itemize}
+      \item Definir os requisitos funcionais e não funcionais da interface gráfica, com base na fundamentação teórica e no estado da arte.
+      \item Desenvolver wireframes e protótipos de baixa fidelidade para validar as funcionalidades com potenciais usuários.
+      \item Modelar o fluxo de interações da interface, considerando a usabilidade e a experiência do usuário.
+    \end{itemize}
+
+  \item[] Atividade 3.2: Desenvolver a proposta de solução.
+
+    \begin{itemize}
+        \item Implementar a interface gráfica utilizando tecnologias adequadas (por exemplo, JavaScript, frameworks web, ou outros).
+        \item Integrar a interface com o Gatling, garantindo que os scripts gerados sejam compatíveis com o formato padrão da ferramenta.
+        \item Implementar funcionalidades de automação, como a geração de scripts de teste baseados em ações do usuário e a configuração de cenários de teste.
+      \end{itemize}
+
+  \item[] Atividade 3.3: Validar a proposta de solução.
+
+    \begin{itemize}
+      \item Realizar testes de usabilidade para avaliar a intuitividade e eficiência da interface.
+      \item Conduzir testes de integração para garantir que a interface funcione corretamente com o Gatling.
+      \item Coletar feedback de potenciais usuários para ajustes finais na interface.
+    \end{itemize}
+
+\end{itemize}
+
+\textbf{Etapa 4 -- Avaliação da Solução}: Essa etapa foca na análise dos impactos da interface gráfica desenvolvida. Será realizada uma avaliação qualitativa e quantitativa com uma equipe de testes para validar a eficácia da solução em termos de usabilidade e produtividade.
+
+\begin{itemize}
+  \item[] Atividade 4.1: Identificar métricas para avaliação, como:
+    \begin{itemize}
+      \item Tempo médio para criação de um teste.
+      \item Taxa de erros durante a configuração e execução de testes.
+      \item Nível de satisfação dos usuários com a interface.
+    \end{itemize}
+  \item[] Atividade 4.2: Coletar e analisar os dados obtidos durante a avaliação.
+  \item[] Atividade 4.3: Elaborar um relatório com os resultados, discutindo as contribuições da interface desenvolvida e identificando áreas de melhoria.
+\end{itemize}
+
+
+%------------------------------------------------------------------------------%
+
+\chapter{Fundamentação Teórica} % Contexto
+
+Neste capítulo, são apresentados os conceitos teóricos necessários para contextualizar e embasar o desenvolvimento da interface gráfica para o Gatling, ferramenta amplamente utilizada em testes de performance e carga. São abordados de forma concisa os fundamentos de testes de performance, com ênfase no uso de APIs REST, bem como uma análise comparativa das principais ferramentas disponíveis no mercado.
+
+Além disso, são discutidos princípios de desenvolvimento de interfaces gráficas com foco em usabilidade e experiência do usuário, assim como os benefícios da automação na configuração e execução de testes. Por fim, o capítulo explora as metodologias ágeis aplicadas ao desenvolvimento da solução proposta, justificando sua escolha como estratégia para garantir maior flexibilidade, colaboração e entrega contínua ao longo do projeto.
+
+\section{Testes de Carga e Performance}
+\section{APIs REST e Sua Importância nos Sistemas Modernos}
+\section{Gatling como Ferramenta de Teste de Performance}
+\section{Desenvolvimento de Interfaces Gráficas}
+\section{Automação de Testes e Geração de Scripts}
+\section{Metodologias Ágeis no Desenvolvimento de Software}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Trabalhos Correlatos} % Trabalhos parecidos com os que eu vou desenvolver
+
+
+%------------------------------------------------------------------------------%
+
+\chapter{Projeto} % Eu digo que/vou por esse outro caminho porque
+A interface gráfica proposta para o Gatling busca superar as limitações atualmente enfrentadas por profissionais que não possuem conhecimentos avançados em programação. Como discutido nos capítulos anteriores, o uso de ferramentas de teste de carga é indispensável para garantir a qualidade de software em sistemas modernos, mas muitas dessas ferramentas apresentam barreiras de acessibilidade, limitando sua adoção em equipes multidisciplinares.
+
+Atualmente, o Gatling, apesar de sua robustez e eficiência em cenários de testes de APIs REST, exige que os usuários criem scripts em Scala, uma linguagem que apresenta uma curva de aprendizado significativa para não programadores. Além disso, a falta de uma interface gráfica que simplifique a configuração e execução de testes dificulta sua utilização por equipes compostas por profissionais de diferentes áreas. Essa limitação reduz o potencial do Gatling como uma solução abrangente e acessível para realização de testes de carga.
+
+Dessa forma, este projeto propõe o desenvolvimento de uma interface gráfica que combina usabilidade, automação e visualização de dados. A proposta visa democratizar o uso do Gatling, permitindo que usuários com diferentes níveis de conhecimento técnico configurem cenários de teste, gerem scripts automaticamente e analisem resultados de maneira clara e interativa.
+
+As funcionalidades previstas para a interface estão detalhadas na Tabela~\ref{tab_requisitos_funcionais}, que apresenta os requisitos funcionais essenciais e desejáveis para a solução. Entre os principais requisitos estão a configuração visual de cenários de teste (RF-01), a geração automática de scripts compatíveis com o Gatling (RF-02) e a visualização gráfica de métricas de desempenho (RF-03). % Esses requisitos foram definidos com base nas necessidades identificadas durante a revisão de literatura e nos estudos relacionados à usabilidade em ferramentas técnicas.
+
+Além disso, o desenvolvimento da interface considera os diferentes perfis de usuários-alvo, conforme descrito na Tabela~\ref{tab_perfil_usuarios}. Esses perfis incluem profissionais de QA, que precisam de uma ferramenta acessível para realizar testes de performance sem conhecimentos de programação; desenvolvedores, que buscam agilidade na configuração de cenários complexos; e gerentes de produto, que necessitam de relatórios claros para tomar decisões estratégicas. A interface também busca atender equipes multidisciplinares, promovendo maior colaboração e integração no contexto de testes de performance.
+
+Com base nas funcionalidades e nos perfis identificados, espera-se que a solução proposta atenda às demandas dos usuários, eliminando barreiras técnicas e otimizando os processos de teste de carga. % Assim, este projeto alinha-se ao objetivo de democratizar o uso de ferramentas avançadas como o Gatling, contribuindo para a melhoria contínua da qualidade de software.
+
+\begin{table}[H]
+  \centering
+  \caption{\label{tab_requisitos_funcionais}Requisitos funcionais}
+  \noindent\resizebox{\textwidth}{!}{
+    \begin{tabular}{|p{3cm}|p{9cm}|p{3cm}|}
+      \hline
+      \textbf{Identificador} & \textbf{Requisito} & \textbf{Classificação} \\ \hline
+      RF-01 & A interface deve permitir a configuração visual de cenários de teste de carga. & Essencial \\ \hline
+      RF-02 & A interface deve gerar automaticamente scripts compatíveis com o Gatling. & Essencial \\ \hline
+      RF-03 & A interface deve oferecer visualização gráfica de métricas de desempenho, como tempos de resposta e throughput. & Essencial \\ \hline
+      RF-04 & A interface deve permitir o gerenciamento de múltiplos cenários de teste. & Essencial \\ \hline
+      RF-05 & A interface deve ser compatível com sistemas operacionais populares. & Essencial \\ \hline
+      RF-06 & A interface deve suportar a personalização de testes por meio de parâmetros configuráveis. & Essencial \\ \hline
+      RF-07 & A interface deve permitir a exportação de relatórios em formatos como PDF ou CSV. & Desejável \\ \hline
+    \end{tabular}
+  }
+\end{table}
+
+
+\begin{table}[H]
+  \centering
+  \caption{\label{tab_perfil_usuarios}Perfil de Usuários}
+  \noindent\resizebox{\textwidth}{!}{
+    \begin{tabular}{|p{5cm}|p{10cm}|}
+      \hline
+      \textbf{Usuário} & \textbf{Uso} \\ \hline
+      Profissionais de QA & Configurar e executar testes de performance sem necessidade de conhecimento avançado em programação. \\ \hline
+      Desenvolvedores & Avaliar o desempenho de APIs REST e simular cenários de alta carga de forma rápida e eficiente. \\ \hline
+      Gerentes de Produto & Interpretar resultados de performance em relatórios claros para a tomada de decisões estratégicas. \\ \hline
+      Equipes Multidisciplinares & Colaborar na criação e execução de testes sem barreiras técnicas, permitindo maior integração entre áreas. \\ \hline
+    \end{tabular}
+  }
+\end{table}
+
+% TODO quem sabe trazer a parte de funcionalidades propostas que foi sugerido antes, ver o chat, acho que pode ser interessante pro tcc 2
+%------------------------------------------------------------------------------%
+
+% \chapter{Desenvolvimento} % Como
+
+%------------------------------------------------------------------------------%
+
+\chapter{Cronograma}
+
+\noindent\resizebox{\textwidth}{!}{
+  \begin{tabular}{|p{5cm}|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+    \hline
+    & \multicolumn{5}{|c|}{2024} & \multicolumn{7}{|c|}{2025} \\ \hline
+    \textbf{Etapas} &
+    \textbf{Ago} &
+    \textbf{Set} &
+    \textbf{Out} &
+    \textbf{Nov} &
+    \textbf{Dez} &
+    \textbf{Jan} &
+    \textbf{Fev} &
+    \textbf{Mar} &
+    \textbf{Abr} &
+    \textbf{Mai} &
+    \textbf{Jun} &
+    \textbf{Jul} \\
+    \hline
+    Revisão do estado da arte \& prática                                    &x& & & & & & & & & & &       \\ \hline
+    Proposta de solução                                                     &x& & & & & & & & & & &       \\ \hline
+    Levantamento de requisitos                                              &x&x& & & & & & & & & &       \\ \hline
+    Design de Interface                                                     & &x& & & & & & & & & &       \\ \hline
+    Desenvolvimento da UI e desenvolvimento do relatório                    & &x&x&x& & & & & & & &       \\ \hline
+    Entrega do relatório de Projeto I                                       & & & & &fim& & & & & & &     \\ \hline
+    Desenvolvimento da UI e testes                                          & & & & & &x& & & & & &       \\ \hline
+    Documentação e coleta de dados                                          & & & & & &x&x& & & & &       \\ \hline
+    Aplicação da UI dentro de uma equipe de qualidade de software           & & & & & & &x&x& & & &       \\ \hline
+    Coleta e análise de dados                                               & & & & & & & &x&x& & &       \\ \hline
+    Relatório de análise                                                    & & & & & & & &x&x&x& &       \\ \hline
+    Entrega do rascunho do TCC                                              & & & & & & & & & & &metade&  \\ \hline
+    Preparação da defesa pública                                            & & & & & & & & & & &x&       \\ \hline
+    Defesa pública                                                          & & & & & & & & & & & &inicio \\ \hline
+    Ajustes no relatório final do TCC                                       & & & & & & & & & & & &x      \\ \hline
+  \end{tabular}
+}
+
+% Referências -----------------------------------------------------------------%
+
+\postextual
+\bibliography{tcc}
+
+%------------------------------------------------------------------------------%
+
+\phantompart
+\printindex
+
+%------------------------------------------------------------------------------%
+
+\end{document}

@@ -1,0 +1,77 @@
+\ProvidesPackage{ufsc}[2024 Criacao desta customizacao do abnTeX2]
+
+\renewcommand{\imprimircapa}{
+  \begin{capa}
+    \center
+    \ABNTEXchapterfont\large
+    Universidade Federal de Santa Catarina \\
+    Centro Tecnológico \\
+    Departamento de Informática e Estatística
+
+    \vspace*{\fill}
+    {\ABNTEXchapterfont\large\imprimirautor}
+    \vspace*{\fill}
+
+    \begin{center}
+      \ABNTEXchapterfont\bfseries\LARGE\imprimirtitulo
+    \end{center}
+
+    \vspace*{\fill}
+    \vspace{\onelineskip}
+    \vspace*{\fill}
+
+    \large\imprimirlocal
+
+    \large\imprimirdata
+
+    \vspace*{1cm}
+  \end{capa}
+}
+
+\makeatletter
+  \renewcommand{\folhaderostocontent}{
+    \begin{center}
+      {\ABNTEXchapterfont\large
+        Universidade Federal de Santa Catarina \\
+        Centro Tecnológico \\
+        Departamento de Informática e Estatística}
+
+        \vspace*{3cm}
+
+      {\ABNTEXchapterfont\large\imprimirautor}
+
+      \vspace*{\fill}\vspace*{\fill}
+
+      \begin{center}
+        \ABNTEXchapterfont\bfseries\Large\imprimirtitulo
+      \end{center}
+
+      \vspace*{\fill}
+
+      \abntex@ifnotempty{\imprimirpreambulo}{
+        \hspace{.45\textwidth}
+        \begin{minipage}{.5\textwidth}
+          \SingleSpacing
+          \imprimirpreambulo
+        \end{minipage}
+        \vspace*{\fill}
+      }
+
+      {\large\imprimirorientadorRotulo~\imprimirorientador\par}
+
+      \abntex@ifnotempty{\imprimircoorientador}{
+        {\large\imprimircoorientadorRotulo~\imprimircoorientador}
+      }
+
+      \vspace*{\fill}
+      \vspace*{\fill}
+
+      {\large\imprimirlocal}
+
+      \par
+
+      {\large\imprimirdata}
+      \vspace*{1cm}
+    \end{center}
+  }
+\makeatother
