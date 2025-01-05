@@ -22,6 +22,7 @@
 \usepackage{listings}
 \usepackage{cleveref}
 \usepackage{multirow}
+\usepackage{longtable}
 
 \renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
 \renewcommand{\backref}{}
@@ -252,7 +253,7 @@ Neste capítulo, serão apresentados conceitos relevantes relacionados à gerên
 
 \section{Gerência de projetos}
 
-O PMBOK \citeyear{PMBOK} define que o gerenciamento de projetos é a aplicação de conhecimentos, habilidades, ferramentas e técnicas às atividades do projeto a fim de cumprir os seus requisitos. Diversas atividades podem estar envolvidas para alcançar este objetivo, mas para \citeonline{Pressman_2014} todas envolvem planejamento, monitoração e controle de pessoas, processos e eventos que ocorrem à medida que o software evolui desde os conceitos preliminares até sua disponibilização operacional e completa.
+O PMBOK \cite{PMBOK} define que o gerenciamento de projetos é a aplicação de conhecimentos, habilidades, ferramentas e técnicas às atividades do projeto a fim de cumprir os seus requisitos. Diversas atividades podem estar envolvidas para alcançar este objetivo, mas para \citeonline{Pressman_2014} todas envolvem planejamento, monitoração e controle de pessoas, processos e eventos que ocorrem à medida que o software evolui desde os conceitos preliminares até sua disponibilização operacional e completa.
 
 Por envolver tantas etapas e atividades do projeto, todos os membros possuem algum papel na atividade de gerenciamento, cada um no escopo de suas atividades \cite{Pressman_2014}. Um engenheiro de software gerenciará suas atividades diárias, planejando, monitorando e controlando as tarefas técnicas, enquanto o gerente do projeto planeja, monitora e controla o trabalho de uma equipe de engenheiros de software.
 
@@ -448,7 +449,7 @@ O PMBOK \cite{PMBOK} possui um dos  processos de gerenciamento de riscos mais co
 
 \section{Métodos ágeis}
 
-O modelo cascata começou a ser definido nos anos 1970 e é considerado o  precursor de todos os ciclos de vida de software. Baseado na filosofia *Big Design Up Front*, ele propõe que antes de qualquer codificação  é necessário realizar um trabalho detalhado de análise e design. O modelo é definido por documentação, determinando se as fases foram concluídas através de revisões ao final de cada uma das etapas \cite{wazlawick2019}. Apesar de sua abordagem estruturada, o modelo enfrenta desafios como a dificuldade de avaliar a qualidade e os riscos do projeto durante o desenvolvimento e a rigidez em lidar com mudanças nos requisitos, pontos que, como apontado por Wazlawick, tornam seu uso impraticável para muitos projetos reais.
+O modelo cascata começou a ser definido nos anos 1970 e é considerado o  precursor de todos os ciclos de vida de software. Baseado na filosofia \textit{Big Design Up Front}, ele propõe que antes de qualquer codificação  é necessário realizar um trabalho detalhado de análise e design. O modelo é definido por documentação, determinando se as fases foram concluídas através de revisões ao final de cada uma das etapas \cite{wazlawick2019}. Apesar de sua abordagem estruturada, o modelo enfrenta desafios como a dificuldade de avaliar a qualidade e os riscos do projeto durante o desenvolvimento e a rigidez em lidar com mudanças nos requisitos, pontos que, como apontado por Wazlawick, tornam seu uso impraticável para muitos projetos reais.
 
 Os desafios enfrentados por este modelo preditivo deram origem a ciclos de vida iterativos e incrementais, que abordam melhor as incertezas e as necessidades de adaptação ao longo do projeto. Diferentemente dos métodos preditivos, que se baseiam em planos detalhados para antecipar todas as etapas de um projeto, os métodos iterativos dividem o trabalho em ciclos menores, permitindo revisões frequentes e maior flexibilidade para ajustes \cite{AgileGuide}. Essa abordagem adaptativa é essencial em contextos de alta complexidade e incerteza, onde mudanças nos requisitos são inevitáveis.
 
@@ -484,15 +485,16 @@ Os princípios do Manifesto enfatizam a entrega contínua de software funcional,
 É levantado no Agile Practice Guide \cite{AgileGuide} uma série de diferentes modelos ágeis existentes, cobrindo frameworks, métodos e práticas. Estes são destacados na Figura abaixo.
 
 \begin{figure}[H]
+  \centering
 	\caption{\label{metodos-ageis}Métodos ágeis}
-  \includegraphics[width=\textwidth]{metodos-ageis}
+  \includegraphics[width=0.6\textwidth]{metodos-ageis}
 	\legend{Fonte: Agile Practice Guide \cite{AgileGuide}}
 \end{figure}
 
-O Lean é definido em Lean Software Development: An Agile Toolkit \cite{Poppendieck_Poppendieck_2003} como uma abordagem que visa otimizar processos eliminando desperdícios e adicionando valor de acordo com a percepção do cliente. Entre seus princípios estão a eliminação de desperdícios, que envolve identificar e remover qualquer atividade que não agregue valor ao produto final. Amplificar o aprendizado é essencial, pois o desenvolvimento é um processo de descoberta contínua. Decidir o mais tarde possível permite tomar decisões mais informadas e com base em fatos concretos. A entrega rápida é fundamental para obter feedback contínuo e atender rapidamente às necessidades dos clientes. A equipe deve ser empoderada para tomar decisões técnicas detalhadas, pois eles possuem o conhecimento mais profundo sobre o trabalho. Construir integridade no produto significa assegurar que ele atenda às expectativas do usuário e se mantenha útil ao longo do tempo. Finalmente, ver o todo é crucial para garantir que todas as partes do sistema trabalhem de forma coesa e otimizada, evitando a subotimização de componentes individuais.
+O \textit{Lean} é definido em \textit{Lean Software Development: An Agile Toolkit} \cite{Poppendieck_Poppendieck_2003} como uma abordagem que visa otimizar processos eliminando desperdícios e adicionando valor de acordo com a percepção do cliente. Entre seus princípios estão a eliminação de desperdícios, que envolve identificar e remover qualquer atividade que não agregue valor ao produto final. Amplificar o aprendizado é essencial, pois o desenvolvimento é um processo de descoberta contínua. Decidir o mais tarde possível permite tomar decisões mais informadas e com base em fatos concretos. A entrega rápida é fundamental para obter feedback contínuo e atender rapidamente às necessidades dos clientes. A equipe deve ser empoderada para tomar decisões técnicas detalhadas, pois eles possuem o conhecimento mais profundo sobre o trabalho. Construir integridade no produto significa assegurar que ele atenda às expectativas do usuário e se mantenha útil ao longo do tempo. Finalmente, ver o todo é crucial para garantir que todas as partes do sistema trabalhem de forma coesa e otimizada, evitando a subotimização de componentes individuais.
 
 \begin{figure}[H]
-	\caption{\label{annual-agile-report}Frameworks utilizados pelos respondentes do Agile Report da digital.ai}
+	\caption{\label{annual-agile-report}Frameworks utilizados pelos respondentes do Agile Report}
   \includegraphics[width=\textwidth]{annual-agile-report}
 	\legend{Fonte: 17th State of Agile Report \cite{17_agile_report}}
 \end{figure}
@@ -548,8 +550,6 @@ Pode ser observado na Figura 4 um exemplo do uso da técnica PBL (Points, Badges
 \end{figure}
 
 Para poder então criar um processo gamificado para uma atividade, \citeonline{GARCIA201721} identificam uma sequência bem definida de passos:
-
-Tabela 1 - Metodologia para desenvolvimento de sistemas gamificados
 
 \begin{table}[h!]
   \caption{Metodologia para desenvolvimento de sistemas gamificados}
@@ -631,7 +631,7 @@ A questão geral de pesquisa foi definida como: “Como as organizações de sof
   \label{tab:perguntas-msl}
 \end{table}
 
-A Tabela 3 \cite{kitchenham2007guidelines} mostra os critérios e o escopo da estrutura da pergunta de pesquisa, que é a estrutura de População, Intervenção, Comparação, Resultados e Contexto (PICOC).
+A Tabela~\ref{tab:picoc} \cite{kitchenham2007guidelines} mostra os critérios e o escopo da estrutura da pergunta de pesquisa, que é a estrutura de População, Intervenção, Comparação, Resultados e Contexto (PICOC).
 
 \begin{table}[h!]
   \centering
@@ -647,7 +647,9 @@ A Tabela 3 \cite{kitchenham2007guidelines} mostra os critérios e o escopo da es
 
 A comparação é definida como “N/A” por se tratar de um mapeamento sistemático.
 
-\section{String de busca e fontes de pesquisa}
+%------------------------------------------------------------------------------%
+
+\subsection{String de busca e fontes de pesquisa}
 
 A string de busca foi aplicada nas bibliotecas digitais IEEEXplore, ACM Digital Library e Scopus, devido à sua relevância para a área de engenharia de software. A string de busca foi adaptada à sintaxe específica de cada biblioteca e aplicada aos campos de título e resumos. A pesquisa foi realizada em setembro de 2024.
 
@@ -677,7 +679,7 @@ Com base na questão de pesquisa principal, os seguintes critérios de inclusão
   IC1 & Estudos primários revisados por pares \\ \hline
   IC2 & Escrito em inglês \\ \hline
   IC3 & Trabalhos completos com pelo menos 4 páginas \\ \hline
-  IC4 & Trabalhos publicado a partir de 2021. \\ \hline
+  IC4 & Trabalhos publicado a partir de 2021 \\ \hline
   \end{tabular}
 \end{table}
   
@@ -729,12 +731,12 @@ A seleção dos estudos foi realizada em três ciclos, conforme Figura 5.
 
 \section{Extração dos dados}
 
-Os dados coletados dos estudos primários selecionados são apresentados e analisados de acordo com cada questão de análise pré-definida. Os dados brutos extraídos estão disponíveis em: \href{https://docs.google.com/spreadsheets/d/1YY_yjyBefJ3ZmnEY38TM_LnZLoJcKhrw_q0BdEvqx2E/edit?gid=1276800509#gid=1276800509}{MSL público}. Uma síntese do DEF está descrita na Tabela 7.
+Os dados coletados dos estudos primários selecionados são apresentados e analisados de acordo com cada questão de análise pré-definida. Os dados brutos extraídos estão disponíveis em: \href{https://docs.google.com/spreadsheets/d/1YY_yjyBefJ3ZmnEY38TM_LnZLoJcKhrw_q0BdEvqx2E/edit?gid=1276800509#gid=1276800509}{MSL público}. Uma síntese do DEF está descrita na Tabela~\ref{sintese}.
 
 \begin{table}[h!]
   \centering
   \caption{Síntese do DEF}
-  \begin{tabular}{|c|c|l|}
+  \begin{tabular}{|c|c|p{10cm}|}
   \hline
   \textbf{Questão de pesquisa} & \textbf{Identificador} & \textbf{Descrição} \\ \hline
   Q1 & Q1.1 & Contexto de aplicação do estudo \\ \hline
@@ -746,11 +748,12 @@ Os dados coletados dos estudos primários selecionados são apresentados e anali
   Q3 & Q3.1 & Riscos enfrentados nos projetos \\ \hline
   Q4 & Q4.1 & Síntese do resultado dos estudos empíricos \\ \hline
   \end{tabular}
+  \label{sintese}
 \end{table}
 
 \textbf{Q1. Qual é o contexto de uso das práticas de gestão de risco em métodos ágeis?}
 
-Na Tabela 8 é possível observar a resposta direta de cada uma dos seccionamentos desta pergunta.
+Na Tabela~\ref{contexto} é possível observar a resposta direta de cada uma dos seccionamentos desta pergunta.
 
 \begin{table}[h!]
   \centering
@@ -771,18 +774,22 @@ Na Tabela 8 é possível observar a resposta direta de cada uma dos seccionament
   \multirow{2}{*}{Q1.4 - Instâncias}  & Exatamente 1   & S1, S3, S7, S8 \\ \cline{2-3}
                                      & Exatamente 2   & S2, S4, S5, S6 \\ \hline
   \end{tabular}
+  \label{contexto}
   \end{table}
 
 Os estudos selecionados foram conduzidos em dois ambientes distintos (Q2.1): indústria de software e academia. Dos estudos analisados, 75\% foram realizados em organizações de desenvolvimento de software, enquanto 25\% foram conduzidos em ambiente acadêmico.
 
 Quanto aos métodos ágeis adotados (Q2.2), Scrum foi mencionado em 2 estudos, XP, DAD e SAFe em 1 estudo cada. Além disso, de forma maior, 4 estudos não mencionaram nenhum método ágil específico.
+
 Em relação ao tipo de estudo empírico (Q2.3), metade dos estudos utilizaram estudos de caso, 37\% realizaram experimentos e 13\% aplicaram surveys. Observa-se que, na indústria, predominam os estudos de caso, como observado no mapeamento original.
 O número de projetos em que o estudo foi aplicado ficou entre apenas 1 e 2, divididos de forma igual, 50\% dos estudos aplicados em apenas 1 organização e 50\% aplicaram em 2 organizações.
 
 \textbf{Q2. Quais práticas de gerenciamento de risco são introduzidas nos métodos ágeis?}
 
 Assim como observado no mapeamento original, duas estratégias diferentes foram adotadas pelos estudos para integrar a gestão de riscos aos métodos ágeis: usar as práticas ágeis existentes ou introduzir novas práticas de gestão de riscos.
+
 Os estudos S2 e S6 adotaram a primeira estratégia. Sendo que em S2 são incentivadas prioritariamente as práticas Daily meeting, Increment, Prototype, Product backlog, Sprint planning, Sprint backlog, Product backlog refinement meeting. Além disso, em S2 é sugerida uma prática da segunda estratégia, ao definir uma “Risk weekly meeting”.
+
 Adotando a segunda estratégia, os outros estudos primários criaram novas práticas ágeis ou introduziram práticas tradicionais adaptadas em métodos ágeis para melhorar o gerenciamento de riscos. O Apêndice C apresenta as práticas de gerenciamento de risco introduzidas, agrupadas pela prática ágil existente impactada (quando aplicável). Alguns exemplos de práticas são descritos abaixo.
 
 Em S1 é instituído o RM3 que é composto por três processos principais: análise de complexidade do projeto, análise de riscos e monitoramento e controle de riscos. Onde em (1) Utiliza-se a Matriz de Complexidade, uma ferramenta qualitativa para avaliar objetivamente os fatores de complexidade e seu impacto; (2) Análise de Riscos: Identifica todos os riscos, tanto negativos quanto positivos, com base nos pressupostos e restrições do projeto. Utiliza a Exposição ao Risco como medida quantitativa para avaliar e priorizar os riscos; (3) Monitoramento e Controle de Riscos: Aplica ações de resposta ao risco e monitora os riscos identificados, atualizando-os conforme necessário. Este processo inclui monitorar e tratar riscos residuais, identificar novos riscos e avaliar a eficácia das respostas. Além disso, atualiza os ativos dos processos organizacionais, como modelos de gestão de riscos e lições aprendidas, beneficiando futuros projetos.
@@ -807,10 +814,10 @@ O atributo com maior frequência de riscos foram “Schedule”, da classe “Pr
 
 O elemento com maior número de ocorrências de riscos foi ”Resources”, registrado em 4 estudos primários. “Product Engineering” e “Program Constraints” foram as  classes que apresentaram o maior número de ocorrências, ambas com registros em 4 estudos.
 
-
 \textbf{Q4. Quais são os resultados da introdução de práticas explícitas de gerenciamento de riscos em métodos ágeis?}
 
 Todos os estudos selecionados relatam impactos positivos da introdução de práticas explícitas de gerenciamento de riscos, mas 4 estudos (50\%) [S2, S3, S6, S8] destacaram explicitamente impactos positivos sem comprometer a agilidade dos métodos ágeis.
+
 Em S1 do ponto de vista financeiro, de escopo e de prazos, o projeto foi bem-sucedido e atendeu às expectativas da equipe. Houve menos tempo gasto em atividades desnecessárias, o que permitiu mais foco e ausência de riscos inesperados. Os recursos foram liberados conforme planejado, garantindo a qualidade das entregas e continuidade do trabalho da equipe em outros projetos. Foi aplicado um questionário para medir a satisfação da equipe, do cliente e das partes interessadas com o uso do RM3, e o resultado foi muito positivo,  demonstrando preferência pelo RM3 em relação ao método anterior.
 
 No estudo S4, aplicado em projetos com mais de 5 mil horas de duração de 5 a 10 meses para serem concluídos, o uso do framework gerou um aumento positivo na reação média aos riscos, com uma taxa de melhoria de cerca de 49\%.
@@ -840,58 +847,172 @@ As mesmas ameaças à validade avaliadas no mapeamento original também estão p
 %------------------------------------------------------------------------------%
 %------------------------------------------------------------------------------%
 
+\chapter{Proposta}
 
-\chapter{Proposta} % Eu digo que/vou por esse outro caminho porque
-A interface gráfica proposta para o Gatling busca superar as limitações atualmente enfrentadas por profissionais que não possuem conhecimentos avançados em programação. Como discutido nos capítulos anteriores, o uso de ferramentas de teste de carga é indispensável para garantir a qualidade de software em sistemas modernos, mas muitas dessas ferramentas apresentam barreiras de acessibilidade, limitando sua adoção em equipes multidisciplinares.
+Seguindo o framework de gamificação em engenharia de software proposto por \citeonline{GARCIA201721}, nas seções seguintes serão apresentadas as atividades realizadas para o desenvolvimento da dinâmica gamificação para identificação de riscos em meios ágeis. O framework prevê as seguinte etapas para esta definição:
 
-Atualmente, o Gatling, apesar de sua robustez e eficiência em cenários de testes de APIs REST, exige que os usuários criem scripts em Scala, uma linguagem que apresenta uma curva de aprendizado significativa para não programadores. Além disso, a falta de uma interface gráfica que simplifique a configuração e execução de testes dificulta sua utilização por equipes compostas por profissionais de diferentes áreas. Essa limitação reduz o potencial do Gatling como uma solução abrangente e acessível para realização de testes de carga.
+\begin{enumerate}
+  \item Identificação os objetivos da gamificação  
+  \item Análise dos jogadores  
+  \item Definição do escopo da gamificação e estudo de viabilidade  
+  \item Análise e design do jogo  
+  \item Desenvolvimento da plataforma gamificada  
+  \item Gerenciamento, monitoramento e medição
+\end{enumerate}
 
-Dessa forma, este projeto propõe o desenvolvimento de uma interface gráfica que combina usabilidade, automação e visualização de dados. A proposta visa democratizar o uso do Gatling, permitindo que usuários com diferentes níveis de conhecimento técnico configurem cenários de teste, gerem scripts automaticamente e analisem resultados de maneira clara e interativa.
+\section{Identificação dos objetivos da gamificação}
 
-As funcionalidades previstas para a interface estão detalhadas na Tabela~\ref{tab_requisitos_funcionais}, que apresenta os requisitos funcionais essenciais e desejáveis para a solução. Entre os principais requisitos estão a configuração visual de cenários de teste (RF-01), a geração automática de scripts compatíveis com o Gatling (RF-02) e a visualização gráfica de métricas de desempenho (RF-03). % Esses requisitos foram definidos com base nas necessidades identificadas durante a revisão de literatura e nos estudos relacionados à usabilidade em ferramentas técnicas.
+A primeira etapa do framework busca estabelecer um conjunto de objetivos para a gamificação, sendo que isto deve ser feito examinando o cenário atual e o desejado, identificando situações que podem ser aprimoradas por meio da aplicação da gamificação e como essas melhorias podem ocorrer. Por fim, estes objetivos devem ser convertidos em metas SMART para medir as melhorias alcançadas. Preferencialmente métricas e indicadores quantitativos devem ser definidos, entretanto nem isto é viável, especialmente em organizações com sistemas de medição inexistentes ou imaturos.
 
-Além disso, o desenvolvimento da interface considera os diferentes perfis de usuários-alvo, conforme descrito na Tabela~\ref{tab_perfil_usuarios}. Esses perfis incluem profissionais de QA, que precisam de uma ferramenta acessível para realizar testes de performance sem conhecimentos de programação; desenvolvedores, que buscam agilidade na configuração de cenários complexos; e gerentes de produto, que necessitam de relatórios claros para tomar decisões estratégicas. A interface também busca atender equipes multidisciplinares, promovendo maior colaboração e integração no contexto de testes de performance.
+\begin{enumerate}
+  \item \textbf{Cenário atual}: Equipes ágeis operam em modelos onde o gerenciamento de riscos é implícito, sem etapas estruturadas ou práticas específicas para identificar e analisar riscos. Essa ausência de um gerenciamento de riscos explícito pode resultar na negligência de possíveis problemas, permitindo que riscos não tratados se concretizem e gerem impactos negativos no andamento dos projetos e na entrega de valor.  
+  \item \textbf{Cenário-alvo}: Implementar uma dinâmica gamificada que facilite a análise e identificação de riscos no contexto de equipes ágeis. O objetivo é proporcionar um espaço estruturado e colaborativo para que os membros da equipe possam reconhecer os riscos potenciais em seus projetos e alinhá-los a possíveis ações de mitigação, promovendo maior clareza e previsibilidade no trabalho, sem comprometer a agilidade dos processos.  
+  \item \textbf{Meta}: Desenvolver uma dinâmica gamificada que permita às equipes ágeis compreender melhor os riscos associados aos seus projetos e aumentar a percepção coletiva sobre possíveis impactos, promovendo uma análise mais estruturada e eficiente em pelo menos uma equipe piloto, com validação por feedback qualitativo dos participantes sobre a clareza e aplicabilidade da abordagem.
+\end{enumerate}
 
-Com base nas funcionalidades e nos perfis identificados, espera-se que a solução proposta atenda às demandas dos usuários, eliminando barreiras técnicas e otimizando os processos de teste de carga. % Assim, este projeto alinha-se ao objetivo de democratizar o uso de ferramentas avançadas como o Gatling, contribuindo para a melhoria contínua da qualidade de software.
+\section{Análise de usuários}
 
-\begin{table}[H]
+A segunda etapa enfatiza a importância de analisar os participantes para quem se está projetando, para criar soluções que melhorem sua motivação e engajamento. Essa análise considera os jogadores como elemento central do ambiente, avaliando suas motivações, missão e interação com as mecânicas propostas. O processo envolve identificar a cultura organizacional e os tipos de participantes, que podem ser categorizados por taxonomias como a de \citeonline{Bartle}, complementadas por dados psicográficos e demográficos.
+
+Para usuários potenciais, no Brasil, como observado pela \citeonline{jetbrains2023dev}, 51\% dos profissionais do setor de TI têm menos de 30 anos. Esse dado é reforçado regionalmente pela pesquisa realizada em Santa Catarina \cite{acate}, que aponta uma média de idade em torno de 33 anos. O setor é predominantemente masculino, com apenas 21,2\% de participação feminina, conforme dados da \citeonline{softex2023industriatic}. Em relação à formação acadêmica, mais de 85\% dos profissionais possuem graduação em áreas relacionadas à tecnologia, com destaque para Sistemas de Informação, Análise e Desenvolvimento de Sistemas, Ciências da Computação e Engenharia \cite{revelo2021tecnologia}.
+
+No que diz respeito às especialidades, 30,5\% dos profissionais se identificam como Full-stack, seguidos por Back-end (27,2\%) e Front-end (24,2\%) \cite{revelo2021tecnologia}. Os segmentos em que mais atuam são Serviços e Telecomunicações (25,9\%), Finanças (25,6\%) e Indústria (18,9\%) \cite{abes2023mercado}. Além disso, 63\% dos profissionais declararam utilizar preferem o Scrum à nível de equipe, demonstrando a prevalência desse framework como principal metodologia para equipes ágeis \cite{17_agile_report}.
+
+Como resumido na Tabela 9, esses dados destacam um perfil majoritário de profissionais jovens, especializados em tecnologia e adaptados ao uso de metodologias ágeis, reforçando a relevância de soluções gamificadas para esse público,.
+
+\begin{table}[h!]
   \centering
-  \caption{\label{tab_requisitos_funcionais}Requisitos funcionais}
-  \noindent\resizebox{\textwidth}{!}{
-    \begin{tabular}{|p{3cm}|p{9cm}|p{3cm}|}
-      \hline
-      \textbf{Identificador} & \textbf{Requisito} & \textbf{Classificação} \\ \hline
-      RF-01 & A interface deve permitir a configuração visual de cenários de teste de carga. & Essencial \\ \hline
-      RF-02 & A interface deve gerar automaticamente scripts compatíveis com o Gatling. & Essencial \\ \hline
-      RF-03 & A interface deve oferecer visualização gráfica de métricas de desempenho, como tempos de resposta e throughput. & Essencial \\ \hline
-      RF-04 & A interface deve permitir o gerenciamento de múltiplos cenários de teste. & Essencial \\ \hline
-      RF-05 & A interface deve ser compatível com sistemas operacionais populares. & Essencial \\ \hline
-      RF-06 & A interface deve suportar a personalização de testes por meio de parâmetros configuráveis. & Essencial \\ \hline
-      RF-07 & A interface deve permitir a exportação de relatórios em formatos como PDF ou CSV. & Desejável \\ \hline
-    \end{tabular}
-  }
+  \caption{Análise de usuário}
+  \begin{tabular}{|p{6.5cm}|}
+  \hline
+  \textbf{Análise de usuário} \\ \hline
+  Homem \\ \hline
+  33 anos \\ \hline
+  Full-stack \\ \hline
+  Bacharel em sistemas de informação \\ \hline
+  Serviços e Telecom \\ \hline
+  Scrum \\ \hline
+  Categoria de Bartle: Achievers e Explorers \\ \hline
+  \end{tabular}
 \end{table}
+  
+\section{Definição do escopo da gamificação e estudo de viabilidade}
 
+Na terceira etapa, as informações obtidas nas análises anteriores permitem definir uma abordagem inicial para a solução gamificada. Primeiramente, é necessário delimitar o escopo da solução, identificando quais processos, tipos de usuários e ferramentas serão impactados, com base nos objetivos estabelecidos na primeira etapa. A partir dos dados sobre os jogadores coletados na segunda etapa, define-se o tipo de ambiente gamificado a ser criado, formulando alternativas iniciais para a solução. Por fim, faz-se necessário realizar a análise de viabilidade de cada alternativa de solução
 
-\begin{table}[H]
+\subsection{Escopo, motivadores, tipo de jogo e possíveis soluções}
+
+A dinâmica proposta tem como objetivo principal facilitar a identificação e análise de riscos em equipes ágeis, promovendo um ambiente mais interativo e colaborativo. Ao integrar elementos de gamificação ao gerenciamento de riscos, espera-se engajar os participantes e promover uma compreensão mais profunda sobre os potenciais problemas que podem surgir durante os projetos.
+
+Com relação ao tipo de jogo, optou-se por uma abordagem predominantemente colaborativa, embora alguns elementos competitivos possam ser incorporados de maneira secundária. O modelo colaborativo foi escolhido porque ele reflete melhor a realidade das equipes ágeis, onde o sucesso depende do esforço conjunto para superar desafios e espera-se que haja um trabalho multidisciplinar. Esse formato também ajuda a incentivar a troca de ideias e o compartilhamento de diferentes perspectivas, enriquecendo o processo de identificação de riscos.
+
+A dinâmica visa abranger principalmente as etapas iniciais do gerenciamento de riscos, especificamente a identificação e análise dos riscos. Essas etapas foram escolhidas porque representam um dos pontos mais críticos e, ao mesmo tempo, subutilizados em projetos conduzidos por métodos ágeis, pela ausência de práticas explícitas para identificação de riscos. Sendo esta uma lacuna que pode levar ao surgimento de problemas inesperados, que muitas vezes poderiam ter sido mitigados se fossem identificados precocemente.
+
+Foram idealizadas pela autora possíveis opções de gamificação descritas na Tabela 10.
+
+\begin{longtable}{|p{3cm}|p{12cm}|}
+  \caption{Dinâmicas para identificação e análise de riscos} \label{tab:dinamicas} \\ \hline
+  \textbf{Nome} & \textbf{Descrição} \\ \hline
+  \endfirsthead
+  \hline
+  \textbf{Nome} & \textbf{Descrição} \\ \hline
+  \endhead
+  \hline
+  \endfoot
+  \endlastfoot
+  Tarot dos riscos & Dinâmica inspirada no Tarot da tecnologia. Os participantes utilizam um conjunto de cartas contendo diferentes cenários de risco. Cada carta é discutida em grupo, avaliando a aplicação e relevância do risco no contexto do projeto atual. O objetivo é promover a troca de ideias e alinhar percepções sobre os principais riscos. \\ \hline
+  6 chapéus & Adaptação da técnica dos \href{https://brasil.uxdesign.cc/escolhendo-ferramentas-six-thinking-hats-2e30da00ec9b}{6 chapéus}. Durante a dinâmica, cada participante é designado com uma área/perspectiva diferente para mapear os riscos do projeto e sugerir resoluções iniciais. A estrutura promove uma análise abrangente dos problemas identificados. \\ \hline
+  Crazy 8s & Adaptação da dinâmica de design \href{https://laboratoriobridge.github.io/bthinking/pt/methods/crazy8/}{Crazy 8s}. Cada participante lista 8 riscos em até 8 minutos, incentivando criatividade e agilidade. Após o tempo, os riscos listados são compartilhados e analisados pela equipe. Participantes com listas únicas ou inovadoras ganham prêmios, promovendo engajamento e colaboração. \\ \hline
+  Tapple & Baseado no jogo \href{https://ludopedia.com.br/jogo/tapple}{Tapple}, onde os participantes utilizam cartas pré-definidas para listar e discutir possíveis riscos associados ao projeto, como riscos de prazo ou financeiros. A interação ocorre em rodadas rápidas, promovendo identificação e priorização ágil de riscos. \\ \hline
+  Amarelinha / Board game & Dinâmica baseada no jogo da amarelinha. Cada participante apresenta um risco, e o grupo avalia sua probabilidade e impacto. O valor combinado determina o número de casas que o participante avança no tabuleiro. A atividade combina análise de risco e elementos lúdicos para engajamento. \\ \hline
+  Baralho de riscos em matriz & Dinâmica baseada em cartas, onde cada uma representa um risco distinto. Os participantes compram cartas e categorizam os riscos apresentados dentro de uma matriz de probabilidade e impacto. O objetivo é priorizar os riscos e promover uma análise estruturada. \\ \hline
+  CPV & Dinâmica que utiliza um canvas para categorizar e organizar os riscos. Os participantes preenchem seções específicas do canvas, permitindo uma análise visual e estruturada dos principais riscos do projeto. \\ \hline
+  Retrospectiva de riscos & Adaptação da técnica de retrospectiva, com foco nos riscos enfrentados durante o projeto. A equipe revisa os riscos identificados anteriormente, avalia sua ocorrência e discute lições aprendidas para melhorar estratégias futuras de mitigação. \\ \hline
+  Sequenciador & Baseada na técnica \href{https://caroli.org/sequenciador/}{Sequenciador} de Paulo Caroli. Os participantes organizam os riscos identificados em uma matriz, em diferentes níveis e por fim em uma sequência de prioridade, utilizando cartões e debates para comparar e decidir a importância de cada risco. A dinâmica promove alinhamento e priorização. \\ \hline
+  Planning poker dos riscos & Dinâmica que adapta o Planning Poker. Os participantes utilizam cartas para votar sobre a probabilidade e o impacto de cada risco. O consenso obtido nas rodadas serve para priorizar os riscos mais críticos. \\ \hline
+  Pokemon risk (super trunfo) & Dinâmica inspirada no universo Pokémon. Cada risco é representado por uma carta com parâmetros como probabilidade e impacto, definidos previamente pelos participantes. Durante o jogo, as cartas são comparadas em rodadas, priorizando os riscos com maior gravidade. A dinâmica combina elementos de cartas e board game para análise colaborativa. \\ \hline
+\end{longtable}
+
+Em seguida são detalhadas as ideias priorizadas para maior detalhamento.
+
+\subsubsection{Tarot dos riscos}
+
+A ideia do Tarot dos Riscos é baseada na ideia do \textit{The Tarot Cards of Tech} da \textit{Artefact}. A dinâmica visa a realização da identificação de riscos utilizando cartas que representam diferentes categorias ou cenários de risco. Cada carta contém uma breve descrição de um risco potencial, associado a situações comuns em projetos ágeis, como mudanças nos requisitos, atrasos ou problemas de comunicação. A atividade envolve uma equipe que sorteia cartas e discute como cada risco poderia afetar o projeto em questão, promovendo o pensamento crítico e a antecipação de problemas. De acordo com o resultado das discussões deve ser posteriormente realizada a análise e mitigação destes riscos.
+
+\begin{itemize}
+  \item Vantagens: Incentiva a discussão entre os membros da equipe e facilita o engajamento. Além disso, ao incluir exemplos concretos nos cartões, ajuda na identificação de riscos que poderiam passar despercebidos.  
+  \item Desvantagens: Pode ser limitada para riscos muito específicos que não estejam cobertos pelas cartas preparadas, dependendo muito da curadoria inicial. Equipes menos colaborativas podem ter dificuldades para engajar na atividade.
+\end{itemize}
+  
+A simplicidade de criação e aplicação torna essa dinâmica bastante viável, especialmente em ambientes com tempo limitado para atividades. As cartas podem ser impressas ou até mesmo disponibilizadas digitalmente para aplicação da dinâmica.
+
+\begin{figure}[H]
+	\caption{\label{tarot-da-tecnologia}The Tarot Cards of Tech}
+  \includegraphics[width=\textwidth]{tarot-da-tecnologia}
+	\legend{Fonte: Artefact}
+\end{figure}
+
+\subsubsection{Amarelinha / Board game}
+
+O Amarelinha Game Board combina gamificação e análise de riscos em uma dinâmica interativa. O jogo segue uma trilha no estilo da amarelinha, com um participante de cada vez anunciando um risco identificado. Após o anúncio, todos os outros participantes categorizam o risco e calculam seu número de impacto, com base em sua probabilidade e severidade. Esse número representa a quantidade de casas que o participante avança no tabuleiro. O objetivo é alcançar o “céu” antes dos demais.
+
+\begin{itemize}
+  \item Vantagens: A dinâmica não apenas promove a identificação e categorização de riscos, mas também ensina os participantes a analisar impacto e probabilidade de maneira prática. É engajante e competitiva, o que pode aumentar a motivação.  
+  \item Desvantagens: A competitividade pode desviar o foco de algumas equipes, especialmente se o objetivo for colaborativo. Além disso, a mecânica de calcular o número do risco pode ser desafiadora para equipes menos experientes, exigindo um facilitador.
+\end{itemize}
+
+Esta proposta tem viabilidade moderada. Exige preparação para definir categorias e criar o tabuleiro, mas pode ser adaptado com recursos básicos ou digitais.
+
+\begin{figure}[H]
   \centering
-  \caption{\label{tab_perfil_usuarios}Perfil de Usuários}
-  \noindent\resizebox{\textwidth}{!}{
-    \begin{tabular}{|p{5cm}|p{10cm}|}
-      \hline
-      \textbf{Usuário} & \textbf{Uso} \\ \hline
-      Profissionais de QA & Configurar e executar testes de performance sem necessidade de conhecimento avançado em programação. \\ \hline
-      Desenvolvedores & Avaliar o desempenho de APIs REST e simular cenários de alta carga de forma rápida e eficiente. \\ \hline
-      Gerentes de Produto & Interpretar resultados de performance em relatórios claros para a tomada de decisões estratégicas. \\ \hline
-      Equipes Multidisciplinares & Colaborar na criação e execução de testes sem barreiras técnicas, permitindo maior integração entre áreas. \\ \hline
-    \end{tabular}
-  }
-\end{table}
+  \caption{\label{amarelinha}Amarelinha caracol}
+  \includegraphics[width=0.8\textwidth]{amarelinha}
+\end{figure}
 
-% TODO quem sabe trazer a parte de funcionalidades propostas que foi sugerido antes, ver o chat, acho que pode ser interessante pro tcc 2
+\subsubsection{Poke risk}
+
+O Poke Risk é inspirado no universo dos jogos de Pokémon, onde cada carta representa um risco que a equipe pode enfrentar. Antes do início do jogo, os participantes preenchem as cartas de riscos, atribuindo a elas parâmetros como probabilidade, impacto e cenário do risco. Essas cartas são usadas durante a dinâmica para promover a discussão, análise e priorização dos riscos identificados.
+
+A partir do monte de cartas, todos os jogadores compram suas cartas, um por vez, até o monte acabar. Cada jogador estará representando determinados riscos durante a partida. Durante as rodadas, os participantes enfrentam "batalhas de riscos", onde anunciam o atributo com maiores chances de superar a carta do adversário. A carta ganhadora da batalha entra para um novo monte, que é o resultado dos riscos que devem ser priorizados para definição de estratégias de mitigação.
+
+\begin{itemize}
+  \item Vantagens: A abordagem lúdica torna a análise de riscos mais envolvente, especialmente para equipes que apreciam dinâmicas criativas.
+  \item Desvantagens: Exige mais tempo de preparação e familiaridade dos participantes com o conceito dos parâmetros de risco. Sem um facilitador experiente, a dinâmica pode perder o foco ou se tornar menos produtiva.
+\end{itemize}
+
+Esta proposta tem viabilidade moderada. A preparação inicial das cartas exige tempo e alinhamento prévio, mas o processo de criação pode ser feito de forma colaborativa pela equipe, garantindo que as cartas sejam relevantes ao projeto.
+
+\begin{figure}[H]
+  \centering
+	\caption{\label{super-trunfo}Super Trunfo Pokémon}
+  \includegraphics[width=0.8\textwidth]{super-trunfo}
+\end{figure}
+
+
+\section{Análise e design do jogo}
+
+\section{Desenvolvimento da plataforma gamificada}
+
+\section{Gerenciamento, monitoramento e medição}
+
+%------------------------------------------------------------------------------%
 %------------------------------------------------------------------------------%
 
-% \chapter{Desenvolvimento} % Como
+\chapter{Dinâmica}
+
+%------------------------------------------------------------------------------%
+%------------------------------------------------------------------------------%
+
+\chapter{Avaliação}
+
+\section{Planejamento do estudo de caso}
+\section{Realização do estudo de caso}
+\section{Análise dos resultados do estudo de caso}
+
+%------------------------------------------------------------------------------%
+%------------------------------------------------------------------------------%
+
+\chapter{Conclusão}
 
 %------------------------------------------------------------------------------%
 
@@ -900,6 +1021,146 @@ Com base nas funcionalidades e nos perfis identificados, espera-se que a soluç�
 
 \postextual
 \bibliography{tcc}
+
+% Apêndices  -----------------------------------------------------------------%
+\appendix
+
+\chapter*{Apêndice A – Strings de busca adaptadas}
+\addcontentsline{toc}{chapter}{Apêndice A – Strings de busca adaptadas}
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{|l|p{12cm}|}
+    \hline
+    \textbf{Biblioteca digital} & \textbf{String adaptada} \\
+    \hline
+    ACM & (Title:(risk) OR Abstract:(risk)) AND (Title:(agile) OR Title:(scrum) OR Title:(xp) OR Title:(extreme programming) OR Title:(lean) OR Title:(kanban) OR Title:(scrumban) OR Title:(fdd) OR Title:(feature driven development) OR Title:(crystal) OR Title:(iterative development) OR Abstract:(agile) OR Abstract:(scrum) OR Abstract:(xp) OR Abstract:(extreme programming) OR Abstract:(lean) OR Abstract:(kanban) OR Abstract:(scrumban) OR Abstract:(fdd) OR Abstract:(feature driven development) OR Abstract:(crystal) OR Abstract:(iterative development)) AND (Title:(software) OR Abstract:(software)) \\
+    \hline
+    IEEExplore & "All Metadata":risk AND ("All Metadata":agile OR "All Metadata":scrum OR "All Metadata":xp OR "All Metadata":extreme programming OR "All Metadata":lean OR "All Metadata":kanban OR "All Metadata":scrumban OR "All Metadata":fdd OR "All Metadata":feature driven development OR "All Metadata":crystal OR "All Metadata":iterative development) AND "All Metadata":software \\
+    \hline
+    Scopus & (TITLE-ABS-KEY ( risk ) AND ( TITLE-ABS-KEY ( agile ) OR TITLE-ABS-KEY ( scrum ) OR TITLE-ABS-KEY ( xp ) OR TITLEABS-KEY ( extreme AND programming ) OR TITLE-ABS-KEY ( kanban ) OR TITLE-ABS-KEY ( scrumban ) OR TITLE-ABSKEY ( fdd ) OR TITLE-ABS-KEY ( feature AND driven AND development) OR TITLE-ABS-KEY ( crystal ) OR TITLE-ABS-KEY ( iterative AND development )) AND TITLE-ABS-KEY (software) AND ( LIMIT-TO ( SUBJAREA,"COMP") ) ) \\
+    \hline
+  \end{tabular}
+\end{table}
+
+
+\chapter*{Apêndice B – Estudos selecionados}
+\addcontentsline{toc}{chapter}{Apêndice B – Estudos selecionados}
+
+\begin{longtable}{|c|p{5.5cm}|p{7.5cm}|}
+  \hline
+  \textbf{Estudo} & \textbf{Título} & \textbf{Referência} \\
+  \hline
+  \endfirsthead
+  \hline
+  \multicolumn{3}{|c|}{\textit{Continua na próxima página}} \\
+  \hline
+  \endfoot
+  \hline
+  \multicolumn{3}{|c|}{\textit{Fim da tabela}} \\
+  \hline
+  \endlastfoot
+  S1 & RM3: A Risk Management Framework for IT Project Success & Paulo Roberto Martins de Andrade and Samira Sadaoui. 2021. RM3: A Risk Management Framework For IT Project Success. In Proceedings of the 4th International Conference on Computer Science and Software Engineering (CSSE '21). Association for Computing Machinery, New York, NY, USA, 200–205. \\
+  \hline
+  S2 & A Risk Management Tool for Agile Software Development & Tavares, Breno \& Keil, Mark \& Sanches, Carlos \& Diniz de Souza, Adler \& Silva, Carlos. (2020). A Risk Management Tool for Agile Software Development. Journal of Computer Information Systems. 1. 1. 10.1080/08874417.2020.1839813. \\
+  \hline
+  S3 & A novel risk management model in the Scrum and extreme programming hybrid methodology & Afshari, Mahnaz \& Javdani Gandomani, Taghi. (2022). A novel risk management model in the Scrum and extreme programming hybrid methodology. International Journal of Electrical and Computer Engineering. 12. 2911-2921. 10.11591/ijece.v12i3.pp2911-2921. \\
+  \hline
+  S4 & Risk management framework in Agile software development methodology & Zahedi, Mohammad \& Kashanaki, Alireza \& Farahani, Elham. (2023). Risk management framework in Agile software development methodology. International Journal of Electrical and Computer Engineering (IJECE). 13. 4379. 10.11591/ijece.v13i4.pp4379-4387. \\
+  \hline
+  S5 & SERGE – Serious Game for the Education of Risk Management in Software Project Management & G. Annunziata, S. Lambiase, F. Palomba and F. Ferrucci, "SERGE - Serious Game for the Education of Risk Management in Software Project Management," 2024 IEEE/ACM 46th International Conference on Software Engineering: Software Engineering Education and Training (ICSE-SEET), Lisbon, Portugal, 2024, pp. 264-273, doi: 10.1145/3639474.3640085. \\
+  \hline
+  S6 & Do scaling agile frameworks address global software development risks? An empirical study & Beecham, Sarah \& Clear, Tony \& Lal, Ramesh \& Noll, John. (2021). Do scaling agile frameworks address global software development risks? An empirical study. Journal of Systems and Software. 171. 110823. 10.1016/j.jss.2020.110823. \\
+  \hline
+  S7 & User Story Risk Prioritization Model for Agile Software Development & P. Thanomwong and T. Senivongse, "User Story Risk Prioritization Model for Agile Software Development," 2022 International Conference on Data and Software Engineering (ICoDSE), Denpasar, Indonesia, 2022, pp. 161-166, doi: 10.1109/ICoDSE56892.2022.9972041. \\
+  \hline
+  S8 & Issues of Formalization of Risk Management Process in Software Design & BILOUSIVA, Liudmyla et al. Issues of formalization of risk management process in software design. In: IntelITSIS. 2023. p. 48-57. \\
+  \hline
+\end{longtable}
+
+\chapter*{Apêndice C – Riscos categorizados}
+\addcontentsline{toc}{chapter}{Apêndice C – Riscos categorizados}
+
+\begin{longtable}{|>{\raggedright\arraybackslash}p{2.5cm}|p{4.5cm}|p{4.6cm}|l|}
+  \hline
+  \textbf{Classe} & \textbf{Elemento} & \textbf{Atributo} & \textbf{Estudo} \\
+  \hline
+  \endfirsthead
+  \hline
+  \multicolumn{4}{|c|}{\textit{Continua na próxima página}} \\
+  \hline
+  \endfoot
+  \hline
+  \multicolumn{4}{|c|}{\textit{Fim da tabela}} \\
+  \hline
+  \endlastfoot
+  A. Product Engineering & 1. Requirements & a. Stability & S6, S7, S8 \\
+  \cline{3-4}
+  & & b. Completeness & S5, S7 \\
+  \cline{3-4}
+  & & c. Clarity & S5, S6, S7 \\
+  \cline{3-4}
+  & & d. Validity & S5, S6, S7 \\
+  \cline{3-4}
+  & & e. Feasibility & S5, S6, S7 \\
+  \cline{3-4}
+  & & g. Scale & S6 \\
+  \cline{2-4}
+  & 2. Design & b. Difficulty & S5 \\
+  \cline{2-4}
+  & 3. Code and Unit Test & a. Feasibility & S6 \\
+  \cline{3-4}
+  & & b. Testing & S8 \\
+  \cline{2-4}
+  & 5. Engineering Specialties & b. Reliability & S6 \\
+  \hline
+  B. Development Environment & 1. Development Process & c. Process Control & S6 \\
+  \cline{3-4}
+  & & d. Familiarity & S1 \\
+  \cline{2-4}
+  & 2. Development System & a. Capacity & S6 \\
+  \cline{3-4}
+  & & d. Familiarity & S6 \\
+  \cline{2-4}
+  & 3. Management Process & a. Planning & S1, S6 \\
+  \cline{3-4}
+  & & c. Management Experience & S6 \\
+  \cline{3-4}
+  & & d. Program Interfaces & S1 \\
+  \cline{2-4}
+  & 4. Management Methods & a. Monitoring & S6 \\
+  \cline{3-4}
+  & & b. Personnel Management & S6 \\
+  \cline{2-4}
+  & 5. Work Environment & a. Quality Attitude & S1 \\
+  \cline{3-4}
+  & & b. Cooperation & S5, S6 \\
+  \cline{3-4}
+  & & c. Communication & S1, S5, S6 \\
+  \cline{3-4}
+  & & d. Morale & S6 \\
+  \cline{3-4}
+  & & e. Reliability & S6 \\
+  \hline
+  C. Program Constraints & 1. Resources & a. Schedule & S1, S5, S6, S8 \\
+  \cline{3-4}
+  & & b. Staff & S1, S6, S8 \\
+  \cline{3-4}
+  & & c. Budget & S5, S6 \\
+  \cline{2-4}
+  & 2. Contract & c. Dependencies & S6 \\
+  \cline{2-4}
+  & 3. Program Interfaces & a. Customer & S6, S8 \\
+  \cline{3-4}
+  & & b. Associate Contractors & S1, S6 \\
+  \cline{3-4}
+  & & e. Corporate Management & S6 \\
+  \cline{3-4}
+  & & f. Vendors & S6 \\
+  \cline{3-4}
+  & & g. Politics & S6 \\
+  \hline
+\end{longtable}
+
 
 %------------------------------------------------------------------------------%
 
