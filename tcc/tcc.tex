@@ -817,7 +817,7 @@ Apenas 5 dos 8 estudos listaram de forma explícita os riscos enfrentados nos pr
 
 O atributo com maior frequência de riscos foram “\textit{Schedule}”, da classe “\textit{Program Constraints}”, identificado em 4 dos estudos primários. Em sequência “\textit{Staff}”, da classe “\textit{Product Engineering”}, “\textit{Communication}”, da classe “\textit{Development Environment}” e “\textit{Stability}”, “\textit{Clarity}”, “\textit{Validity}” e “\textit{Feasibility}”, da classe “\textit{Product Engineering}”, obtiveram 3 ocorrências cada.
 
-O elemento com maior número de ocorrências de riscos foi ”\textit{Resources}”, registrado em 4 estudos primários. “\textit{Product Engineering}” e “\textit{Program Constraints}” foram as classes que apresentaram o maior número de ocorrências, ambas com registros em 4 estudos.
+O elemento com maior número de ocorrências de riscos foi “\textit{Resources}”, registrado em 4 estudos primários. “\textit{Product Engineering}” e “\textit{Program Constraints}” foram as classes que apresentaram o maior número de ocorrências, ambas com registros em 4 estudos.
 
 \textbf{Q4. Quais são os resultados da introdução de práticas explícitas de gerenciamento de riscos em métodos ágeis?}
 
@@ -997,31 +997,479 @@ Esta proposta tem viabilidade moderada. A preparação inicial das cartas exige 
   \includegraphics[width=0.8\textwidth]{super-trunfo}
 \end{figure}
 
+\section{Análise e design}
 
-\section{Análise e design do jogo}
+%% Adicionar apêndice do documento de discussão com líderes do laboratório
+% ver no framework detalhes dessa etapa
+% Luiz colocou aqui: 
+% - Escolha dos componentes
+% - Escolha das mecânicas e economia do jogo
+% - Definição das regras da dinâmica
+% - Etapas:
+% - Definição da estética
+% - Elaboração dos casos de uso
 
-\section{Desenvolvimento da plataforma gamificada}
+\subsection{Prototipação dos elementos}
 
-\section{Gerenciamento, monitoramento e medição}
+%% Versão online e versão física
+
+%% \section{Desenvolvimento da plataforma gamificada}
+
+%% \section{Gerenciamento, monitoramento e medição}
 
 %------------------------------------------------------------------------------%
 %------------------------------------------------------------------------------%
 
 \chapter{Dinâmica}
 
+% Explicações gerais sobre a dinâmica e os materiais dela %
+A dinâmica
+
+\section{Objetivos}
+
+\section{Detalhes da dinâmica presencial}
+\subsection{Materiais necessários}
+
+\section{Detalhes da dinâmica online}
+\subsection{Materiais necessários}
+
+\section{Anatomia da carta}
+
+\begin{figure}[H]
+  \centering
+	\caption{\label{anatomia-carta} Anatomia da carta da dinâmica}
+  \includegraphics[width=0.7\textwidth]{anatomia-carta}
+	\legend{Fonte: Autora (2025)}
+\end{figure}
+
+\section{Preparação para execução}
+
+\begin{figure}[H]
+  \centering
+	\caption{\label{manual-tarot} Manual de regras (formato \textit{flyer})}
+  \includegraphics[width=0.8\textwidth]{manual-tarot}
+	\legend{Fonte: Autora (2025)}
+\end{figure}
+
+\section{Execução da dinâmica}
+\subsection{Identificação e análise dos riscos}
+\subsection{Priorização dos riscos}
+
+\begin{figure}[H]
+	\caption{\label{carta-exemplo-tarot} Carta de exemplo (frente e verso)}
+  \includegraphics[width=\textwidth]{carta-exemplo-tarot}
+	\legend{Fonte: Autora (2025)}
+\end{figure}
+
+
+\section{Considerações finais}
+
+%% TODO: Adicionar gravação de vídeo explicando a dinâmica
+
+Por se tratar de uma dinâmica que pode conter evoluções futuras, caso o usuário tenha sugestões ao criador deste trabalho, é possível que seja feito contato por e-mail: amanda.martins.oliveira@grad.ufsc.br para discutir tal evolução. A explicação de como a dinâmica pode
+ser implementada está disponibilizada por vídeo em: <>.
+De antemão, a autora agradece a utilização da dinâmica e espera que seja útil em seus respectivos projetos de software.
+
 %------------------------------------------------------------------------------%
 %------------------------------------------------------------------------------%
 
 \chapter{Avaliação}
 
-\section{Planejamento do estudo de caso}
-\section{Realização do estudo de caso}
-\section{Análise dos resultados do estudo de caso}
+Neste capítulo, é apresentada a avaliação da dinâmica proposta. A avaliação é um passo crucial para verificar a eficácia, aplicabilidade e usabilidade da dinâmica em diferentes contextos e com diferentes perfis de participantes.
+
+Será detalhado o planejamento da avaliação, incluindo a metodologia empregada e as adaptações realizadas no método MEEGA+. Em seguida, descreve-se a execução da avaliação, dividida em duas abordagens distintas: uma com a participação de estudantes e outra com profissionais da área de desenvolvimento de software. Para cada uma dessas avaliações, serão apresentados os métodos de coleta e análise dos dados. Por fim, o capítulo traz uma discussão aprofundada dos resultados obtidos, comparando as percepções dos grupos, e finaliza com a discussão das ameaças à validade que podem influenciar as conclusões deste estudo.
+
+\section{Planejamento da avaliação}
+
+Para garantir a validade e a robustez dos resultados da dinâmica proposta, foi empregado uso do modelo MEEGA+ (Method for an Extensive and Exhaustive Game Assessment) \cite{MEEGA}, um framework consolidado para a avaliação da qualidade de jogos e experiências gamificadas.
+
+A escolha do MEEGA+ justifica-se por sua capacidade de fornecer um instrumento de medição confiável e estruturado. Sua abordagem abrangente se alinha aos objetivos desta pesquisa, permitindo avaliar a dinâmica gamificada do Tarot para identificação de riscos. O modelo desdobra fatores de qualidade em métricas relacionadas à motivação, experiência do usuário e aprendizado. Essa granularidade é fundamental para compreender o impacto da dinâmica e identificar pontos de melhoria, indo além de uma simples avaliação de engajamento, e adentrando em aspectos como a eficácia na facilitação do aprendizado e na análise de riscos.
+
+A próxima subseção detalhará como o MEEGA+ foi adaptado para o contexto específico desta dinâmica, bem como os procedimentos adotados para a coleta de dados.
+
+\subsection{Adaptação do MEEGA+}
+
+Ao empregar o modelo MEEGA+ para a avaliação da dinâmica gamificada proposta neste trabalho, tornaram-se necessárias algumas adaptações específicas. O MEEGA+ foi concebido para a avaliação de jogos educacionais, porém o Tarot não se configura como um jogo tradicional, mas sim como uma atividade gamificada, que aplica elementos e mecânicas de jogos no contexto de análise de riscos.
+
+Durante o processo de planejamento desta avaliação, foi realizada uma análise para identificar os elementos do modelo MEEGA+ original que não se mostravam aplicáveis ou alinhados aos objetivos específicos da dinâmica. Assim, a customização envolveu a remoção de certas afirmativas do questionário padrão que não refletiam a natureza ou o propósito da gamificação do Tarot. Vale ressaltar que, embora essas adaptações permitam uma avaliação mais direcionada e focada, a modificação de um instrumento validado pode, em certa medida, afetar a comparabilidade direta com resultados obtidos com o modelo original e sua validade/confiabilidade no novo contexto.
+
+Com base nessa análise, foram removidas as seguintes afirmativas do questionário MEEGA+, pelas justificativas apresentadas na Tabela \ref{tab:afirmativas-removidas}:
+
+\begin{table}[h!]
+  \centering
+  \caption{Afirmativas do MEEGA+ removidas e suas justificativas.}
+  \label{tab:afirmativas-removidas}
+  \begin{tabular}{|p{0.35\textwidth}|p{0.65\textwidth}|}
+  \hline
+  \textbf{Afirmativa removida} & \textbf{Justificativa de exclusão} \\ \hline
+  O jogo oferece novos desafios em um ritmo adequado & A dinâmica não possui ritmo intrínseco de desafios que se assemelhe a um jogo tradicional. Seu foco é na facilitação da discussão e análise. \\ \hline
+  É devido ao meu esforço pessoal que eu consigo avançar no jogo & A dinâmica de análise de riscos é uma atividade colaborativa, onde o avanço é construído em equipe, e não depende primariamente do esforço individual. \\ \hline
+  Eu estava tão envolvido no jogo que eu perdi a noção do tempo & Embora o engajamento seja desejável, esta afirmativa remete a uma imersão típica de jogos de entretenimento ou com narrativa intensa, que não é o foco principal de uma ferramenta para análise de riscos. \\ \hline
+  Eu esqueci sobre o ambiente ao meu redor enquanto jogava este jogo & Similar à afirmativa anterior, esta métrica foca em um nível de imersão que não é o objetivo central de uma dinâmica profissional de análise de riscos. \\ \hline
+  \end{tabular}
+\end{table}
+
+De forma complementar, foram adicionadas perguntas customizadas, conforme a flexibilidade sugerida pelo próprio MEEGA+ para abordar objetivos específicos. Essas novas afirmativas foram elaboradas para avaliar a eficácia da dinâmica na promoção da identificação e análise de riscos, um dos principais objetivos deste trabalho, e estão detalhadas na Tabela \ref{tab:afirmativas-adicionadas}.
+
+\begin{table}[h!]
+  \centering
+  \caption{Afirmativas customizadas adicionadas e suas justificativas.}
+  \label{tab:afirmativas-adicionadas}
+  \begin{tabular}{|p{0.45\textwidth}|p{0.55\textwidth}|}
+  \hline
+  \textbf{Afirmativa adicionada} & \textbf{Justificativa de inclusão} \\ \hline
+  A dinâmica contribuiu para reconhecer os principais riscos que podem afetar o andamento do projeto. & Essencial para verificar se a dinâmica cumpriu seu objetivo principal de auxiliar na identificação de riscos relevantes. \\ \hline
+  A dinâmica contribuiu para reconhecer de forma clara e consciente os riscos presentes no projeto. & Avalia a clareza e a profundidade da percepção dos riscos após a utilização da ferramenta. \\ \hline
+  A dinâmica contribuiu para aumentar a percepção da equipe sobre suas vulnerabilidades diante de falhas ou imprevistos. & Visa medir o impacto da dinâmica na conscientização coletiva sobre a fragilidade do projeto e a necessidade de mitigação. \\ \hline
+  A dinâmica contribuiu para exercitar a análise inicial dos riscos levantados em equipe. & Verifica se a ferramenta não apenas identifica, mas também fomenta a discussão e análise colaborativa dos riscos, aspecto-chave em métodos ágeis. \\ \hline
+  \end{tabular}
+\end{table}
+
+\section{Execução da avaliação}
+
+A avaliação da dinâmica proposta foi conduzida em duas etapas distintas, visando coletar feedback de diferentes perfis de participantes: estudantes e profissionais. Esta seção detalha a execução de cada uma dessas avaliações.
+
+\subsection{Avaliação com estudantes}
+
+Como etapa inicial da avaliação da dinâmica de gamificação para identificação e análise de riscos, foram realizadas aplicações em sala de aula com estudantes de graduação. As sessões ocorreram em maio de 2025, envolvendo alunos das disciplinas INE5427 (Planejamento e Gestão de Projetos) e INE5617 (Gerência de Projetos) do Departamento de Informática e Estatística da Universidade Federal de Santa Catarina (UFSC).
+
+Participaram um total de 45 estudantes, todos regularmente matriculados nos cursos de Ciência da Computação ou Sistemas de Informação da UFSC. Após a aplicação da dinâmica, 30 desses participantes responderam ao questionário de avaliação baseado no modelo MEEGA+ adaptado.
+
+As aplicações foram divididas em dois turnos (matutino e noturno), seguindo um protocolo semelhante em ambos:
+\begin{itemize}
+  \item Momento inicial: Iniciava-se com uma explanação sobre o trabalho, os objetivos da dinâmica e suas regras gerais.
+  \item Execução da dinâmica: Os alunos eram separados em grupos para a realização das etapas da dinâmica.
+  \item Questionário: Ao final, os participantes eram convidados a responder ao questionário de avaliação.
+\end{itemize}
+
+Detalhes específicos de cada turma:
+
+\begin{itemize}
+  \item Primeira turma (matutino): Contou com 18 alunos, que foram divididos em grupos de 4 ou 5 integrantes. Para a primeira etapa da dinâmica (leitura e mapeamento dos riscos), foram concedidos 30 minutos. Para a segunda etapa (votação/priorização dos riscos), foram alocados 5 minutos adicionais. Os grupos receberam os materiais necessários da dinâmica (cartas, manual, post-its e canetas) e uma folha contendo uma descrição fictícia de um projeto de software (\hyperref[apendiceD]{Apêndice D}), para contextualizar a aplicação.
+  \item Segunda turma (noturno): Contou com 27 alunos, divididos em grupos de 5 ou 6 integrantes. O tempo alocado para a primeira etapa foi de 20 minutos, e para a segunda etapa, 5 minutos. O processo de aplicação e distribuição de materiais foi similar ao da primeira turma.
+\end{itemize}
+
+\begin{figure}[H]
+	\caption{\label{aplicacao-aula-alunos} Aplicação da dinâmica com estudantes (período matutino)}
+  \includegraphics[width=\textwidth]{aplicacao-aula-alunos}
+	\legend{Fonte: Autora (2025)}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+	\caption{\label{aplicacao-aula-mesa-1} Organização das cartas pelos estudantes 01}
+  \includegraphics[width=0.8\textwidth]{aplicacao-aula-mesa-1}
+	\legend{Fonte: Autora (2025)}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+	\caption{\label{aplicacao-aula-mesa-2} Organização das cartas pelos estudantes 02 }
+  \includegraphics[width=0.8\textwidth]{aplicacao-aula-mesa-2}
+	\legend{Fonte: Autora (2025)}
+\end{figure}
+
+\subsubsection{Análise dos dados coletados}
+
+A análise dos dados coletados a partir dos questionários e da observação da execução com os estudantes permitiu inferir a eficácia da dinâmica em promover a identificação de riscos relevantes e estimular discussões. Não houve um consenso absoluto entre os riscos priorizados pelos diferentes grupos; no entanto, foi possível observar uma recorrência nos riscos mais votados, que se concentraram em categorias como cronograma (identificado por 75\% dos grupos), comunicação (X\% dos grupos), planejamento (X\% dos grupos) e orçamento (X\% dos grupos).
+
+Em termos de quantidade de riscos, os grupos do período noturno avaliaram, em média, 8,2 riscos, enquanto os grupos do período matutino avaliaram, em média, 12,25 riscos, resultando em uma média geral de 10 riscos avaliados por grupo no período médio de 30 minutos. Esses resultados preliminares indicam que a dinâmica foi capaz de gerar um volume significativo de riscos e fomentar a discussão sobre os mesmos, o que é um indicativo positivo para a sua aplicabilidade.
+
+Os dados obtidos por meio dos questionários preenchidos pelos estudantes foram consolidados e analisados conforme o formato proposto pelo modelo MEEGA+. A partir desses dados, foram gerados gráficos (a serem apresentados nas Figuras subsequentes) que possibilitam uma análise detalhada dos aspectos avaliados em relação à Usabilidade, Experiência do Jogador e às afirmativas específicas da dinâmica.
+
+Em relação à avaliação da Usabilidade, a Figura \ref{ufsc-usabilidade} apresenta um gráfico consolidado com os resultados obtidos. É possível verificar que a dinâmica obteve resultados altamente positivos nesta categoria. Itens como atratividade visual, consistência de textos/cores/fontes, legibilidade das fontes e compreensão das cores obtiveram mediana 2 (Concordo fortemente). Esse insight reforça que o design é um ponto forte e unânime da dinâmica, sendo percebida como visual e funcionalmente atrativa, com uma apresentação clara e profissional que contribui positivamente para a imersão e a primeira impressão do público jovem. Especificamente, a afirmativa "Eu precisei aprender poucas coisas para poder começar a jogar" obteve a menor mediana geral, com 50\% dos participantes concordando ou concordando fortemente, 40\% indiferentes e 10\% discordantes. Esses dados indicam que, embora o formato atual da gamificação seja efetivo para engajar uma parcela dos participantes, uma simplificação adicional no processo nas regras pode ser benéfica para alcançar maior satisfação em um grupo mais amplo.
+
+\begin{figure}[H]
+	\caption{\label{ufsc-usabilidade} Resultados da avaliação de usabilidade com estudantes}
+  \includegraphics[width=\textwidth]{ufsc-usabilidade}
+	\legend{Fonte: Autora (2025)}
+\end{figure}
+
+No critério Experiência do Jogador, a Figura \ref{ufsc-xp-jogador} ilustra os resultados obtidos. No que engloba a curva de aprendizado, clareza das regras e facilidade de jogar, observou-se que a mediana foi 1 (Concordo) em quase todos os itens. É importante notar uma dispersão significativa nas respostas, com a ocorrência de vários votos em -1 (Discordo), 0 (Indiferente) e até alguns em -2 (Discordo fortemente). Esse insight indica que os estudantes perceberam uma maior dificuldade para aprender a jogar e compreender as regras inicialmente. Isso sugere que o processo de onboarding e a explicação da dinâmica necessitam de ajustes para o contexto educacional, talvez com a inclusão de uma rodada de exemplo ou um vídeo instrutivo pré-aplicação para minimizar o tempo de adaptação e as dúvidas iniciais.
+
+\begin{figure}[H]
+	\caption{\label{ufsc-xp-jogador} Resultados da avaliação de experiência do jogador com estudantes}
+  \includegraphics[width=\textwidth]{ufsc-xp-jogador}
+	\legend{Fonte: Autora (2025)}
+\end{figure}
+
+Em relação à dinâmica e envolvimento, que analisa aspectos como desafio adequado, não-monotonia e sentimento de realização, os resultados apresentaram mediana 1 (Concordo) para a maioria desses itens. A análise da distribuição das respostas revela alguns votos negativos e uma concentração em valores medianos (0 e 1), indicando que, embora a dinâmica não seja percebida como entediante, ela não gerou um forte senso de desafio ou conquista entre os estudantes. Isso pode apontar para um desequilíbrio entre a simplicidade da dinâmica e o estímulo esperado, que talvez aguardasse uma experiência mais "gamificada" ou competitiva. Há, portanto, espaço para evoluir as mecânicas ou introduzir mais variações nas atividades para potencializar o engajamento emocional.
+
+A dimensão da interação social foi avaliada com mediana 2 (Concordo fortemente) em todos os seus itens, incluindo interação com outras pessoas, cooperação/competição e sentimento positivo ao interagir. Essa é uma força notável da dinâmica, pois indica que, mesmo em um ambiente de sala de aula, houve um forte engajamento e conexão entre os colegas. Isso é excelente para promover habilidades interpessoais, trabalho em grupo e a comunicação eficaz, elementos cruciais no desenvolvimento de projetos.
+
+Nos itens relacionados ao engajamento e diversão, como "Me diverti com o jogo", "Senti vontade de sorrir" e "Me capturou no início", a mediana foi 1 (Concordo), e foi observada uma maior dispersão nas respostas. Esse insight sugere que, apesar da clareza visual e das boas interações sociais, o fator "diversão" teve uma intensidade moderada. Isso pode ser influenciado pelo ambiente de sala de aula ou pela não familiaridade dos participantes uns com os outros, que pode inibir o engajamento espontâneo. A introdução de elementos mais lúdicos, a promoção de um ambiente mais descontraído, ou a alocação de mais tempo livre para a exploração da dinâmica pode contribuir para aumentar o prazer e a imersão.
+
+A conexão com o conteúdo pedagógico foi um ponto de destaque. Todos os itens relacionados a esta categoria, como clareza da relação com a disciplina, aprendizagem com o jogo, relevância e comparação positiva com outros métodos, obtiveram mediana 2 (Concordo fortemente). Esse resultado demonstra que a dinâmica cumpre com excelência seus objetivos pedagógicos, sendo reconhecida pelos estudantes como eficaz, aplicável e, em muitos casos, preferível a outros métodos tradicionais de ensino sobre gestão de riscos. Este é um grande diferencial didático da ferramenta.
+
+Finalmente, para as afirmativas customizadas e específicas da dinâmica, a Figura \ref{ufsc-afirmativas} apresenta os resultados. Todos os itens da seção obtiveram mediana 2 (Concordo fortemente), indicando que a dinâmica é bem-sucedida em despertar a consciência sobre riscos em projetos, sendo efetiva em promover a identificação e discussão desses elementos mesmo com um público acadêmico.
+
+\begin{figure}[H]
+	\caption{\label{ufsc-afirmativas} Resultados da avaliação de afirmativas específicas com estudantes}
+  \includegraphics[width=\textwidth]{ufsc-afirmativas}
+	\legend{Fonte: Autora (2025)}
+\end{figure}
+
+Além dos dados quantitativos, a coleta de feedback aberto revelou percepções valiosas dos estudantes sobre a dinâmica. Os pontos mais elogiados incluíram:
+\begin{itemize}
+  \item Qualidade e estética do material: O design atrativo das cartas e a qualidade do material foram frequentemente mencionados, contribuindo para uma experiência visualmente agradável.
+  \item Interatividade e colaboração: A dinâmica promoveu a interação e discussão em equipe, sendo destacada como um facilitador para a troca de ideias e a classificação colaborativa de riscos.
+  \item Eficácia na identificação e análise de riscos: Muitos participantes apontaram a capacidade da dinâmica em auxiliar na identificação e análise inicial de riscos, mesmo com diferentes interpretações de uma mesma carta.
+  \item Abordagem descontraída: A maneira lúdica e descontraída de abordar um tema complexo como riscos foi bem recebida, tornando o aprendizado mais engajador.
+\end{itemize}
+
+Quanto aos aspectos que poderiam ser melhorados, as sugestões dos participantes focaram em:
+\begin{itemize}
+  \item Número e repetitividade das cartas: Alguns estudantes sentiram que o número de cartas era excessivo ou que algumas apresentavam temáticas muito similares/sobrepostas, o que poderia levar a respostas parecidas ou não agregar valor suficiente.
+  \item Clareza das regras e tempo: Sugeriu-se que as regras poderiam ser mais claras e que o tempo de execução, especialmente da primeira etapa, poderia ser estendido para permitir uma leitura e discussão mais aprofundada. A ideia de um exemplo prático ou vídeo explicativo foi mencionada para facilitar o entendimento inicial.
+  \item Estruturação da análise: Houve sugestões para padronizar a forma de registrar os riscos (um post-it por risco) e, em alguns casos, para uma organização das cartas (ex.: diagrama de Ishikawa) que pudesse guiar a identificação de riscos de forma mais estruturada.
+  \item Detalhes do cenário: Alguns participantes sugeriram que o caso de projeto fictício poderia ser mais detalhado ou que a dinâmica poderia exemplificar melhor o que considerar como risco.
+\end{itemize}
+
+Essas percepções qualitativas complementam os dados quantitativos, oferecendo insights importantes para a evolução e aprimoramento contínuo da dinâmica.
+
+%TODO(adicionar apendice com dados brutos?)
+
+\subsection{Avaliação com profissionais}
+
+Após a avaliação inicial conduzida com estudantes, uma segunda etapa da avaliação foi realizada com profissionais atuantes no mercado de tecnologia, visando obter feedback de um público com experiência prática em ambientes de desenvolvimento ágil. Nesta avaliação, também foi empregado o questionário do MEEGA+ adaptado, com o objetivo de avaliar a dinâmica de gamificação para a identificação e análise de riscos em equipes ágeis.
+
+A aplicação ocorreu no contexto do Laboratório Bridge da UFSC, um ambiente focado em pesquisa e desenvolvimento de software, com ênfase em inovação e soluções tecnológicas com compromisso social.
+
+Fizeram parte dessa avaliação 6 equipes de desenvolvimento ágil voluntárias, pertencentes a 2 projetos distintos do Laboratório Bridge, totalizando 43 participantes. Os participantes são profissionais experientes no mercado de tecnologia, com atuação em desenvolvimento ágil e gestão de projetos, incluindo cargos como \textit{Scrum Master}, \textit{Product Owner}, programador, \textit{tester} e \textit{designer}, variando de acordo com a configuração de cada equipe.
+
+A aplicação da dinâmica foi conduzida pelos \textit{Scrum Masters (SMs)} responsáveis pelas equipes, sem a participação direta da autora do trabalho durante a execução, com exceção da aplicação realizada na equipe da própria autora. Todas as equipes utilizaram o modelo digital/remoto da dinâmica, aproveitando plataformas de uso diário como Google Meet e Discord e o quadros colaborativos digital no FigJam para realizar a interação entre os participantes.
+
+O procedimento para a realização da dinâmica no laboratório envolveu as seguintes etapas:
+\begin{enumerate}
+  \item Explanação inicial: Apresentação da dinâmica e seus objetivos para os \textit{SMs} das equipes do laboratório Bridge, a fim de despertar o interesse e obter voluntários.
+  \item Reunião de alinhamento com \textit{SMs}: Para as equipes interessadas, foi realizada uma reunião de 30 minutos com os \textit{SMs} responsáveis. Nesta reunião, a dinâmica foi explicada em detalhes, assim como os objetivos da aplicação e as diretrizes para sua condução.
+  \item Aplicação autônoma pelas equipes: Os \textit{SMs} foram então orientados a aplicar a dinâmica com suas respectivas equipes, seguindo as regras e etapas previamente definidas.
+  \item Coleta de dados: Após a aplicação, os participantes foram convidados a responder o questionário do MEEGA+ adaptado. Foram obtidas 35 respostas ao questionário, representando um retorno de 81,4\% dos participantes, o que é um índice significativo para a análise.
+\end{enumerate}
+
+\begin{figure}[H]
+  \centering
+	\caption{\label{bridge-print-quadro-1} Organização do quadro pelos profissionais 01}
+  \includegraphics[width=0.8\textwidth]{bridge-print-quadro-1}
+	\legend{Fonte: Autora (2025)}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+	\caption{\label{bridge-print-quadro-2} Organização do quadro pelos profissionais 02}
+  \includegraphics[width=0.8\textwidth]{bridge-print-quadro-2}
+	\legend{Fonte: Autora (2025)}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+	\caption{\label{bridge-print-quadro-3} Organização do quadro pelos profissionais 03}
+  \includegraphics[width=0.8\textwidth]{bridge-print-quadro-3}
+	\legend{Fonte: Autora (2025)}
+\end{figure}
+
+Durante as aplicações, observaram-se algumas variações relevantes que caracterizam o contexto de uso da dinâmica:
+\begin{itemize}
+  \item A quantidade de participantes por aplicação variou entre 7 e 8 integrantes por equipe.
+  \item Quanto ao material utilizado, duas equipes aplicaram o sub-deck básico de cartas, três equipes aplicaram o deck completo, e uma equipe utilizou um sub-deck customizado de 17 cartas.
+  \item O tempo médio de aplicação também variou conforme o deck utilizado: 63 minutos para o deck básico, 90 minutos para o deck completo, e 60 minutos para o sub-deck de 17 cartas.
+  \item Em relação ao escopo da análise, metade das equipes realizou uma aplicação abrangente, enquanto a outra metade focou a dinâmica em riscos de próximas demandas com previsão de início de desenvolvimento iminente.
+\end{itemize}
+
+\subsubsection{Análise dos dados coletados}
+
+A análise dos dados coletados a partir dos questionários e das observações das aplicações com profissionais forneceu insights valiosos sobre a aplicabilidade e percepção da dinâmica em um ambiente de trabalho real. Os dados obtidos por meio dos questionários foram consolidados no formato proposto pelo modelo MEEGA+ adaptado, permitindo a geração de gráficos para uma análise detalhada dos aspectos avaliados.
+
+Em relação à Usabilidade, a Figura \ref{bridge-usabilidade} apresenta um gráfico consolidado com os resultados obtidos. É possível verificar que a proposta de gamificação obteve resultados bastante positivos neste critério. Todos os itens relacionados à aparência visual, combinação de cores/fontes, legibilidade e organização do conteúdo obtiveram mediana 2, indicando uma forte concordância dos participantes. Este resultado sugere que a dinâmica é percebida como visual e funcionalmente atrativa, com uma apresentação clara e profissional que contribui positivamente para a imersão e a primeira impressão. O item com o menor índice de aprovação, embora ainda elevado (88,5\% dos participantes concordaram), foi "Eu precisei aprender poucas coisas para poder começar a jogar". Isso indica que, apesar da alta usabilidade geral, uma simplificação adicional no processo de onboarding ou uma maior clareza nas instruções iniciais pode ser benéfica para otimizar a experiência inicial de todos os grupos, especialmente considerando a restrição de tempo em ambientes profissionais.
+
+\begin{figure}[H]
+	\caption{\label{bridge-usabilidade} Resultados da avaliação de usabilidade com profissionais}
+  \includegraphics[width=\textwidth]{bridge-usabilidade}
+	\legend{Fonte: Autora (2025)}
+\end{figure}
+
+No critério Experiência do Jogador, a Figura \ref{bridge-xp-jogador} ilustra os resultados obtidos. Um dos aspectos cruciais para a adoção de novas ferramentas é a facilidade de aprendizado. A análise revelou que itens como curva de aprendizado, clareza das regras e facilidade de jogar apresentaram mediana 2. A distribuição das respostas para esses itens mostrou uma grande maioria de votos entre 1 (Concordo) e 2 (Concordo fortemente), com pouquíssimas notas negativas. Este é um item fundamental, pois demonstra que a dinâmica é intuitiva e acessível, com um tempo de adaptação mínimo, o que é essencial para sua aplicação em grupos diversos e em contextos profissionais onde a otimização do tempo é prioritária. A eficácia da instrução e da estrutura da dinâmica é, portanto, um ponto forte.
+
+Observa-se que a dinâmica demonstrou resultados positivos em diversos tópicos, mas especificamente nos itens relacionados a desafio adequado, tarefas não monótonas, sentimento de realização e satisfação com o aprendizado, a mediana foi 1 (Concordo). A distribuição das respostas para esses itens foi mais variada, apresentando uma maior dispersão, com alguns votos em 0 (Indiferente), -1 (Discordo) e até -2 (Discordo fortemente). Isso sugere que, embora a dinâmica seja percebida como fácil e clara, há oportunidades para torná-la mais desafiadora ou menos repetitiva, a fim de gerar um engajamento mais profundo e uma sensação de conquista mais pronunciada. Este é um espaço para a evolução de mecânicas ou a introdução de variações nas atividades que possam enriquecer a experiência a longo prazo.
+
+A dimensão de interação social é crucial para dinâmicas em grupo. Os itens analisados, como interação com outras pessoas, cooperação/competição e sentimento durante a interação, obtiveram mediana 2, com uma alta concentração nas notas mais altas. Esse resultado indica que a dimensão social da dinâmica está funcionando muito bem, promovendo um ambiente colaborativo e positivo. Os jogadores se sentiram conectados e engajados com os outros participantes, o que é um ponto forte para fortalecer a cultura colaborativa e a comunicação dentro das equipes.
+
+Para a análise dos itens diversão, momentos de alegria, atenção inicial e relevância do conteúdo revelou que todos obtiveram mediana 2. Houve pouquíssimos votos abaixo de 1 (Concordo). Isso demonstra que a dinâmica gera um engajamento emocional positivo desde o início e consegue manter o interesse dos participantes. Este é um fator fundamental para criar uma experiência memorável e com maior retenção do aprendizado, pois a relevância do conteúdo é percebida de forma lúdica.
+
+\begin{figure}[H]
+	\caption{\label{bridge-xp-jogador} Resultados da avaliação de experiência do jogador com profissionais}
+  \includegraphics[width=\textwidth]{bridge-xp-jogador}
+	\legend{Fonte: Autora (2025)}
+\end{figure}
+
+Considerando os objetivos gerais diretamente relacionados à identificação e análise de riscos, os itens analisados como percepção de riscos, vulnerabilidades e análise de riscos obtiveram mediana 2. A maioria dos votos concentrou-se entre 1 (Concordo) e 2 (Concordo fortemente). Este resultado, apresentado também na Figura \ref{bridge-afirmativas}, é crucial, pois confirma que a dinâmica cumpre eficazmente sua função. Os profissionais percebem que fizeram algo útil e diretamente aplicável ao contexto de seus projetos, validando a eficácia da ferramenta no atingimento de seus propósitos centrais.
+
+\begin{figure}[H]
+	\caption{\label{bridge-afirmativas} Resultados da avaliação de afirmativas específicas com profissionais}
+  \includegraphics[width=\textwidth]{bridge-afirmativas}
+	\legend{Fonte: Autora (2025)}
+\end{figure}
+
+Além dos dados quantitativos, o feedback qualitativo dos profissionais revelou pontos de destaque e oportunidades de aprimoramento.
+
+Os aspectos mais elogiados pelos participantes foram:
+\begin{itemize}
+  \item Eficácia na identificação e análise de Rrscos: Muitos profissionais destacaram a capacidade da dinâmica de levantar riscos que não haviam sido previamente definidos ou formalmente discutidos pela equipe. A ferramenta foi vista como um catalisador para debates e análises conjuntas, contribuindo para uma reflexão sobre vulnerabilidades e para a priorização de riscos importantes.
+  \item Formato lúdico e engajador: A abordagem gamificada, com o design atrativo das cartas, personagens (como os "pokemons" e seus nomes) e o sistema de moedas, foi amplamente elogiada por tornar a discussão de riscos mais descontraída, divertida, dinâmica e engajadora, mesmo em temas complexos. A facilidade de jogar e a interatividade foram pontos frequentemente mencionados.
+  \item Estímulo à interação e colaboração: A dinâmica foi reconhecida por promover a participação ativa de todos os integrantes da equipe e por facilitar a integração e o debate saudável, o que, em muitos casos, resultou na primeira oportunidade formal de discutir riscos em conjunto.
+  \item Organização e clareza: A objetividade dos textos das cartas e a clareza das perguntas foram destacadas por facilitar a identificação dos riscos. A organização visual do material também foi mencionada como um facilitador.
+\end{itemize}
+
+Quanto aos aspectos que poderiam ser aprimorados, as sugestões dos profissionais incluíram:
+\begin{itemize}
+  \item Duração e fadiga: Para o deck completo, alguns participantes relataram um certo cansaço ou queda na atenção ao longo da dinâmica, sugerindo que uma duração ideal poderia ser em torno de 1 hora.
+  \item Repetitividade e sobreposição de cartas: Similar ao feedback dos estudantes, houve menção a algumas cartas que pareciam ter temas muito parecidos ou elementos difíceis de diferenciar (ex: "Stakeon" e "Clientor"). A sugestão é revisar os textos ou o número de cartas para evitar redundâncias.
+  \item Clareza e formatação das perguntas: Algumas sugestões pontuais sobre a redação das perguntas nas cartas foram feitas, indicando que a frase poderia estar diretamente formatada como um "risco" em vez de uma pergunta, para evitar ambiguidades na interpretação da concordância.
+  \item Ferramenta digital e usabilidade da plataforma: Embora a aplicação remota tenha sido funcional, houve sugestões para aprimorar a experiência em plataformas digitais (ex: Figma), como o bloqueio de elementos de fundo e a consideração de um aplicativo interativo próprio, para evitar dificuldades técnicas.
+  \item Aprofundamento pós-dinâmica: Alguns participantes apontaram a necessidade de uma sequência para a dinâmica, como um módulo ou ferramenta para organizar os planos de ação após o levantamento dos riscos, ou uma pré-seleção de cartas para focar em vulnerabilidades específicas antes da aplicação completa.
+  \item Detalhes e explicabilidade: Sugeriu-se que o manual ou as explicações poderiam ser ainda mais detalhadas, com exemplos ou vídeos práticos de uma rodada, para facilitar o entendimento inicial, especialmente sobre como considerar e registrar os riscos.
+\end{itemize}
+
+Essas percepções qualitativas dos profissionais são cruciais, pois complementam os dados quantitativos, oferecendo insights práticos e contextuais para futuras iterações e aprimoramentos da dinâmica.
+
+\section{Discussão}
+\label{sec:discussao}
+
+Este capítulo apresentou a avaliação da dinâmica proposta, realizada em dois contextos distintos: com estudantes de graduação e com profissionais atuantes no mercado. A análise comparativa dos resultados quantitativos, obtidos por meio do questionário MEEGA+ adaptado, e das percepções qualitativas coletadas de ambos os públicos, permite uma compreensão aprofundada da eficácia, usabilidade e aplicabilidade da dinâmica.
+
+Apesar da natureza distinta dos públicos e ambientes de aplicação, a dinâmica demonstrou consistentemente pontos fortes em diversas dimensões. Conforme observado tanto nas avaliações com estudantes quanto com profissionais, o design visual da dinâmica foi universalmente bem avaliado, com todos os itens atingindo mediana 2 (Concordo fortemente) em ambos os grupos. Essa unanimidade reforça que a qualidade estética e a clareza da apresentação são diferenciais importantes e contribuem positivamente para a experiência inicial do usuário.
+
+Similarmente, a interação social foi um ponto de excelência em ambas as avaliações, com todos os itens sociais (interação, cooperação/competição e sentimentos positivos ao interagir) obtendo mediana 2. Isso evidencia a capacidade inerente da dinâmica em promover a colaboração e o engajamento entre os participantes, independentemente do seu nível de experiência ou contexto, o que é fundamental para atividades de análise de riscos em equipes ágeis.
+
+Adicionalmente, os objetivos específicos da dinâmica foram consistentemente bem avaliados, com todas as afirmativas pertinentes a esses critérios atingindo mediana 2 em ambos os públicos. Isso inclui a clareza da relação com a disciplina/contexto, a aprendizagem proporcionada, a relevância do conteúdo e a contribuição direta para o reconhecimento e análise de riscos. Tal resultado confirma que a dinâmica cumpre com excelência sua função central de auxiliar na identificação e discussão de riscos, e é percebida como uma ferramenta didática e prática eficaz.
+
+A comparação entre os dois grupos revelou discrepâncias em dimensões específicas, que fornecem insights para o aprimoramento da dinâmica e sua adequação a diferentes contextos de aplicação. As principais discrepâncias observadas são:
+
+\begin{itemize}
+  \item \textbf{Facilidade de aprendizado:} Os estudantes indicaram uma dificuldade significativamente maior para aprender a jogar e compreender as regras, em contraste com a percepção dos profissionais. A afirmativa "Eu precisei aprender poucas coisas para começar a jogar o jogo", por exemplo, teve mediana 0 para estudantes, enquanto para profissionais foi 2. Similarmente, outras afirmativas como "Aprender a jogar este jogo foi fácil para mim", "Eu acho que a maioria das pessoas aprenderiam a jogar este jogo rapidamente", "Eu considero que o jogo é fácil de jogar" e "As regras do jogo são claras e compreensíveis" apresentaram mediana 1 para estudantes e 2 para profissionais. Essa discrepância pode estar relacionada ao tempo limitado para a aplicação em sala de aula, à pressão inerente a um contexto acadêmico ou a uma menor familiaridade com o formato de gamificação para fins práticos. Isso sugere a necessidade de desenvolver um processo de onboarding mais robusto e contextualizado para ambientes educacionais, talvez com a inclusão de um vídeo instrutivo ou de uma rodada de exemplo.
+
+  \item \textbf{Engajamento emocional e diversão:} Itens relacionados à diversão e ao sentimento de realização foram avaliados com medianas mais altas pelos profissionais. Afirmativas como "Me diverti com o jogo" e "Aconteceu algo no jogo que me fez sorrir" tiveram mediana 1 para estudantes e 2 para profissionais. O mesmo padrão foi observado para "O jogo não se torna monótono nas suas tarefas" e "Completar as tarefas do jogo me deu um sentimento de realização", que também apresentaram mediana 1 para estudantes e 2 para profissionais. Além disso, a recomendação geral do jogo ("Eu recomendaria este jogo para meus colegas") seguiu essa tendência, com mediana 1 para estudantes e 2 para profissionais. Isso indica que o aspecto lúdico e a sensação de conquista foram mais fortes fora da sala de aula. É provável que o ambiente mais formal da sala de aula tenha inibido o engajamento espontâneo e a expressividade emocional. Para otimizar o engajamento lúdico em contextos acadêmicos, seria benéfico criar um clima mais descontraído durante a aplicação e considerar a permissão de pausas para conversas livres, o que pode aumentar a imersão e o prazer na experiência.
+\end{itemize}
+
+Em síntese, a maior discrepância entre os dois públicos reside na percepção da facilidade de aprendizado e no nível de engajamento lúdico. A dinâmica demonstra um desempenho visual e pedagógico consistentemente elevado, validando sua concepção e seus objetivos centrais. Contudo, para que a experiência em sala de aula atinja o mesmo nível de fluidez e diversão percebido em ambientes profissionais, são necessários ajustes no processo de onboarding e na ambientação da atividade. A promoção de um ambiente mais descontraído e a adequação das instruções iniciais são as principais vias para mitigar as diferenças observadas e maximizar o potencial da dinâmica em diferentes contextos de aplicação.
+
+\section{Ameaças à validade}
+
+A condução de qualquer estudo empírico, incluindo a avaliação de uma dinâmica de gamificação, está sujeita a diversas ameaças à validade que podem limitar a generalização e a confiança nos resultados obtidos. Esta seção discute as potenciais ameaças à validade identificadas neste estudo, categorizando-as de acordo com a taxonomia comum de validação de pesquisa, e propondo estratégias para mitigar seus impactos.
+
+\subsection{Ameaças à validade de construto}
+\label{sec:ameacas-construto}
+
+A validade de construto refere-se à extensão em que as variáveis operacionais (como a forma de medir a usabilidade ou a diversão da dinâmica) realmente representam os construtos teóricos que se pretende medir.
+\begin{itemize}
+  \item \textbf{Subjetividade das percepções:} A principal ameaça aqui reside na natureza subjetiva das respostas aos questionários. A percepção de "diversão", "facilidade de uso" ou "relevância" pode variar amplamente entre os participantes, influenciada por fatores pessoais, expectativas prévias ou até mesmo o humor no momento da avaliação.
+  \begin{itemize}
+    \item \textit{Mitigação:} A utilização de um modelo de avaliação consolidado como o MEEGA+ (mesmo que adaptado) ajuda a padronizar a coleta de dados, mas a interpretação ainda é individual. A combinação de dados quantitativos (questionário) com dados qualitativos (comentários abertos) foi utilizada para fornecer uma visão mais completa e triangulada das percepções.
+    \end{itemize}
+  \item \textbf{Interpretação das perguntas do questionário:} Embora o questionário tenha sido adaptado e revisado, sempre existe o risco de que os participantes interpretem as perguntas de maneira diferente do que foi intencionado pelos pesquisadores. Isso pode levar a respostas que não refletem precisamente o construto que se desejava medir.
+  \begin{itemize}
+    \item \textit{Mitigação:} A clareza na redação das perguntas e a oportunidade para os participantes tirarem dúvidas durante as aplicações (especialmente na modalidade presencial) foram consideradas. O pré-teste do questionário, se realizado, também contribuiria para identificar ambiguidades.
+    \end{itemize}
+  \item \textbf{Adaptação do instrumento de avaliação:} A adaptação de um instrumento de avaliação consolidado, como o corte de itens do MEEGA+ (SAVI; WANGENHEIM; BORGATTO, 2011), representa uma ameaça potencial à validade de construto. A modificação de um instrumento validado pode comprometer suas propriedades psicométricas originais, uma vez que a retirada de itens pode alterar o que o instrumento de fato mede. Consequentemente, não é possível assegurar que o instrumento adaptado mede precisamente os mesmos construtos que a versão original, impactando a validade dos resultados obtidos.
+  \begin{itemize}
+    \item \textit{Mitigação:} A adaptação foi realizada buscando manter a essência dos construtos originais do MEEGA+ relevantes para a avaliação de gamificação. A análise dos resultados das afirmativas específicas, que foram customizadas, visa complementar a visão obtida pelos itens gerais do MEEGA+ adaptado.
+    \end{itemize}
+  \item \textbf{Efeito Hawthorne:} A participação em um estudo pode, por si só, alterar o comportamento ou as respostas dos indivíduos. Os participantes podem ter se esforçado mais na dinâmica ou fornecido respostas mais positivas no questionário simplesmente por saberem que estavam sendo avaliados.
+  \begin{itemize}
+    \item \textit{Mitigação:} A garantia de anonimato nas respostas do questionário pode reduzir esse efeito, mas não eliminá-lo completamente. A aplicação por Scrum Masters, sem a presença constante da autora, também pode ter ajudado a reduzir a percepção de uma avaliação direta.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Ameaças à validade interna}
+\label{sec:ameacas-interna}
+
+A validade interna preocupa-se com a extensão em que a relação de causa e efeito observada entre as variáveis é realmente genuína e não influenciada por fatores externos ou confounding factors.
+
+\begin{itemize}
+  \item \textbf{Diferenças entre grupos de aplicação:} As características dos grupos (estudantes vs. profissionais, número de participantes por grupo, decks de cartas utilizados, tempo de aplicação) variaram. Essas diferenças podem ter influenciado os resultados e as percepções dos participantes, em vez de serem causadas exclusivamente pela dinâmica em si.
+  \begin{itemize}
+    \item \textit{Mitigação:} A análise separada dos resultados para cada grupo e a identificação das discrepâncias (como feito na seção de discussão) buscam contextualizar essas variações. No entanto, a impossibilidade de randomizar completamente as condições de aplicação é uma limitação inerente.
+    \end{itemize}
+  \item \textbf{Envolvimento e potencial viés do pesquisador:} A presença e influência do pesquisador nos momentos de avaliação podem representar uma ameaça. Como o autor esteve envolvido de maneira próxima e ativa no processo de coleta de dados e avaliação, especialmente na aplicação com sua própria equipe de profissionais do mercado, pode ter ocorrido uma influência inadvertida nos resultados. O pesquisador pode, mesmo que inconscientemente, introduzir seus próprios preconceitos, expectativas ou interpretações nos dados coletados, comprometendo a objetividade e a validade interna do estudo. Para uma validação mais robusta desses resultados, seria necessária uma avaliação prática sem a participação ativa do autor, por um terceiro imparcial.
+  \begin{itemize}
+    \item \textit{Mitigação:} Como contorno desta limitação, o pesquisador buscou manter uma postura neutra e imparcial durante as aplicações, abstendo-se de influenciar as discussões ou respostas dos participantes. Além disso, a maioria das aplicações com profissionais foi conduzida pelos próprios Scrum Masters das equipes, o que reduziu a presença direta da autora.
+    \end{itemize}
+  \item \textbf{Maturação:} O conhecimento prévio dos participantes sobre gestão de riscos ou sobre gamificação pode ter evoluído durante o período do estudo, influenciando suas respostas.
+    \begin{itemize}
+    \item \textit{Mitigação:} As aplicações foram relativamente curtas, o que minimiza o efeito da maturação em termos de aquisição de novos conhecimentos significativos durante a dinâmica.
+    \end{itemize}
+  \item \textbf{História:} Eventos externos que ocorreram durante o período das aplicações (e.g., projetos em crise, pressão de prazos) podem ter afetado o humor, a atenção e a percepção dos participantes sobre a dinâmica.
+    \begin{itemize}
+    \item \textit{Mitigação:} É difícil controlar todos os eventos externos na vida dos participantes. A aplicação em múltiplos grupos em momentos distintos pode diluir o impacto de um evento isolado em um único grupo.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Ameaças à validade externa}
+\label{sec:ameacas-externa}
+
+A validade externa refere-se à capacidade de generalizar os resultados do estudo para outras populações, ambientes ou contextos fora do escopo da pesquisa.
+
+\begin{itemize}
+  \item \textbf{Estratégia de seleção da amostra e viés de seleção:} A estratégia de seleção da amostra adotada, caracterizada por ser de conveniência e, em parte, por vínculos pessoais com os profissionais envolvidos no Laboratório Bridge, pode introduzir um viés de seleção. Essas conexões pré-existentes podem ter influenciado a escolha dos participantes, resultando em uma amostra que pode não ser totalmente representativa de uma população mais ampla de profissionais ou estudantes. Essa limitação compromete a generalização dos resultados e, consequentemente, a validade externa do estudo.
+    \begin{itemize}
+    \item \textit{Mitigação:} Embora inerente a estudos com amostras de conveniência, a avaliação em dois públicos distintos (acadêmicos e profissionais) e com diferentes níveis de experiência tenta expandir um pouco a representatividade dos resultados. A descrição detalhada do perfil dos participantes busca fornecer transparência sobre as características da amostra.
+    \end{itemize}
+  \item \textbf{Contexto específico da aplicação:} A dinâmica foi aplicada em um ambiente de sala de aula e em um laboratório de Pesquisa e Desenvolvimento (Laboratório Bridge). As características desses ambientes (e.g., cultura da equipe, tipo de projeto, familiaridade com ferramentas ágeis) podem não ser representativas de todos os cenários de desenvolvimento de software.
+    \begin{itemize}
+    \item \textit{Mitigação:} A documentação detalhada do contexto de aplicação busca fornecer subsídios para que futuros pesquisadores possam avaliar a similaridade com seus próprios ambientes.
+    \end{itemize}
+  \item \textbf{Modalidade de aplicação (remota/Figma):} A maioria das aplicações com profissionais foi em ambiente remoto, utilizando ferramentas como o Figma. Isso pode ter influenciado a interação e a percepção da dinâmica em comparação com uma aplicação presencial com materiais físicos.
+    \begin{itemize}
+    \item \textit{Mitigação:} A identificação clara da modalidade de aplicação permite que o leitor pondere os resultados sob essa luz. A comparação com a aplicação presencial com alunos (onde a dinâmica é física) pode fornecer alguns insights, embora não seja uma comparação direta devido às outras variáveis.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Ameaças à validade de conclusão estatística}
+\label{sec:ameacas-estatistica}
+
+Esta validade diz respeito à inferência correta da relação entre as variáveis utilizando métodos estatísticos.
+
+\begin{itemize}
+  \item \textbf{Tamanho da amostra:} O número total de participantes (45 estudantes e 43 profissionais) e o número de respostas ao questionário (30 e 35, respectivamente) podem ser considerados moderados para algumas análises estatísticas mais robustas, limitando o poder de detectar efeitos pequenos, mas relevantes.
+    \begin{itemize}
+    \item \textit{Mitigação:} A análise baseou-se principalmente em medianas e frequências percentuais, que são adequadas para tamanhos de amostra menores e dados ordinais (escala Likert). A complementação com dados qualitativos também fortalece a interpretação dos resultados.
+    \end{itemize}
+  \item \textbf{Variabilidade dentro dos grupos:} As variações nas condições de aplicação entre as equipes de profissionais (sub-decks diferentes, tempos variados, foco abrangente vs. específico) podem ter aumentado a variabilidade dos dados, dificultando a identificação de padrões claros.
+    \begin{itemize}
+    \item \textit{Mitigação:} A descrição dessas variações na seção da avaliação com os profissionais ajuda a contextualizar os resultados. Em futuras pesquisas, uma maior padronização das condições de aplicação seria ideal para reduzir essa variabilidade.
+    \end{itemize}
+\end{itemize}
 
 %------------------------------------------------------------------------------%
 %------------------------------------------------------------------------------%
 
 \chapter{Conclusão}
+
+O presente trabalho teve como objetivo principal desenvolver e avaliar uma dinâmica gamificada para auxiliar na análise e identificação de riscos em equipes ágeis de desenvolvimento de software. Para alcançar este propósito, o estudo foi estruturado em uma série de etapas metodológicas que permitiram a construção de uma base teórica sólida, o entendimento do estado da arte na gestão de riscos em contextos ágeis, o desenvolvimento da dinâmica e sua posterior avaliação em diferentes ambientes e com distintos públicos.
+
+Inicialmente, a pesquisa realizou uma análise e fundamentação teórica abrangente, abordando conceitos essenciais de gerência de projetos, gestão de riscos, métodos ágeis e gamificação. Este embasamento conceitual, detalhado no Capítulo 2, foi crucial para contextualizar a problemática e guiar as etapas subsequentes do trabalho. Complementarmente, um mapeamento sistemático da literatura, apresentado no Capítulo 3, foi conduzido com o intuito de identificar e analisar os riscos mais comuns em projetos ágeis, as técnicas de gestão de riscos prevalentemente utilizadas e os resultados obtidos com a aplicação de tais práticas. Esse levantamento do estado da arte forneceu insights valiosos que fundamentaram a concepção e o desenvolvimento da dinâmica gamificada.
+
+A partir da revisão teórica e do mapeamento sistemático, foi identificada a necessidade de uma ferramenta mais interativa e engajadora para facilitar a gestão de riscos, especialmente a etapa de identificação e análise. Com base nessa lacuna, o desenvolvimento da dinâmica gamificada foi realizado, seguindo uma abordagem estruturada que incluiu a definição de objetivos, análise do público-alvo e prototipagem da solução, conforme detalhado no Capítulo 4 e 5. O material resultante, composto por cartas de riscos e um guia de aplicação, foi projetado para ser intuitivo e adaptável.
+
+A avaliação da dinâmica foi um pilar central deste trabalho, visando analisar a motivação, experiência do usuário e aprendizagem proporcionada pela proposta gamificada. Conforme apresentado no Capítulo 6, a dinâmica foi aplicada com dois públicos distintos: estudantes de graduação da Universidade Federal de Santa Catarina (UFSC) e profissionais do mercado de trabalho, em contextos de projetos ágeis reais. Os resultados dessa avaliação foram predominantemente positivos em diversas dimensões.
+
+As avaliações com ambos os públicos, conforme discutido na seção \ref{sec:discussao}, evidenciaram que a dinâmica se destaca em aspectos cruciais. O design visual e a apresentação estética do material foram unanimemente elogiados, contribuindo para uma experiência agradável e profissional. A dimensão de interação social também obteve alta aprovação, confirmando a eficácia da dinâmica em promover a colaboração e o engajamento entre os participantes. Mais importante, os objetivos pedagógicos e a conexão com o conteúdo sobre riscos foram amplamente reconhecidos, indicando que a dinâmica cumpre sua função de auxiliar na identificação e análise de riscos de forma clara e relevante, sendo até preferível a outros métodos tradicionais por alguns participantes.
+
+Contudo, a comparação entre os grupos de estudantes e profissionais revelou discrepâncias notáveis. A facilidade de aprendizado e o engajamento emocional/diversão foram percebidos de forma mais acentuada pelos profissionais. As medianas mais baixas e a maior dispersão de respostas entre os estudantes sugerem que o ambiente acadêmico, com suas limitações de tempo e potencial pressão avaliativa, pode ter inibido parte do aspecto lúdico e intuitivo da dinâmica, demandando um processo adaptado mais direcionado e uma ambientação mais descontraída para esse público.
+
+Em síntese, este trabalho demonstra que a dinâmica gamificada desenvolvida é uma abordagem promissora e eficaz para a análise e identificação de riscos em equipes ágeis. Ela se mostrou capaz de engajar os participantes de forma interativa, promover a colaboração e, de maneira mais significativa, facilitar a compreensão e o reconhecimento de riscos em projetos de software. Os materiais necessários para a execução da dinâmica estão disponíveis para download em: \url{https://github.com/martinsamanda/tcc} e também nos Apêndices deste trabalho.
+
+\section{Trabalhos futuros}
+\label{sec:trabalhos-futuros}
+
+Como indicação para trabalhos futuros, sugere-se a expansão e o aprimoramento da dinâmica em diversas frentes:
+
+\begin{itemize}
+\item \textbf{Expansão do conteúdo das cartas:} A criação de cartas para os demais riscos identificados na taxonomia usada como base \cite{Taxonomy} (32 elementos menos citados na literatura ficaram de fora da dinâmica) pode enriquecer ainda mais a dinâmica, tornando-a mais abrangente e útil para equipes que enfrentam uma variedade maior de desafios em projetos de software.
+\item \textbf{Aplicação em outros contextos:} É recomendada a aplicação da dinâmica em outros contextos além dos investigados neste estudo, como em projetos de software não ágeis ou em empresas de diferentes portes e segmentos. Tal expansão pode ampliar a aplicabilidade da abordagem e validar sua eficácia em cenários mais diversificados.
+\item \textbf{Aprofundamento pós-dinâmica:} Um ponto de melhoria dos feedbacks foi a necessidade de uma sequência para a dinâmica. Sugere-se o desenvolvimento de um módulo ou ferramenta complementar que auxilie as equipes a organizar e planejar planos de ação após o levantamento e análise inicial dos riscos, transformando o input da dinâmica em saídas acionáveis para o projeto.
+\item \textbf{Desenvolvimento de plataforma online:} A criação de uma plataforma online para a dinâmica representaria um avanço significativo, permitindo que equipes distribuídas participem da atividade de forma assíncrona ou síncrona de maneira mais facilitada. Isso ampliaria o alcance e a flexibilidade da abordagem, oferecendo uma experiência mais dinâmica e interativa para ambientes remotos ou híbridos.
+\end{itemize}
 
 %------------------------------------------------------------------------------%
 
@@ -1032,10 +1480,20 @@ Esta proposta tem viabilidade moderada. A preparação inicial das cartas exige 
 \bibliography{tcc}
 
 % Apêndices -----------------------------------------------------------------%
+
+\clearpage
+\thispagestyle{empty} % Remove cabeçalhos e numeração da página, se necessário
+
+\vfill
+\begin{center}
+    {\LARGE Apêndices} % Define o tamanho do título
+\end{center}
+\vfill
+
 \appendix
 
-\chapter*{Apêndice A – Strings de busca adaptadas}\label{apendiceA}
-\addcontentsline{toc}{chapter}{Apêndice A – Strings de busca adaptadas}
+\chapter{Strings de busca adaptadas}\label{apendiceA}
+% \addcontentsline{toc}{chapter}{Apêndice A – Strings de busca adaptadas} %
 
 \vspace{-2em} % Ajusta o espaço negativo para reduzir a distância 
 
@@ -1055,9 +1513,9 @@ Esta proposta tem viabilidade moderada. A preparação inicial das cartas exige 
 \end{table}
 
 
-\chapter*{Apêndice B – Estudos selecionados}
+\chapter{Estudos selecionados}
 \label{apendiceB}
-\addcontentsline{toc}{chapter}{Apêndice B – Estudos selecionados}
+% \addcontentsline{toc}{chapter}{Apêndice B – Estudos selecionados}%
 
 \vspace{-2em} % Ajusta o espaço negativo para reduzir a distância
 
@@ -1092,9 +1550,8 @@ Esta proposta tem viabilidade moderada. A preparação inicial das cartas exige 
   \hline
 \end{longtable}
 
-\chapter*{Apêndice C – Riscos categorizados}
+\chapter{Riscos categorizados}
 \label{apendiceC}
-\addcontentsline{toc}{chapter}{Apêndice C – Riscos categorizados}
 
 \vspace{-2em} % Ajusta o espaço negativo para reduzir a distância
 
@@ -1135,7 +1592,7 @@ Esta proposta tem viabilidade moderada. A preparação inicial das cartas exige 
   \hline
   B. Development Environment & 1. Development Process & c. Process Control & S6 \\
   \cline{3-4}
-  & & d. Familiarity & S1 \\
+  & & d. Familiarity & S1, S6 \\
   \cline{2-4}
   & 2. Development System & a. Capacity & S6 \\
   \cline{3-4}
@@ -1158,8 +1615,6 @@ Esta proposta tem viabilidade moderada. A preparação inicial das cartas exige 
   & & c. Communication & S1, S5, S6 \\
   \cline{3-4}
   & & d. Morale & S6 \\
-  \cline{3-4}
-  & & e. Reliability & S6 \\
   \hline
   C. Program Constraints & 1. Resources & a. Schedule & S1, S5, S6, S8 \\
   \cline{3-4}
@@ -1181,6 +1636,10 @@ Esta proposta tem viabilidade moderada. A preparação inicial das cartas exige 
   \hline
 \end{longtable}
 
+\chapter{Projeto fictício}
+\label{apendiceD}
+
+%TODO(adicionar apendice)
 
 %------------------------------------------------------------------------------%
 

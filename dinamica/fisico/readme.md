@@ -19,7 +19,7 @@ Para montar um kit completo da dinâmica **Tarot dos Riscos**, você precisará 
 ## 📘 Manual da dinâmica
 
 - `A4-manual-regras.pdf`
-  Manual pronto para impressão em papel A4, com dobra estilo flier.
+  Manual pronto para impressão em papel A4, com dobra estilo _flyer_.
   Contém as instruções completas para aplicação presencial da dinâmica.
 
 ## 🪙 Moedas do jogo
