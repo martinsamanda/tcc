@@ -23,6 +23,7 @@
 \usepackage{cleveref}
 \usepackage{multirow}
 \usepackage{longtable}
+\usepackage{pdfpages}
 
 \renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
 \renewcommand{\backref}{}
@@ -125,7 +126,7 @@
 \begin{resumo}
   Com a popularização dos métodos ágeis cada vez mais organizações adotam este abordagem pela flexibilidade  e adaptabilidade proposta pelo modelo. Entretanto, apesar destas vantagens o uso destes métodos traz consigo desafios relacionados à gestão de riscos nos projetos, já que frequentemente não possuem um processo explícito para tal gerenciamento.
   O objetivo deste trabalho é analisar, desenvolver, aplicar e avaliar uma dinâmica que auxilie no processo de gestão de riscos, por meio de um estudo de caso aplicado em equipes ágeis e em sala de aula. A proposta é criar uma maneira lúdica e facilitada de gerenciamento de riscos, adaptada para ambientes ágeis.
-  Para isto o trabalho será baseado em uma estrutura que inicia com uma fundamentação teórica e a análise do estado da arte sobre a gestão de riscos em metodologias ágeis. Com base nessa análise, será desenvolvida uma dinâmica para gestão de riscos no contexto ágil. Em seguida, a eficácia dessa dinâmica será avaliada por meio da aplicação em estudos de caso com equipes de desenvolvimento de software e em cenários educacionais, como salas de aula.
+  Para isto o trabalho será baseado em uma estrutura que inicia com uma fundamentação teórica e a análise do estado da arte sobre a gestão de riscos em metodologias ágeis. Com base nessa análise, será desenvolvida uma dinâmica para gestão de riscos no contexto ágil. Em seguida, a eficácia dessa dinâmica será avaliada por meio da aplicação em estudos de caso com equipes de desenvolvimento de \textit{software} e em cenários educacionais, como salas de aula.
   Espera-se com isso o desenvolvimento e a validação de uma dinâmica lúdica que auxilie os profissionais que utilizam metodologias ágeis na análise e identificação de riscos. Acredita-se que, com essa abordagem, será possível mitigar impactos negativos potenciais nos projetos, promovendo uma entrega de valor contínua e eficiente pelas equipes que integrarem a ferramenta ao seu processo. 
   \vspace{\onelineskip}
 
@@ -172,6 +173,13 @@
   \item[XP] eXtreme Programming
   \item[DAD] Disciplined Agile Delivery 
   \item[SAFe] Scaled Agile Framework
+  \item[PMBOK] Project Management Body of Knowledge
+  \item[CMMI] Capability Maturity Model Integration
+  \item[ISO] International Organization for Standardization
+  \item[IEC] International Electrotechnical Commission
+  \item[IEEE] Institute of Electrical and Electronics Engineers
+  \item[SEI] Software Engineering Institute
+  \item[EAP] Estrutura Analítica do Projeto
 \end{siglas}
 
 % Sumário ---------------------------------------------------------------------%
@@ -186,11 +194,11 @@
 \chapter{Introdução e objetivos} % Ideias gerais e por quê fazer?
 
 \section{Introdução}
-As metodologias ágeis têm se consolidado como uma das abordagens mais eficazes e flexíveis para o desenvolvimento de software e gestão de projetos na área de tecnologia. Essas metodologias, que incluem frameworks como Scrum, Kanban e XP, são amplamente adotadas pois promovem uma rápida adaptação às mudanças e entrega contínua de valor aos clientes/usuários. No entanto, um dos desafios associados a essas práticas é o da gestão de riscos, que muitas vezes não é realizada de maneira explícita, deixando as equipes vulneráveis a imprevistos que podem comprometer o sucesso dos projetos.
+As metodologias ágeis têm se consolidado como uma das abordagens mais eficazes e flexíveis para o desenvolvimento de \textit{software} e gestão de projetos na área de tecnologia. Essas metodologias, que incluem frameworks como \textit{Scrum}, \textit{Kanban} e \textit{XP}, são amplamente adotadas pois promovem uma rápida adaptação às mudanças e entrega contínua de valor aos clientes/usuários. No entanto, um dos desafios associados a essas práticas é o da gestão de riscos, que muitas vezes não é realizada de maneira explícita, deixando as equipes vulneráveis a imprevistos que podem comprometer o sucesso dos projetos.
 
 O problema identificado neste trabalho é que as equipes ágeis, ao não possuírem um processo de gerenciamento de riscos explícito, podem sofrer consequências negativas que poderiam ser mitigadas se houvesse a implementação de um gerenciamento de riscos estruturado. Assim, a hipótese central do trabalho é que a criação e implementação de uma dinâmica lúdica e facilitada de gestão de riscos para equipes ágeis pode melhorar significativamente a identificação e a mitigação de riscos nessas equipes, resultando em uma entrega de valor mais consistente e eficiente. 
 
-Este trabalho se mostra necessário devido à lacuna existente na integração de práticas explícitas de gestão de riscos no contexto das metodologias ágeis. A falta de um foco estruturado na gestão de riscos nessas metodologias pode levar a atrasos, aumento de custos e, em última instância, ao fracasso de projetos. A introdução de uma dinâmica lúdica para a gestão de riscos visa tornar o processo mais acessível e menos oneroso para as equipes, promovendo um ambiente de trabalho mais colaborativo e consciente dos riscos. Ao desenvolver e validar uma dinâmica lúdica para este fim, o trabalho pode contribuir para a melhoria das práticas de desenvolvimento de software, tornando-as mais robustas e resilientes. Os resultados esperados incluem a criação de uma ferramenta prática e acessível que pode ser adotada por diversas equipes e organizações.
+Este trabalho se mostra necessário devido à lacuna existente na integração de práticas explícitas de gestão de riscos no contexto das metodologias ágeis. A falta de um foco estruturado na gestão de riscos nessas metodologias pode levar a atrasos, aumento de custos e, em última instância, ao fracasso de projetos. A introdução de uma dinâmica lúdica para a gestão de riscos visa tornar o processo mais acessível e menos oneroso para as equipes, promovendo um ambiente de trabalho mais colaborativo e consciente dos riscos. Ao desenvolver e validar uma dinâmica lúdica para este fim, o trabalho pode contribuir para a melhoria das práticas de desenvolvimento de \textit{software}, tornando-as mais robustas e resilientes. Os resultados esperados incluem a criação de uma ferramenta prática e acessível que pode ser adotada por diversas equipes e organizações.
 
 \section{Objetivos gerais}
 
@@ -211,7 +219,7 @@ Este trabalho tem o objetivo de analisar, desenvolver, aplicar e avaliar uma din
 \begin{itemize}
   \item[] Atividade 1.1: Fundamentar principais conceitos sobre gerência de projeto.
   \item[] Atividade 1.2: Fundamentar principais conceitos sobre métodos ágeis.
-  \item[] Atividade 1.3: Fundamentar principais conceitos sobre gestão de riscos.s
+  \item[] Atividade 1.3: Fundamentar principais conceitos sobre gestão de riscos.
 \end{itemize}
 
 
@@ -244,20 +252,19 @@ Este trabalho tem o objetivo de analisar, desenvolver, aplicar e avaliar uma din
   \item[] Atividade 4.3: Análise dos resultados do estudo de caso.
 \end{itemize}
 
-
 %------------------------------------------------------------------------------%
 
-\chapter{Fundamentação Teórica} % Contexto
+\chapter{Fundamentação Teórica}
 
 Neste capítulo, serão apresentados conceitos relevantes relacionados à gerência de projetos, gerenciamento de riscos, métodos ágeis e gamificação, que serão abordados ao longo deste trabalho, visando proporcionar uma base sólida para o desenvolvimento e análise do tema.
 
 \section{Gerência de projetos}
 
-O PMBOK \cite{PMBOK} define que o gerenciamento de projetos é a aplicação de conhecimentos, habilidades, ferramentas e técnicas às atividades do projeto a fim de cumprir os seus requisitos. Diversas atividades podem estar envolvidas para alcançar este objetivo, mas para \citeonline{Pressman_2014} todas envolvem planejamento, monitoração e controle de pessoas, processos e eventos que ocorrem à medida que o software evolui desde os conceitos preliminares até sua disponibilização operacional e completa.
+O PMBOK \cite{PMBOK} define que o gerenciamento de projetos é a aplicação de conhecimentos, habilidades, ferramentas e técnicas às atividades do projeto a fim de cumprir os seus requisitos. Diversas atividades podem estar envolvidas para alcançar este objetivo, mas para \citeonline{Pressman_2014} todas envolvem planejamento, monitoração e controle de pessoas, processos e eventos que ocorrem à medida que o \textit{software} evolui desde os conceitos preliminares até sua disponibilização operacional e completa.
 
-Por envolver tantas etapas e atividades do projeto, todos os membros possuem algum papel na atividade de gerenciamento, cada um no escopo de suas atividades \cite{Pressman_2014}. Um engenheiro de software gerenciará suas atividades diárias, planejando, monitorando e controlando as tarefas técnicas, enquanto o gerente do projeto planeja, monitora e controla o trabalho de uma equipe de engenheiros de software.
+Por envolver tantas etapas e atividades do projeto, todos os membros possuem algum papel na atividade de gerenciamento, cada um no escopo de suas atividades \cite{Pressman_2014}. Um engenheiro de \textit{software} gerenciará suas atividades diárias, planejando, monitorando e controlando as tarefas técnicas, enquanto o gerente do projeto planeja, monitora e controla o trabalho de uma equipe de engenheiros de \textit{software}.
 
-Como abordado por \citeonline{Sommerville_2007} os projetos precisam ser gerenciados, pois a engenharia de software profissional está sempre sujeita a restrições, e esta gestão garante que o projeto de software atenda e supere essas restrições, enquanto oferece software de qualidade. Além disso, quando aplicados e integrados os processos de gerenciamento apropriados, estas ações permitem que as organizações executem projetos de forma mais eficaz e eficiente \cite{PMBOK}, diminuindo custos e retrabalhos. O alcance desta eficiência permite que as organizações \cite{PMBOK}:
+Como abordado por \citeonline{Sommerville_2007} os projetos precisam ser gerenciados, pois a engenharia de \textit{software} profissional está sempre sujeita a restrições, e esta gestão garante que o projeto de \textit{software} atenda e supere essas restrições, enquanto oferece \textit{software} de qualidade. Além disso, quando aplicados e integrados os processos de gerenciamento apropriados, estas ações permitem que as organizações executem projetos de forma mais eficaz e eficiente \cite{PMBOK}, diminuindo custos e retrabalhos. O alcance desta eficiência permite que as organizações \cite{PMBOK}:
 
 \begin{itemize}
   \item Vinculem os resultados do projeto com os objetivos do negócio;
@@ -285,16 +292,16 @@ Quando realizada esta gestão eficaz, ela ajuda indivíduos, grupos e organizaç
 Para \citeonline{Sommerville_2007}, o sucesso do projeto não é garantido por um bom gerenciamento. No entanto, o mau gerenciamento geralmente resulta em falha do projeto. Os critérios de sucesso para o gerenciamento de projetos variam de um projeto para outro \cite{Pressman_2014}, mas, para a maioria dos projetos, estas são as metas mais importantes:
 
 \begin{enumerate}
-  \item Fornecer o software ao cliente no prazo estabelecido.
+  \item Fornecer o \textit{software} ao cliente no prazo estabelecido.
   \item Manter os custos gerais dentro do orçamento.
-  \item Entregar software que atenda às expectativas do cliente.
+  \item Entregar \textit{software} que atenda às expectativas do cliente.
   \item Manter uma equipe de desenvolvimento que trabalhe bem e feliz.
 \end{enumerate}
 
 Para realizar este processo de gerenciamento o PMBOK \cite{PMBOK} categoriza o processo em cinco grupos, que são organizados da seguinte maneira:
 
 \begin{itemize}
-  \item \textbf{Iniciação}: contém os processos realizados para definir um novo projeto ou uma nova fase de um projeto obtendo autorização para iniciar o projeto ou a fase. O objetivo principal é alinhar as expectativas das partes interessadas com o objetivo do projeto, informar as partes interessadas sobre o escopo e os objetivos, e discutir como sua participação no projeto e nas fases associadas pode ajudar a garantir que suas expectativas sejam realizadas. Nos processos de iniciação, o escopo inicial é definido e os recursos financeiros iniciais são comprometidos. As partes interessadas que vão interagir e influenciar o resultado geral do projeto são identificadas. Os principais benefícios deste grupo de processos é que somente projetos que estão alinhados com os objetivos estratégicos da organização são autorizados, e que o business case, os benefícios e as partes interessadas são considerados desde o início do projeto.
+  \item \textbf{Iniciação}: contém os processos realizados para definir um novo projeto ou uma nova fase de um projeto obtendo autorização para iniciar o projeto ou a fase. O objetivo principal é alinhar as expectativas das partes interessadas com o objetivo do projeto, informar as partes interessadas sobre o escopo e os objetivos, e discutir como sua participação no projeto e nas fases associadas pode ajudar a garantir que suas expectativas sejam realizadas. Nos processos de iniciação, o escopo inicial é definido e os recursos financeiros iniciais são comprometidos. As partes interessadas que vão interagir e influenciar o resultado geral do projeto são identificadas. Os principais benefícios deste grupo de processos é que somente projetos que estão alinhados com os objetivos estratégicos da organização são autorizados, e que o \textit{business case}, os benefícios e as partes interessadas são considerados desde o início do projeto.
   \item \textbf{Planejamento}: contém os processos que definem o escopo total do esforço, estabelecem e refinam os objetivos e desenvolvem o curso de ação necessário para alcançar esses objetivos. Os processos no grupo desenvolvem os componentes do plano de gerenciamento do projeto e os documentos do projeto usados para realizar o projeto. A natureza de um projeto pode exigir o uso de ciclos de retroalimentação periódicos para análise adicional. À medida que mais informações ou características do projeto são coletadas e entendidas, pode ser necessário um planejamento adicional. Mudanças significativas ocorridas ao longo do ciclo de vida do projeto podem acionar uma necessidade de revisitar um ou mais dos processos de planejamento e, possivelmente, alguns dos processos de iniciação. Este refinamento constante do plano de gerenciamento de projetos é denominado elaboração progressiva, indicando que o planejamento e a documentação são atividades iterativas ou contínuas.
   \item \textbf{Execução}: contém os processos executados para concluir o trabalho definido no plano de gerenciamento do projeto para cumprir os requisitos do projeto. Este grupo envolve coordenar recursos, gerenciar o engajamento das partes interessadas, e integrar e executar as atividades do projeto. Os processos no grupo podem gerar solicitações de mudança. Se aprovadas, as solicitações de mudança podem acionar um ou mais processos de planejamento que resultem em modificações no plano de gerenciamento, nos documentos do projeto e possivelmente em novas linhas de base.
   \item \textbf{Monitoramento e Controle}: contém os processos necessários para acompanhar, analisar e ajustar o progresso e o desempenho do projeto; identificar quaisquer áreas nas quais serão necessárias mudanças no plano; e iniciar as respectivas mudanças. Monitorar é coletar dados de desempenho do projeto, produzir medições do desempenho, relatar e divulgar informações sobre o desempenho. Controlar é comparar o desempenho real com o planejado, analisar as variações, avaliar as tendências para efetuar melhorias no processo, avaliar as alternativas possíveis e recomendar ações corretivas adequadas, conforme necessário. O monitoramento contínuo fornece à equipe do projeto e às outras partes interessadas uma visão melhor sobre a situação do projeto, além de identificar quaisquer áreas que exijam atenção adicional.
@@ -320,11 +327,11 @@ As áreas de conhecimento identificadas pelo PMBOK \cite{PMBOK} categorizam os p
 
 \subsection{Gerenciamento de riscos}
 
-É definido pela ISO/IEC/IEEE 16085 que o propósito do processo de gerenciamento de riscos é identificar, analisar, tratar e monitorar riscos continuamente. Este é um processo para sistematicamente endereçar os riscos durante o ciclo de vida do sistema produto ou serviço \cite{iso16085}. Isto ocorre, pois como apontado por \citeonline{wazlawick2019}, todo projeto de desenvolvimento de software apresenta um conjunto de incertezas em diferentes graus e a falta de planejamento de ações para tratar estes riscos pode causar problemas no projeto, como cronogramas e orçamentos que não são cumpridos ou mesmo uma inviabilidade total do projeto.
+É definido pela ISO/IEC/IEEE 16085 que o propósito do processo de gerenciamento de riscos é identificar, analisar, tratar e monitorar riscos continuamente. Este é um processo para sistematicamente endereçar os riscos durante o ciclo de vida do sistema produto ou serviço \cite{iso16085}. Isto ocorre, pois como apontado por \citeonline{wazlawick2019}, todo projeto de desenvolvimento de \textit{software} apresenta um conjunto de incertezas em diferentes graus e a falta de planejamento de ações para tratar estes riscos pode causar problemas no projeto, como cronogramas e orçamentos que não são cumpridos ou mesmo uma inviabilidade total do projeto.
 
-O processo de gerenciamento de riscos abrange todos os aspectos do trabalho organizacional e do projeto, o resultado do projeto ("o sistema realizado") e o ambiente em que o sistema realizado irá operar. No entanto, o processo de gerenciamento de riscos também é aplicável em casos em que se está preocupado apenas com um ou mais aspectos selecionados do trabalho, do resultado ou do ambiente, mas ela é mais efetiva quando performada como uma parte integral de todos processos organizacionais \cite{iso16085}.
+O processo de gerenciamento de riscos abrange todos os aspectos do trabalho organizacional e do projeto, o resultado do projeto (“o sistema realizado”) e o ambiente em que o sistema realizado irá operar. No entanto, o processo de gerenciamento de riscos também é aplicável em casos em que se está preocupado apenas com um ou mais aspectos selecionados do trabalho, do resultado ou do ambiente, mas ela é mais efetiva quando performada como uma parte integral de todos processos organizacionais \cite{iso16085}.
 
-Para \citeonline{wazlawick2019} todo projeto de software deve ter um plano de gerência de riscos, que deve mostrar:
+Para \citeonline{wazlawick2019} todo projeto de \textit{software} deve ter um plano de gerência de riscos, que deve mostrar:
 
 \begin{itemize}
   \item Quais são os riscos identificados.
@@ -365,17 +372,17 @@ Na atividade de \textbf{Gerenciamento do perfil de risco}, são capturadas as in
 
 As informações do perfil de risco são continuamente atualizadas e mantidas por meio da atividade de \textbf{Análise de riscos}, que identifica os riscos, determina suas probabilidades e consequências, determina suas exposições ao risco e recomenda tratamentos para os riscos considerados acima dos seus limiares de risco. 
 
-As recomendações de \textbf{Tratamento de riscos}, juntamente com o status de outros riscos e seus status de tratamento, são enviadas para a revisão da gerência. A gerência decide qual tratamento de risco será implementado para qualquer risco considerado inaceitável. Planos de tratamento de risco são criados para riscos que necessitam de tratamento. Esses planos são coordenados com outros planos de gerenciamento e outras atividades em andamento. As informações criadas durante essa atividade devem ser documentadas em um plano de tratamento de riscos.
+As recomendações de \textbf{Tratamento de riscos}, juntamente com o \textit{status} de outros riscos e seus \textit{status} de tratamento, são enviadas para a revisão da gerência. A gerência decide qual tratamento de risco será implementado para qualquer risco considerado inaceitável. Planos de tratamento de risco são criados para riscos que necessitam de tratamento. Esses planos são coordenados com outros planos de gerenciamento e outras atividades em andamento. As informações criadas durante essa atividade devem ser documentadas em um plano de tratamento de riscos.
 
-Todos os riscos são continuamente monitorados até que não precisem mais ser rastreados, por exemplo, quando são eliminados, durante a atividade de \textbf{Monitoramento de riscos}. Além disso, novos riscos e fontes de risco são procurados. O processo de gerenciamento de riscos é avaliado para melhorar sua eficácia. Durante a atividade de \textbf{Avaliação do processo de gestão de riscos}, são capturadas informações, incluindo feedback de usuários e outras partes, para melhorar o processo ou a capacidade da organização ou do projeto de gerenciar riscos. Melhorias definidas como resultado da avaliação são implementadas na atividade de Planejamento da gestão de riscos.
+Todos os riscos são continuamente monitorados até que não precisem mais ser rastreados, por exemplo, quando são eliminados, durante a atividade de \textbf{Monitoramento de riscos}. Além disso, novos riscos e fontes de risco são procurados. O processo de gerenciamento de riscos é avaliado para melhorar sua eficácia. Durante a atividade de \textbf{Avaliação do processo de gestão de riscos}, são capturadas informações, incluindo \textit{feedback} de usuários e outras partes, para melhorar o processo ou a capacidade da organização ou do projeto de gerenciar riscos. Melhorias definidas como resultado da avaliação são implementadas na atividade de Planejamento da gestão de riscos.
 
 O processo de gerenciamento de riscos é aplicado continuamente ao longo do ciclo de vida do produto e é integrado com os outros processos do ciclo de vida. As atividades e tarefas do processo de gerenciamento de riscos interagem com os riscos individuais de maneira iterativa uma vez que o processo de gerenciamento de riscos começa. Por exemplo, na atividade de Análise de riscos, um risco pode ser reavaliado várias vezes durante a realização da avaliação de risco devido ao aumento do conhecimento sobre o risco obtido durante a própria tarefa de avaliação. O processo de gerenciamento de riscos não é um processo que segue de uma fase para a próxima, mas sim um processo iterativo e incremental que é implementado conforme necessário.
 
 %------------------------------------------------------------------------------%
 
-\subsubsection{Modelo do Software Engineering Institute (CMMI)}
+\subsubsection{Modelo do \textit{Software} Engineering Institute (CMMI)}
 
-\citeonline{wazlawick2019} em Engenharia de Software apresenta o modelo de gerenciamento de riscos do Software Engineering Institute (SEI) e caracteriza da seguinte forma suas seis atividades:
+\citeonline{wazlawick2019} em Engenharia de \textit{Software} apresenta o modelo de gerenciamento de riscos do \textit{Software} Engineering Institute (SEI) e caracteriza da seguinte forma suas seis atividades:
 
 \begin{enumerate}
   \item \textbf{Identificação}: antes que os riscos possam ser tratados, eles precisam ser identificados.
@@ -387,8 +394,8 @@ O processo de gerenciamento de riscos é aplicado continuamente ao longo do cicl
     \item planejando as atividades de recuperação de projeto, caso o risco efetivamente tenha ocorrido.
   \end{enumerate}
   \item \textbf{Rastreamento}: o rastreamento (ou monitoramento) de riscos consiste em avaliar, ao longo do projeto, as propriedades do risco (por exemplo, a probabilidade de ele ocorrer). O rastreamento deve ser baseado em métricas de avaliação de risco.
-  \item \textbf{Controle}: em função de mudanças no status de um risco, alguns planos podem ter que ser executados. Muitas vezes, talvez seja necessário improvisar a resposta ao problema causado pelo risco.
-  \item \textbf{Comunicação}: a comunicação é um processo fundamental ao longo de um projeto de software, especialmente em relação à prevenção e ao tratamento de riscos. Assim, não há uma atividade específica de comunicação em riscos, pois se trata de uma prática que permeia todas as outras atividades.
+  \item \textbf{Controle}: em função de mudanças no \textit{status} de um risco, alguns planos podem ter que ser executados. Muitas vezes, talvez seja necessário improvisar a resposta ao problema causado pelo risco.
+  \item \textbf{Comunicação}: a comunicação é um processo fundamental ao longo de um projeto de \textit{software}, especialmente em relação à prevenção e ao tratamento de riscos. Assim, não há uma atividade específica de comunicação em riscos, pois se trata de uma prática que permeia todas as outras atividades.
 \end{enumerate}
 
 %------------------------------------------------------------------------------%
@@ -424,7 +431,7 @@ O PMBOK \cite{PMBOK} possui um dos processos de gerenciamento de riscos mais con
   
   O principal benefício deste processo é que quantifica a exposição ao risco geral do projeto, e também pode fornecer informações quantitativas adicionais dos riscos para apoio do planejamento de respostas aos mesmos. Este processo não é necessário para todos os projetos.
   
-  Realizar uma análise robusta depende da disponibilidade de dados de alta qualidade sobre os riscos individuais do projeto e outras fontes de incerteza, bem como uma sólida linha de base subjacente do projeto para escopo, cronograma e custo. A análise quantitativa dos riscos geralmente requer software especializado e expertise no desenvolvimento e na interpretação dos modelos de riscos. O uso da análise quantitativa de riscos de um projeto será especificado no plano de gerenciamento dos riscos do projeto.
+  Realizar uma análise robusta depende da disponibilidade de dados de alta qualidade sobre os riscos individuais do projeto e outras fontes de incerteza, bem como uma sólida linha de base subjacente do projeto para escopo, cronograma e custo. A análise quantitativa dos riscos geralmente requer \textit{software} especializado e expertise no desenvolvimento e na interpretação dos modelos de riscos. O uso da análise quantitativa de riscos de um projeto será especificado no plano de gerenciamento dos riscos do projeto.
 
   \item \textbf{Planejar as Respostas aos Riscos}: O processo de desenvolver alternativas, selecionar estratégias e acordar ações para lidar com a exposição geral de riscos, e também tratar os riscos individuais do projeto.
   
@@ -449,32 +456,32 @@ O PMBOK \cite{PMBOK} possui um dos processos de gerenciamento de riscos mais con
 
 \section{Métodos ágeis}
 
-O modelo cascata começou a ser definido nos anos 1970 e é considerado o precursor de todos os ciclos de vida de software. Baseado na filosofia \textit{Big Design Up Front}, ele propõe que antes de qualquer codificação é necessário realizar um trabalho detalhado de análise e design. O modelo é definido por documentação, determinando se as fases foram concluídas através de revisões ao final de cada uma das etapas \cite{wazlawick2019}. Apesar de sua abordagem estruturada, o modelo enfrenta desafios como a dificuldade de avaliar a qualidade e os riscos do projeto durante o desenvolvimento e a rigidez em lidar com mudanças nos requisitos, pontos que, como apontado por Wazlawick, tornam seu uso impraticável para muitos projetos reais.
+O modelo cascata começou a ser definido nos anos 1970 e é considerado o precursor de todos os ciclos de vida de \textit{software}. Baseado na filosofia \textit{Big Design Up Front}, ele propõe que antes de qualquer codificação é necessário realizar um trabalho detalhado de análise e design. O modelo é definido por documentação, determinando se as fases foram concluídas através de revisões ao final de cada uma das etapas \cite{wazlawick2019}. Apesar de sua abordagem estruturada, o modelo enfrenta desafios como a dificuldade de avaliar a qualidade e os riscos do projeto durante o desenvolvimento e a rigidez em lidar com mudanças nos requisitos, pontos que, como apontado por Wazlawick, tornam seu uso impraticável para muitos projetos reais.
 
 Os desafios enfrentados por este modelo preditivo deram origem a ciclos de vida iterativos e incrementais, que abordam melhor as incertezas e as necessidades de adaptação ao longo do projeto. Diferentemente dos métodos preditivos, que se baseiam em planos detalhados para antecipar todas as etapas de um projeto, os métodos iterativos dividem o trabalho em ciclos menores, permitindo revisões frequentes e maior flexibilidade para ajustes \cite{AgileGuide}. Essa abordagem adaptativa é essencial em contextos de alta complexidade e incerteza, onde mudanças nos requisitos são inevitáveis.
 
-No entanto, a principal distinção entre os métodos baseados em planos e os ágeis está no foco. Enquanto os métodos preditivos priorizam o cumprimento do plano inicial, os métodos ágeis enfatizam a entrega contínua de valor ao cliente e a resposta rápida a mudanças. Essa filosofia promove ciclos curtos de desenvolvimento, colaboração constante entre as partes interessadas e feedback contínuo para ajustes ao produto final \cite{AgileGuide}.
+No entanto, a principal distinção entre os métodos baseados em planos e os ágeis está no foco. Enquanto os métodos preditivos priorizam o cumprimento do plano inicial, os métodos ágeis enfatizam a entrega contínua de valor ao cliente e a resposta rápida a mudanças. Essa filosofia promove ciclos curtos de desenvolvimento, colaboração constante entre as partes interessadas e \textit{feedback} contínuo para ajustes ao produto final \cite{AgileGuide}.
 
 A relevância dos métodos ágeis cresceu exponencialmente à medida que organizações perceberam as limitações do modelo preditivo em projetos dinâmicos e complexos. Com a ênfase na adaptação e entrega de valor, os métodos ágeis ganharam destaque em um ambiente onde a velocidade de resposta e a qualidade da entrega são fundamentais para atender às expectativas do mercado e dos clientes.
 
-Em 2001 um grupo de 17 profissionais de software se reuniu em Snowbird, Utah, para discutir formas de melhorar o desenvolvimento de software. Dessa reunião surgiu o Manifesto Ágil, que delineia quatro valores fundamentais e doze princípios que promovem uma abordagem responsiva ao desenvolvimento de software \cite{AgileManifest}. Os quatro valores centrais do Manifesto Ágil são:
+Em 2001 um grupo de 17 profissionais de \textit{software} se reuniu em Snowbird, Utah, para discutir formas de melhorar o desenvolvimento de \textit{software}. Dessa reunião surgiu o Manifesto Ágil, que delineia quatro valores fundamentais e doze princípios que promovem uma abordagem responsiva ao desenvolvimento de \textit{software} \cite{AgileManifest}. Os quatro valores centrais do Manifesto Ágil são:
 
 \begin{itemize}
   \item Indivíduos e interações mais que processos e ferramentas.
-  \item Software funcionando mais que documentação abrangente.
+  \item \textit{Software} funcionando mais que documentação abrangente.
   \item Colaboração com o cliente mais que negociação de contratos.
   \item Responder a mudanças mais que seguir um plano.
 \end{itemize}
   
-Os princípios do Manifesto enfatizam a entrega contínua de software funcional, a aceitação de mudanças nos requisitos, a colaboração diária entre desenvolvedores e clientes, e a importância de equipes auto-organizadas e motivadas \cite{AgileManifest}. Os doze princípios do Manifesto são:
+Os princípios do Manifesto enfatizam a entrega contínua de \textit{software} funcional, a aceitação de mudanças nos requisitos, a colaboração diária entre desenvolvedores e clientes, e a importância de equipes auto-organizadas e motivadas \cite{AgileManifest}. Os doze princípios do Manifesto são:
 \begin{itemize}
-  \item Nossa maior prioridade é satisfazer o cliente através da entrega contínua e adiantada de software com valor agregado.
+  \item Nossa maior prioridade é satisfazer o cliente através da entrega contínua e adiantada de \textit{software} com valor agregado.
   \item Mudanças nos requisitos são bem-vindas, mesmo tardiamente no desenvolvimento. Processos ágeis tiram vantagem das mudanças visando vantagem competitiva para o cliente.
-  \item Entregar frequentemente software funcionando, de poucas semanas a poucos meses, com preferência à menor escala de tempo.
+  \item Entregar frequentemente \textit{software} funcionando, de poucas semanas a poucos meses, com preferência à menor escala de tempo.
   \item Pessoas de negócio e desenvolvedores devem trabalhar diariamente em conjunto por todo o projeto.
   \item Construa projetos em torno de indivíduos motivados. Dê a eles o ambiente e o suporte necessário e confie neles para fazer o trabalho.
   \item O método mais eficiente e eficaz de transmitir informações para e entre uma equipe de desenvolvimento é através de conversa face a face.
-  \item Software funcionando é a medida primária de progresso.
+  \item \textit{Software} funcionando é a medida primária de progresso.
   \item Os processos ágeis promovem desenvolvimento sustentável. Os patrocinadores, desenvolvedores e usuários devem ser capazes de manter um ritmo constante indefinidamente.
   \item Contínua atenção à excelência técnica e bom design aumenta a agilidade.
   \item Simplicidade \- a arte de maximizar a quantidade de trabalho não realizado \- é essencial.
@@ -482,16 +489,16 @@ Os princípios do Manifesto enfatizam a entrega contínua de software funcional,
   \item Em intervalos regulares, a equipe reflete sobre como se tornar mais eficaz e então refina e ajusta seu comportamento de acordo.
 \end{itemize}
 
-É levantado no Agile Practice Guide \cite{AgileGuide} uma série de diferentes modelos ágeis existentes, cobrindo frameworks, métodos e práticas. Estes são destacados na Figura abaixo.
+É levantado no \textit{Agile Practice Guide} \cite{AgileGuide} uma série de diferentes modelos ágeis existentes, cobrindo frameworks, métodos e práticas. Estes são destacados na Figura abaixo.
 
 \begin{figure}[H]
   \centering
 	\caption{\label{metodos-ageis}Métodos ágeis}
   \includegraphics[width=0.6\textwidth]{metodos-ageis}
-	\legend{Fonte: Agile Practice Guide \cite{AgileGuide}}
+	\legend{Fonte: \textit{Agile Practice Guide} \cite{AgileGuide}}
 \end{figure}
 
-O \textit{Lean} é definido em \textit{Lean Software Development: An Agile Toolkit} \cite{Poppendieck_Poppendieck_2003} como uma abordagem que visa otimizar processos eliminando desperdícios e adicionando valor de acordo com a percepção do cliente. Entre seus princípios estão a eliminação de desperdícios, que envolve identificar e remover qualquer atividade que não agregue valor ao produto final. Amplificar o aprendizado é essencial, pois o desenvolvimento é um processo de descoberta contínua. Decidir o mais tarde possível permite tomar decisões mais informadas e com base em fatos concretos. A entrega rápida é fundamental para obter feedback contínuo e atender rapidamente às necessidades dos clientes. A equipe deve ser empoderada para tomar decisões técnicas detalhadas, pois eles possuem o conhecimento mais profundo sobre o trabalho. Construir integridade no produto significa assegurar que ele atenda às expectativas do usuário e se mantenha útil ao longo do tempo. Finalmente, ver o todo é crucial para garantir que todas as partes do sistema trabalhem de forma coesa e otimizada, evitando a subotimização de componentes individuais.
+O \textit{Lean} é definido em \textit{Lean Software Development: An Agile Toolkit} \cite{Poppendieck_Poppendieck_2003} como uma abordagem que visa otimizar processos eliminando desperdícios e adicionando valor de acordo com a percepção do cliente. Entre seus princípios estão a eliminação de desperdícios, que envolve identificar e remover qualquer atividade que não agregue valor ao produto final. Amplificar o aprendizado é essencial, pois o desenvolvimento é um processo de descoberta contínua. Decidir o mais tarde possível permite tomar decisões mais informadas e com base em fatos concretos. A entrega rápida é fundamental para obter \textit{feedback} contínuo e atender rapidamente às necessidades dos clientes. A equipe deve ser empoderada para tomar decisões técnicas detalhadas, pois eles possuem o conhecimento mais profundo sobre o trabalho. Construir integridade no produto significa assegurar que ele atenda às expectativas do usuário e se mantenha útil ao longo do tempo. Finalmente, ver o todo é crucial para garantir que todas as partes do sistema trabalhem de forma coesa e otimizada, evitando a subotimização de componentes individuais.
 
 \begin{figure}[H]
 	\caption{\label{annual-agile-report}Frameworks utilizados pelos respondentes do Agile Report}
@@ -499,29 +506,29 @@ O \textit{Lean} é definido em \textit{Lean Software Development: An Agile Toolk
 	\legend{Fonte: 17th State of Agile Report \cite{17_agile_report}}
 \end{figure}
 
-Como pode ser observado na Figura 3, segundo o 17th State of Agile Report \cite{17_agile_report}, entre os métodos ágeis mais utilizados em 2023 estão o Scrum e o Scaled Agile Framework (SAFe), definidos como:
+Como pode ser observado na Figura 3, segundo o \textit{17th State of Agile Report} \cite{17_agile_report}, entre os métodos ágeis mais utilizados em 2023 estão o \textit{Scrum} e o \textit{Scaled Agile Framework} (SAFe), definidos como:
 \begin{itemize}
-  \item \textbf{Scrum}: método ágil de gerenciamento de projetos que visa aumentar a produtividade das equipes de desenvolvimento. Ele não é um processo prescritivo, mas sim um framework que se baseia em três pilares principais: transparência, inspeção e adaptação. A transparência assegura que todos os aspectos importantes do projeto sejam visíveis para os interessados, permitindo que clientes acompanhem o progresso e que desenvolvedores entendam claramente as necessidades do cliente. A inspeção envolve a revisão constante do trabalho realizado para garantir a qualidade e corrigir possíveis desvios. A adaptação permite que o processo de desenvolvimento evolua à medida que novos requisitos são descobertos ou atualizados \cite{wazlawick2019}.
-  \item \textbf{Scaled Agile Framework (SAFe)}: framework ágil que visa escalar o desenvolvimento ágil em todos os níveis de uma organização, proporcionando uma base de conhecimento para padrões de trabalho. Baseado em princípios como pensamento sistêmico e preservação de opções em cenários variáveis, o SAFe incentiva a construção incremental com ciclos de aprendizado rápidos e integrados. Adicionalmente, prioriza a limitação de trabalho em progresso, sincronização de planejamento entre domínios e descentralização das tomadas de decisão. Sua abordagem foca em detalhar práticas, papéis e atividades em níveis de portfólio, programa e equipe, organizando a empresa em torno de fluxos de valor contínuo para o cliente \cite{AgileGuide}.
+  \item \textbf{Scrum}: método ágil de gerenciamento de projetos que visa aumentar a produtividade das equipes de desenvolvimento. Ele não é um processo prescritivo, mas sim um \textit{framework} que se baseia em três pilares principais: transparência, inspeção e adaptação. A transparência assegura que todos os aspectos importantes do projeto sejam visíveis para os interessados, permitindo que clientes acompanhem o progresso e que desenvolvedores entendam claramente as necessidades do cliente. A inspeção envolve a revisão constante do trabalho realizado para garantir a qualidade e corrigir possíveis desvios. A adaptação permite que o processo de desenvolvimento evolua à medida que novos requisitos são descobertos ou atualizados \cite{wazlawick2019}.
+  \item \textbf{\textit{Scaled Agile Framework} (SAFe)}: \textit{framework} ágil que visa escalar o desenvolvimento ágil em todos os níveis de uma organização, proporcionando uma base de conhecimento para padrões de trabalho. Baseado em princípios como pensamento sistêmico e preservação de opções em cenários variáveis, o SAFe incentiva a construção incremental com ciclos de aprendizado rápidos e integrados. Adicionalmente, prioriza a limitação de trabalho em progresso, sincronização de planejamento entre domínios e descentralização das tomadas de decisão. Sua abordagem foca em detalhar práticas, papéis e atividades em níveis de portfólio, programa e equipe, organizando a empresa em torno de fluxos de valor contínuo para o cliente \cite{AgileGuide}.
 \end{itemize}
 
-Apesar das diferenças, Scrum e SAFe compartilham características comuns, como a ênfase na colaboração contínua com o cliente, a entrega frequente de valor em incrementos, a capacidade de adaptação a mudanças e a promoção de equipes auto-organizadas e multifuncionais. Ambos os frameworks incentivam o aprendizado contínuo, a transparência no trabalho e o alinhamento entre as partes interessadas, criando um ambiente que melhora a eficiência, a qualidade e a capacidade de atender às demandas dinâmicas do mercado.
+Apesar das diferenças, \textit{Scrum} e SAFe compartilham características comuns, como a ênfase na colaboração contínua com o cliente, a entrega frequente de valor em incrementos, a capacidade de adaptação a mudanças e a promoção de equipes auto-organizadas e multifuncionais. Ambos os frameworks incentivam o aprendizado contínuo, a transparência no trabalho e o alinhamento entre as partes interessadas, criando um ambiente que melhora a eficiência, a qualidade e a capacidade de atender às demandas dinâmicas do mercado.
 
 %------------------------------------------------------------------------------%
 
 \subsection{Gestão de riscos em métodos ágeis}
 
-O gerenciamento de riscos em métodos ágeis segue uma abordagem que integra práticas e princípios fundamentais ao processo de desenvolvimento de software inerentemente, sem que haja nenhum procedimento específico para a gestão de riscos \cite{Gold}. Práticas como retrospectivas, dailies e sprints com entregas incrementais desempenham papel fundamental na identificação e mitigação de riscos, que acabam por acontecer de forma implícita. Essa forma implícita ocorre porque o processo ágil favorece ciclos curtos de feedback, transparência e colaboração contínua entre as partes interessadas, o que permite identificar problemas ou ameaças de forma rápida e iterativa. Assim, os riscos são tratados à medida que surgem, promovendo ajustes frequentes ao longo do projeto.
+O gerenciamento de riscos em métodos ágeis segue uma abordagem que integra práticas e princípios fundamentais ao processo de desenvolvimento de \textit{software} inerentemente, sem que haja nenhum procedimento específico para a gestão de riscos \cite{Gold}. Práticas como retrospectivas, dailies e \textit{sprints} com entregas incrementais desempenham papel fundamental na identificação e mitigação de riscos, que acabam por acontecer de forma implícita. Essa forma implícita ocorre porque o processo ágil favorece ciclos curtos de \textit{feedback}, transparência e colaboração contínua entre as partes interessadas, o que permite identificar problemas ou ameaças de forma rápida e iterativa. Assim, os riscos são tratados à medida que surgem, promovendo ajustes frequentes ao longo do projeto.
 
-Em outra perspectiva pode-se considerar que o gerenciamento de riscos tem sido negligenciado ou parcialmente suportado em métodos ágeis, mesmo com o aumento da importância do gerenciamento de riscos entre as organizações, já que os riscos podem surgir ao longo do ciclo de vida do projeto e não existe nenhuma ação específica para evitar estes riscos \cite{LopesSamueldeSouza2022ARMF}. Pensando na prática, o Scrum, por exemplo, tem uma seção para quaisquer 'impedimentos' do projeto, que são ocorrências que possam impedir a equipe de funcionar de maneira eficaz. Do ponto de vista do gerenciamento de riscos, os impedimentos do projeto são problemas, riscos que ocorreram \cite{Gold}. Havendo um processo estruturado de gestão de riscos, não seria necessário tratar o problema, pois o risco que o gera poderia ter sido identificado e resolvido, antes de se tornar um problema.
+Em outra perspectiva pode-se considerar que o gerenciamento de riscos tem sido negligenciado ou parcialmente suportado em métodos ágeis, mesmo com o aumento da importância do gerenciamento de riscos entre as organizações, já que os riscos podem surgir ao longo do ciclo de vida do projeto e não existe nenhuma ação específica para evitar estes riscos \cite{LopesSamueldeSouza2022ARMF}. Pensando na prática, o \textit{Scrum}, por exemplo, tem uma seção para quaisquer 'impedimentos' do projeto, que são ocorrências que possam impedir a equipe de funcionar de maneira eficaz. Do ponto de vista do gerenciamento de riscos, os impedimentos do projeto são problemas, riscos que ocorreram \cite{Gold}. Havendo um processo estruturado de gestão de riscos, não seria necessário tratar o problema, pois o risco que o gera poderia ter sido identificado e resolvido, antes de se tornar um problema.
 
 \citeonline{LopesSamueldeSouza2022ARMF} vêem que devido à receptividade às mudanças no método ágil, vários projetos apresentam incertezas e riscos, e no formato atualmente, vários riscos permanecem desconhecidos porque são ignorados ao longo do ciclo de vida do projeto. Estes riscos podem ser gerenciados por meio de processos tradicionais de gerenciamento de riscos, desde que sejam adaptados ao contexto do desenvolvimento ágil.
 
-Na pesquisa de \citeonline{Gold} foram identificados certos fatores que aumentam a eficácia do gerenciamento de riscos, um deles é a aplicação de um framework de gerenciamento de riscos (identificação ágil de riscos, avaliação ágil de riscos, resposta ágil a riscos, revisão e monitoramento ágeis de riscos). Foi visto pelos entrevistados que a aplicação dessas etapas de gerenciamento de riscos tem grande influência positiva nos resultados do projeto, mostrando que o uso das práticas de gerenciamento de riscos neste cenário proporcionam resultados mais benéficos do que limitações. Foram avaliados os seguintes benefícios da aplicação do gerenciamento de riscos a projetos Scrum \cite{Gold}:
+Na pesquisa de \citeonline{Gold} foram identificados certos fatores que aumentam a eficácia do gerenciamento de riscos, um deles é a aplicação de um \textit{framework} de gerenciamento de riscos (identificação ágil de riscos, avaliação ágil de riscos, resposta ágil a riscos, revisão e monitoramento ágeis de riscos). Foi visto pelos entrevistados que a aplicação dessas etapas de gerenciamento de riscos tem grande influência positiva nos resultados do projeto, mostrando que o uso das práticas de gerenciamento de riscos neste cenário proporcionam resultados mais benéficos do que limitações. Foram avaliados os seguintes benefícios da aplicação do gerenciamento de riscos a projetos \textit{Scrum} \cite{Gold}:
 \begin{itemize}
   \item Riscos e problemas ocorrem durante os projetos; uma equipe pode escolher ser reativa ou proativa em relação a esses riscos e problemas. O gerenciamento proativo de riscos durante todo o projeto é significativo para o sucesso do projeto e influencia positivamente o resultado do projeto.
   \item O gerenciamento de riscos ajuda a fornecer uma visão geral dos possíveis riscos que podem ser encontrados durante um projeto e a se preparar adequadamente para esses riscos.
-  \item Embora o Scrum já seja orientado a riscos devido à sua natureza ágil, a aplicação de um processo de gerenciamento de riscos reforça ainda mais esse método, melhorando sua entrega em relação aos seus fatores críticos de sucesso de tempo, custo e qualidade.
+  \item Embora o \textit{Scrum} já seja orientado a riscos devido à sua natureza ágil, a aplicação de um processo de gerenciamento de riscos reforça ainda mais esse método, melhorando sua entrega em relação aos seus fatores críticos de sucesso de tempo, custo e qualidade.
 \end{itemize}
 
 %------------------------------------------------------------------------------%
@@ -532,9 +539,9 @@ Definida como a aplicação de elementos de design de jogos fora do contexto de 
 
 Aplicações da gamificação são amplas e variadas. Na educação, como observado por \citeonline{Alomari}, a gamificação pode transformar ambientes de aprendizagem ao tornar o estudo mais interativo e motivador. No marketing, ela pode aumentar a fidelidade dos clientes e a interação com a marca. No campo da saúde, a gamificação pode incentivar comportamentos saudáveis, como a prática de exercícios físicos e a adesão a tratamentos médicos. Ainda, como visto por \citeonline{Caponetto}, o uso da gamificação se mostra eficaz para alcançar objetivos transversais, como promover abordagens participativas e a colaboração entre pares, incentivar o aprendizado autodirigido e explorar a criatividade.
 
-A gamificação envolve um processo de definição do ponto de vista de um designer de jogos, transformando uma tarefa em uma experiência que concentre o foco do participante para a resolução de um problema \cite{Fardo_2013}. Ela é criada a partir da integração de elementos comuns nos jogos, que, como identificado por \citeonline{Alomari}, podem envolver: sistemas de pontuação, badges, rankeamento (leaderboard), níveis, recompensas, barras de progresso, desafios, feedback e avatares. \citeonline{Alomari} identifica os elementos típicos abaixo como as mais usadas e as caracteriza da seguinte forma:
+A gamificação envolve um processo de definição do ponto de vista de um designer de jogos, transformando uma tarefa em uma experiência que concentre o foco do participante para a resolução de um problema \cite{Fardo_2013}. Ela é criada a partir da integração de elementos comuns nos jogos, que, como identificado por \citeonline{Alomari}, podem envolver: sistemas de pontuação, badges, rankeamento (leaderboard), níveis, recompensas, barras de progresso, desafios, \textit{feedback} e avatares. \citeonline{Alomari} identifica os elementos típicos abaixo como as mais usadas e as caracteriza da seguinte forma:
 \begin{itemize}
-  \item \textbf{Points}: Pontos são definidos como valores numéricos que representam uma avaliação do indivíduo. Esta técnica fornece um feedback sobre o progresso do indivíduo e pode aumentar a sua motivação.
+  \item \textbf{Points}: Pontos são definidos como valores numéricos que representam uma avaliação do indivíduo. Esta técnica fornece um \textit{feedback} sobre o progresso do indivíduo e pode aumentar a sua motivação.
 
   \item \textbf{Badges}: Badges são um maneira visual de representar as conquistas alcançadas pelo indivíduo na atividade. Assim como os pontos, ela impacta positivamente a motivação. Esta representação visual tem ênfase em melhorar a performance dos participantes.
 
@@ -577,7 +584,7 @@ Para poder então criar um processo gamificado para uma atividade, \citeonline{G
   Tarefas: \newline 
   3.1 Estabelecer o escopo, motivadores, tipo de jogo (colaborativo, competitivo, individual) e diferentes possíveis soluções. \newline 
   3.2 Conduzir análise de viabilidade para cada alternativa e escolher a solução. 
-  & Para definir o escopo da gamificação (cobertura do ciclo de vida do software e motivadores intrínsecos/extrínsecos do jogo) e conduzir um estudo de viabilidade (econômica, técnica, operacional e legal), para escolher a melhor solução. \\ \hline
+  & Para definir o escopo da gamificação (cobertura do ciclo de vida do \textit{software} e motivadores intrínsecos/extrínsecos do jogo) e conduzir um estudo de viabilidade (econômica, técnica, operacional e legal), para escolher a melhor solução. \\ \hline
 
   \textbf{Análise e design do jogo} \newline 
   Tarefas: \newline 
@@ -587,13 +594,13 @@ Para poder então criar um processo gamificado para uma atividade, \citeonline{G
   4.4 Estabelecer a dinâmica do jogo (regras) \newline 
   4.5 Estabelecer a estética do jogo \newline 
   4.6 Elaborar os casos de uso do jogo 
-  & O principal resultado desta atividade é o conjunto de requisitos (casos de uso do jogo) da ferramenta de software em que o jogo está, e automatiza o jogo e seus elementos. \\ \hline
+  & O principal resultado desta atividade é o conjunto de requisitos (casos de uso do jogo) da ferramenta de \textit{software} em que o jogo está, e automatiza o jogo e seus elementos. \\ \hline
 
   \textbf{Desenvolvimento da plataforma gamificada} \newline 
-  Tarefas para cada sprint: \newline 
-  5.1 Gestão da Sprint \newline 
-  5.2 Desenvolvimento da Sprint (Preparação, Desenvolvimento, Teste) 
-  & Desenvolvimento de software da plataforma gamificada para SE a partir dos casos de uso do jogo. \\ \hline
+  Tarefas para cada \textit{sprint}: \newline 
+  5.1 Gestão da \textit{Sprint} \newline 
+  5.2 Desenvolvimento da \textit{Sprint} (Preparação, Desenvolvimento, Teste) 
+  & Desenvolvimento de \textit{software} da plataforma gamificada para SE a partir dos casos de uso do jogo. \\ \hline
 
   \textbf{Gerenciamento, monitoramento e medição} \newline 
   Tarefas: \newline 
@@ -609,7 +616,7 @@ Para poder então criar um processo gamificado para uma atividade, \citeonline{G
 
 %------------------------------------------------------------------------------%
 
-\chapter{Estado da arte} % Trabalhos parecidos com os que eu vou desenvolver
+\chapter{Estado da arte}
 
 A fim de levantar o estado da arte, foi realizada uma replicação e atualização do estudo conduzido por \citeonline{garcia2023agreed} em seu trabalho de mestrado de Mapeamento Sistemático de Literatura (MSL). Nesta replicação as diferenças foram a realização da análise apenas de estudos publicados, analisando estudos publicado a partir de 2021, posteriormente ao mapeamento original, e a não aplicação da técnica de Snowballing no ciclo final.
 
@@ -617,7 +624,7 @@ Assim como no mapeamento original, o MSL foi desenvolvido com o objetivo de anal
 
 \section{Protocolo de pesquisa}
 
-A questão geral de pesquisa foi definida como: “Como as organizações de software integram práticas explícitas de gerenciamento de riscos em métodos ágeis?” e esta foi dividida em quatro questões de análise detalhada, conforme apresentada na tabela abaixo.
+A questão geral de pesquisa foi definida como: “Como as organizações de \textit{software} integram práticas explícitas de gerenciamento de riscos em métodos ágeis?” e esta foi dividida em quatro questões de análise detalhada, conforme apresentada na tabela abaixo.
 
 \begin{table}[h!]
   \caption{Perguntas de pesquisa do MSL}
@@ -642,7 +649,7 @@ A Tabela~\ref{tab:picoc} \cite{kitchenham2007guidelines} mostra os critérios e 
   \hline
   \textbf{Critérios} & \textbf{Descrição} \\ \hline
   População \newline Intervenção \newline Comparação \newline Resultado \newline Contexto 
-  & Organizações de software \newline Aplicação da gerência de riscos \newline Não se aplica (N/A) \newline Se a qualidade do produto, prazo de entrega, etc foram impactados \newline Utilização de métodos ágeis \\ \hline
+  & Organizações de \textit{software} \newline Aplicação da gerência de riscos \newline Não se aplica (N/A) \newline Se a qualidade do produto, prazo de entrega, etc foram impactados \newline Utilização de métodos ágeis \\ \hline
   \end{tabular}
   \label{tab:picoc}
 \end{table}
@@ -653,7 +660,7 @@ A comparação é definida como “N/A” por se tratar de um mapeamento sistem�
 
 \subsection{String de busca e fontes de pesquisa}
 
-A string de busca foi aplicada nas bibliotecas digitais IEEEXplore, ACM Digital Library e Scopus, devido à sua relevância para a área de engenharia de software. A string de busca foi adaptada à sintaxe específica de cada biblioteca e aplicada aos campos de título e resumos. A pesquisa foi realizada em setembro de 2024.
+A string de busca foi aplicada nas bibliotecas digitais IEEEXplore, ACM Digital Library e Scopus, devido à sua relevância para a área de engenharia de \textit{software}. A string de busca foi adaptada à sintaxe específica de cada biblioteca e aplicada aos campos de título e resumos. A pesquisa foi realizada em setembro de 2024.
 
 \begin{table}[h!]
   \centering
@@ -694,7 +701,7 @@ Com base na questão de pesquisa principal, os seguintes critérios de inclusão
   EC1 & Trabalho/proposta teórica não aplicada empiricamente \\ \hline
   EC2 & Estudos duplicados \\ \hline
   EC3 & Texto completo indisponível \\ \hline
-  EC4 & Não focado no desenvolvimento de software \\ \hline
+  EC4 & Não focado no desenvolvimento de \textit{software} \\ \hline
   \end{tabular}
 \end{table}
 
@@ -782,9 +789,9 @@ Na Tabela~\ref{contexto} é possível observar a resposta direta de cada uma dos
   \label{contexto}
   \end{table}
 
-Os estudos selecionados foram conduzidos em dois ambientes distintos (Q2.1): indústria de software e academia. Dos estudos analisados, 75\% foram realizados em organizações de desenvolvimento de software, enquanto 25\% foram conduzidos em ambiente acadêmico.
+Os estudos selecionados foram conduzidos em dois ambientes distintos (Q2.1): indústria de \textit{software} e academia. Dos estudos analisados, 75\% foram realizados em organizações de desenvolvimento de \textit{software}, enquanto 25\% foram conduzidos em ambiente acadêmico.
 
-Quanto aos métodos ágeis adotados (Q2.2), Scrum foi mencionado em 2 estudos, XP, DAD e SAFe em 1 estudo cada. Além disso, de forma maior, 4 estudos não mencionaram nenhum método ágil específico.
+Quanto aos métodos ágeis adotados (Q2.2), \textit{Scrum} foi mencionado em 2 estudos, XP, DAD e SAFe em 1 estudo cada. Além disso, de forma maior, 4 estudos não mencionaram nenhum método ágil específico.
 
 Em relação ao tipo de estudo empírico (Q2.3), metade dos estudos utilizaram estudos de caso, 37\% realizaram experimentos e 13\% aplicaram surveys. Observa-se que, na indústria, predominam os estudos de caso, como observado no mapeamento original.
 O número de projetos em que o estudo foi aplicado ficou entre apenas 1 e 2, divididos de forma igual, 50\% dos estudos aplicados em apenas 1 organização e 50\% aplicaram em 2 organizações.
@@ -799,9 +806,9 @@ Adotando a segunda estratégia, os outros estudos primários criaram novas prát
 
 Em S1 é instituído o RM3, que é composto por três processos principais: análise de complexidade do projeto, análise de riscos e monitoramento e controle de riscos. Onde em (1) utiliza-se a matriz de complexidade, uma ferramenta qualitativa para avaliar objetivamente os fatores de complexidade e seu impacto; (2) Análise de riscos: identifica todos os riscos, tanto negativos quanto positivos, com base nos pressupostos e restrições do projeto. Utiliza a exposição ao risco como medida quantitativa para avaliar e priorizar os riscos; (3) Monitoramento e controle de riscos: aplica ações de resposta ao risco e monitora os riscos identificados, atualizando-os conforme necessário. Este processo inclui monitorar e tratar riscos residuais, identificar novos riscos e avaliar a eficácia das respostas. Além disso, atualiza os ativos dos processos organizacionais, como modelos de gestão de riscos e lições aprendidas, beneficiando futuros projetos.
 
-No estudo S3, um backlog específico para riscos é adicionado aos produtos da metodologia para registrar e gerenciar todos os riscos identificados. Além das tarefas do \textit{scrum}, as tarefas de gestão de riscos em cada sprint são realizadas em três passos: planejamento (identificar e registrar todos os riscos no backlog), aplicação de estratégia (priorizar os riscos com base em fatores de prioridade, inserir os riscos de maior prioridade no ciclo de iteração do \textit{scrum}, e aplicar a estratégia apropriada para cada risco) e supervisão e controle (monitorar a eliminação dos riscos e assegurar que a estratégia está sendo eficaz). No final de cada sprint, avalia-se a harmonia entre as estratégias aplicadas e os riscos. Caso novos riscos sejam identificados ou riscos existentes persistam, eles retornam ao backlog de riscos para análise e tratamento em sprints futuras.
+No estudo S3, um \textit{backlog} específico para riscos é adicionado aos produtos da metodologia para registrar e gerenciar todos os riscos identificados. Além das tarefas do \textit{scrum}, as tarefas de gestão de riscos em cada \textit{sprint} são realizadas em três passos: planejamento (identificar e registrar todos os riscos no \textit{backlog}), aplicação de estratégia (priorizar os riscos com base em fatores de prioridade, inserir os riscos de maior prioridade no ciclo de iteração do \textit{scrum}, e aplicar a estratégia apropriada para cada risco) e supervisão e controle (monitorar a eliminação dos riscos e assegurar que a estratégia está sendo eficaz). No final de cada \textit{sprint}, avalia-se a harmonia entre as estratégias aplicadas e os riscos. Caso novos riscos sejam identificados ou riscos existentes persistam, eles retornam ao \textit{backlog} de riscos para análise e tratamento em \textit{sprints} futuras.
 
-Em S8, é descrito o problema de minimização de perdas por riscos no processo de design de software definido considerando vetor de variáveis de decisão. Onde a partir da probabilidade de ocorrência do risco para o i-ésimo recurso, o valor das perdas por unidade do i-ésimo recurso associado à ocorrência do risco, o número do recurso do projeto é feito o cálculo da estimativa total de risco (R). E a função objetivo: determinar a quantidade de cada recurso a ser alocado no projeto, de forma que a função objetivo \(F(x)\) (o custo de compensação das consequências dos riscos) seja minimizada.
+Em S8, é descrito o problema de minimização de perdas por riscos no processo de design de \textit{software} definido considerando vetor de variáveis de decisão. Onde a partir da probabilidade de ocorrência do risco para o i-ésimo recurso, o valor das perdas por unidade do i-ésimo recurso associado à ocorrência do risco, o número do recurso do projeto é feito o cálculo da estimativa total de risco (R). E a função objetivo: determinar a quantidade de cada recurso a ser alocado no projeto, de forma que a função objetivo \(F(x)\) (o custo de compensação das consequências dos riscos) seja minimizada.
 
 \textbf{Q3. Que tipos de riscos são gerenciados?}
 
@@ -815,7 +822,7 @@ Apenas 5 dos 8 estudos listaram de forma explícita os riscos enfrentados nos pr
 	\legend{Fonte: Autora (2024)}
 \end{figure}
 
-O atributo com maior frequência de riscos foram “\textit{Schedule}”, da classe “\textit{Program Constraints}”, identificado em 4 dos estudos primários. Em sequência “\textit{Staff}”, da classe “\textit{Product Engineering”}, “\textit{Communication}”, da classe “\textit{Development Environment}” e “\textit{Stability}”, “\textit{Clarity}”, “\textit{Validity}” e “\textit{Feasibility}”, da classe “\textit{Product Engineering}”, obtiveram 3 ocorrências cada.
+O atributo com maior frequência de riscos foram “\textit{Schedule}”, da classe “\textit{Program Constraints}”, identificado em 4 dos estudos primários. Em sequência “\textit{Staff}”, da classe “\textit{Product Engineering}”, “\textit{Communication}”, da classe “\textit{Development Environment}” e “\textit{Stability}”, “\textit{Clarity}”, “\textit{Validity}” e “\textit{Feasibility}”, da classe “\textit{Product Engineering}”, obtiveram 3 ocorrências cada.
 
 O elemento com maior número de ocorrências de riscos foi “\textit{Resources}”, registrado em 4 estudos primários. “\textit{Product Engineering}” e “\textit{Program Constraints}” foram as classes que apresentaram o maior número de ocorrências, ambas com registros em 4 estudos.
 
@@ -825,11 +832,11 @@ Todos os estudos selecionados relatam impactos positivos da introdução de prá
 
 Em S1 do ponto de vista financeiro, de escopo e de prazos, o projeto foi bem-sucedido e atendeu às expectativas da equipe. Houve menos tempo gasto em atividades desnecessárias, o que permitiu mais foco e ausência de riscos inesperados. Os recursos foram liberados conforme planejado, garantindo a qualidade das entregas e continuidade do trabalho da equipe em outros projetos. Foi aplicado um questionário para medir a satisfação da equipe, do cliente e das partes interessadas com o uso do RM3, e o resultado foi muito positivo, demonstrando preferência pelo RM3 em relação ao método anterior.
 
-No estudo S4, aplicado em projetos com mais de 5 mil horas de duração de 5 a 10 meses para serem concluídos, o uso do framework gerou um aumento positivo na reação média aos riscos, com uma taxa de melhoria de cerca de 49\%.
+No estudo S4, aplicado em projetos com mais de 5 mil horas de duração de 5 a 10 meses para serem concluídos, o uso do \textit{framework} gerou um aumento positivo na reação média aos riscos, com uma taxa de melhoria de cerca de 49\%.
 
 Em S5 os resultados indicam um aumento significativo no conhecimento sobre gestão de riscos ao utilizar o jogo, destacando seu valor educacional e eficácia como ferramenta de apoio ao ensino. Houve uma melhoria de 85\% nas respostas do questionário do Grupo AAS, com apenas 15\% dos participantes mantendo as mesmas respostas iniciais.
 
-Na análise de S6 o mapeamento teórico demonstra como os frameworks escaláveis de ágil — DAD e SAFe — podem potencialmente eliminar ou mitigar os riscos de projetos de software no contexto de desenvolvimento global.
+Na análise de S6 o mapeamento teórico demonstra como os frameworks escaláveis de ágil — DAD e SAFe — podem potencialmente eliminar ou mitigar os riscos de projetos de \textit{software} no contexto de desenvolvimento global.
 
 Em S2 o uso da ferramenta Rm4Am aumentou a média do índice de resposta a riscos em de 63\% no Projeto A e 40\% no Projeto B, indicando que a ferramenta auxiliou os participantes na formulação de planos de resposta a riscos mais eficazes.
 
@@ -837,7 +844,7 @@ Em S2 o uso da ferramenta Rm4Am aumentou a média do índice de resposta a risco
 
 Como também identificado no mapeamento original, a maioria dos estudos foram feitos na indústria, mostrando o potencial impacto positivo das ações de gestão de risco para esta área. Havendo também 50\% dos estudos relatando impactos positivos sem comprometer a agilidade dos métodos ágeis. Além disso, estudos de caso são predominantes na indústria, enquanto experimentos e surveys têm menor representatividade, mostrando uma tendência de abordagem empírica para avaliar os contextos de uso dessas práticas.
 
-As práticas de gestão de riscos nos métodos ágeis se dividem em duas estratégias principais: o uso das práticas ágeis já existentes e a introdução de novas práticas adaptadas. Por exemplo, práticas como reuniões diárias e planejamento de sprints foram aproveitadas para integrar a gestão de riscos, além da inclusão de uma reunião semanal dedicada a riscos. Por outro lado, foi observado também a ideia de criação de um backlog específico para riscos, ou ainda do uso de métodos quantitativos para minimizar perdas, como o cálculo de estimativa total de risco e alocação de recursos.
+As práticas de gestão de riscos nos métodos ágeis se dividem em duas estratégias principais: o uso das práticas ágeis já existentes e a introdução de novas práticas adaptadas. Por exemplo, práticas como reuniões diárias e planejamento de \textit{sprints} foram aproveitadas para integrar a gestão de riscos, além da inclusão de uma reunião semanal dedicada a riscos. Por outro lado, foi observado também a ideia de criação de um \textit{backlog} específico para riscos, ou ainda do uso de métodos quantitativos para minimizar perdas, como o cálculo de estimativa total de risco e alocação de recursos.
 
 Os tipos de riscos gerenciados foram classificados em uma grande variedade de atributos em todas as classes. Estudos como S6, que identificou 63 riscos, mostram a complexidade e a amplitude dos desafios enfrentados, destacando a necessidade de métodos estruturados e adaptados para lidar com essas incertezas no desenvolvimento ágil.
 
@@ -853,8 +860,9 @@ As mesmas ameaças à validade avaliadas no mapeamento original também estão p
 %------------------------------------------------------------------------------%
 
 \chapter{Proposta}
+\label{cap:proposta}
 
-Seguindo o framework de gamificação em engenharia de software proposto por \citeonline{GARCIA201721}, nas seções seguintes serão apresentadas as atividades realizadas para o desenvolvimento da dinâmica gamificação para identificação de riscos em meios ágeis. O framework prevê as seguinte etapas para esta definição:
+Seguindo o \textit{framework} de gamificação em engenharia de \textit{software} proposto por \citeonline{GARCIA201721}, nas seções seguintes serão apresentadas as atividades realizadas para o desenvolvimento da dinâmica gamificação para identificação de riscos em meios ágeis. O \textit{framework} prevê as seguinte etapas para esta definição:
 
 \begin{enumerate}
   \item Identificação os objetivos da gamificação 
@@ -867,12 +875,12 @@ Seguindo o framework de gamificação em engenharia de software proposto por \ci
 
 \section{Identificação dos objetivos da gamificação}
 
-A primeira etapa do framework busca estabelecer um conjunto de objetivos para a gamificação, sendo que isto deve ser feito examinando o cenário atual e o desejado, identificando situações que podem ser aprimoradas por meio da aplicação da gamificação e como essas melhorias podem ocorrer. Por fim, estes objetivos devem ser convertidos em metas SMART para medir as melhorias alcançadas. Preferencialmente métricas e indicadores quantitativos devem ser definidos, entretanto nem isto é viável, especialmente em organizações com sistemas de medição inexistentes ou imaturos.
+A primeira etapa do \textit{framework} busca estabelecer um conjunto de objetivos para a gamificação, sendo que isto deve ser feito examinando o cenário atual e o desejado, identificando situações que podem ser aprimoradas por meio da aplicação da gamificação e como essas melhorias podem ocorrer. Por fim, estes objetivos devem ser convertidos em metas SMART para medir as melhorias alcançadas. Preferencialmente métricas e indicadores quantitativos devem ser definidos, entretanto nem isto é viável, especialmente em organizações com sistemas de medição inexistentes ou imaturos.
 
 \begin{enumerate}
   \item \textbf{Cenário atual}: Equipes ágeis operam em modelos onde o gerenciamento de riscos é implícito, sem etapas estruturadas ou práticas específicas para identificar e analisar riscos. Essa ausência de um gerenciamento de riscos explícito pode resultar na negligência de possíveis problemas, permitindo que riscos não tratados se concretizem e gerem impactos negativos no andamento dos projetos e na entrega de valor. 
   \item \textbf{Cenário-alvo}: Implementar uma dinâmica gamificada que facilite a análise e identificação de riscos no contexto de equipes ágeis. O objetivo é proporcionar um espaço estruturado e colaborativo para que os membros da equipe possam reconhecer os riscos potenciais em seus projetos e alinhá-los a possíveis ações de mitigação, promovendo maior clareza e previsibilidade no trabalho, sem comprometer a agilidade dos processos. 
-  \item \textbf{Meta}: Desenvolver uma dinâmica gamificada que permita às equipes ágeis compreender melhor os riscos associados aos seus projetos e aumentar a percepção coletiva sobre possíveis impactos, promovendo uma análise mais estruturada e eficiente em pelo menos uma equipe piloto, com validação por feedback qualitativo dos participantes sobre a clareza e aplicabilidade da abordagem.
+  \item \textbf{Meta}: Desenvolver uma dinâmica gamificada que permita às equipes ágeis compreender melhor os riscos associados aos seus projetos e aumentar a percepção coletiva sobre possíveis impactos, promovendo uma análise mais estruturada e eficiente em pelo menos uma equipe piloto, com validação por \textit{feedback} qualitativo dos participantes sobre a clareza e aplicabilidade da abordagem.
 \end{enumerate}
 
 \section{Análise de usuários}
@@ -881,7 +889,7 @@ A segunda etapa enfatiza a importância de analisar os participantes para quem s
 
 Para usuários potenciais, no Brasil, como observado pela \citeonline{jetbrains2023dev}, 51\% dos profissionais do setor de TI têm menos de 30 anos. Esse dado é reforçado regionalmente pela pesquisa realizada em Santa Catarina \cite{acate}, que aponta uma média de idade em torno de 33 anos. O setor é predominantemente masculino, com apenas 21,2\% de participação feminina, conforme dados da \citeonline{softex2023industriatic}. Em relação à formação acadêmica, mais de 85\% dos profissionais possuem graduação em áreas relacionadas à tecnologia, com destaque para Sistemas de Informação, Análise e Desenvolvimento de Sistemas, Ciências da Computação e Engenharia \cite{revelo2021tecnologia}.
 
-No que diz respeito às especialidades, 30,5\% dos profissionais se identificam como Full-stack, seguidos por Back-end (27,2\%) e Front-end (24,2\%) \cite{revelo2021tecnologia}. Os segmentos em que mais atuam são Serviços e Telecomunicações (25,9\%), Finanças (25,6\%) e Indústria (18,9\%) \cite{abes2023mercado}. Além disso, 63\% dos profissionais declararam que preferem utilizar o Scrum à nível de equipe, demonstrando a prevalência desse framework como principal metodologia para equipes ágeis \cite{17_agile_report}.
+No que diz respeito às especialidades, 30,5\% dos profissionais se identificam como Full-stack, seguidos por Back-end (27,2\%) e Front-end (24,2\%) \cite{revelo2021tecnologia}. Os segmentos em que mais atuam são Serviços e Telecomunicações (25,9\%), Finanças (25,6\%) e Indústria (18,9\%) \cite{abes2023mercado}. Além disso, 63\% dos profissionais declararam que preferem utilizar o \textit{Scrum} à nível de equipe, demonstrando a prevalência desse \textit{framework} como principal metodologia para equipes ágeis \cite{17_agile_report}.
 
 Como resumido na Tabela 9, esses dados destacam um perfil majoritário de profissionais jovens, especializados em tecnologia e adaptados ao uso de metodologias ágeis, reforçando a relevância de soluções gamificadas para esse público,.
 
@@ -915,7 +923,6 @@ A dinâmica visa abranger principalmente as etapas iniciais do gerenciamento de 
 
 Foram idealizadas pela autora possíveis opções de gamificação descritas na Tabela ~\ref{tab:dinamicas}.
 
-
 \begin{longtable}{|p{3cm}|p{12cm}|}
   \caption{Dinâmicas de gestão de riscos ideadas} \label{tab:dinamicas} \\ \hline
   \textbf{Nome} & \textbf{Descrição} \\ \hline
@@ -935,10 +942,10 @@ Foram idealizadas pela autora possíveis opções de gamificação descritas na 
   Tapple & Baseado no jogo \href{https://ludopedia.com.br/jogo/tapple}{Tapple}, onde os participantes utilizam cartas pré-definidas para listar e discutir possíveis riscos associados ao projeto, como riscos de prazo ou financeiros. A interação ocorre em rodadas rápidas, promovendo identificação e priorização ágil de riscos. \\ \hline
   Amarelinha / Board game & Dinâmica baseada no jogo da amarelinha. Cada participante apresenta um risco, e o grupo avalia sua probabilidade e impacto. O valor combinado determina o número de casas que o participante avança no tabuleiro. A atividade combina análise de risco e elementos lúdicos para engajamento. \\ \hline
   Baralho de riscos em matriz & Dinâmica baseada em cartas, onde cada uma representa um risco distinto. Os participantes compram cartas e categorizam os riscos apresentados dentro de uma matriz de probabilidade e impacto. O objetivo é priorizar os riscos e promover uma análise estruturada. \\ \hline
-  CPV & Dinâmica que utiliza um canvas para categorizar e organizar os riscos. Os participantes preenchem seções específicas do canvas, permitindo uma análise visual e estruturada dos principais riscos do projeto. \\ \hline
+  CPV & Dinâmica que utiliza um \textit{canvas} para categorizar e organizar os riscos. Os participantes preenchem seções específicas do \textit{canvas}, permitindo uma análise visual e estruturada dos principais riscos do projeto. \\ \hline
   Retrospectiva de riscos & Adaptação da técnica de retrospectiva, com foco nos riscos enfrentados durante o projeto. A equipe revisa os riscos identificados anteriormente, avalia sua ocorrência e discute lições aprendidas para melhorar estratégias futuras de mitigação. \\ \hline
   Sequenciador & Baseada na técnica \href{https://caroli.org/sequenciador/}{Sequenciador} de Paulo Caroli. Os participantes organizam os riscos identificados em uma matriz, em diferentes níveis e por fim em uma sequência de prioridade, utilizando cartões e debates para comparar e decidir a importância de cada risco. A dinâmica promove alinhamento e priorização. \\ \hline
-  Planning poker dos riscos & Dinâmica que adapta o Planning Poker. Os participantes utilizam cartas para votar sobre a probabilidade e o impacto de cada risco. O consenso obtido nas rodadas serve para priorizar os riscos mais críticos. \\ \hline
+  \textit{Planning} poker dos riscos & Dinâmica que adapta o \textit{Planning Poker}. Os participantes utilizam cartas para votar sobre a probabilidade e o impacto de cada risco. O consenso obtido nas rodadas serve para priorizar os riscos mais críticos. \\ \hline
   Pokemon risk (super trunfo) & Dinâmica inspirada no universo Pokémon. Cada risco é representado por uma carta com parâmetros como probabilidade e impacto, definidos previamente pelos participantes. Durante o jogo, as cartas são comparadas em rodadas, priorizando os riscos com maior gravidade. A dinâmica combina elementos de cartas e board game para análise colaborativa. \\ \hline
 \end{longtable}
 
@@ -982,7 +989,7 @@ Esta proposta tem viabilidade moderada. Exige preparação para definir categori
 
 O Poke Risk é inspirado no universo dos jogos de Pokémon, onde cada carta representa um risco que a equipe pode enfrentar. Antes do início do jogo, os participantes preenchem as cartas de riscos, atribuindo a elas parâmetros como probabilidade, impacto e cenário do risco. Essas cartas são usadas durante a dinâmica para promover a discussão, análise e priorização dos riscos identificados.
 
-A partir do monte de cartas, todos os jogadores compram suas cartas, um por vez, até o monte acabar. Cada jogador estará representando determinados riscos durante a partida. Durante as rodadas, os participantes enfrentam "batalhas de riscos", onde anunciam o atributo com maiores chances de superar a carta do adversário. A carta ganhadora da batalha entra para um novo monte, que é o resultado dos riscos que devem ser priorizados para definição de estratégias de mitigação.
+A partir do monte de cartas, todos os jogadores compram suas cartas, um por vez, até o monte acabar. Cada jogador estará representando determinados riscos durante a partida. Durante as rodadas, os participantes enfrentam  “batalhas de riscos”, onde anunciam o atributo com maiores chances de superar a carta do adversário. A carta ganhadora da batalha entra para um novo monte, que é o resultado dos riscos que devem ser priorizados para definição de estratégias de mitigação.
 
 \begin{itemize}
   \item Vantagens: A abordagem lúdica torna a análise de riscos mais envolvente, especialmente para equipes que apreciam dinâmicas criativas.
@@ -998,90 +1005,375 @@ Esta proposta tem viabilidade moderada. A preparação inicial das cartas exige 
 \end{figure}
 
 \section{Análise e design}
+\label{sec:analise-design}
 
-%% Adicionar apêndice do documento de discussão com líderes do laboratório
-% ver no framework detalhes dessa etapa
-% Luiz colocou aqui: 
-% - Escolha dos componentes
-% - Escolha das mecânicas e economia do jogo
-% - Definição das regras da dinâmica
-% - Etapas:
-% - Definição da estética
-% - Elaboração dos casos de uso
+Esta seção detalha o processo de análise e design da dinâmica gamificada, seguindo as diretrizes da quarta etapa do \textit{framework} de \citeonline{GARCIA201721}. Serão apresentados os elementos constituintes da dinâmica, as mecânicas que governam a interação, a economia do jogo, suas regras, a estética visual e os casos de uso para sua aplicação.
 
-\subsection{Prototipação dos elementos}
+\subsection{Escolha dos componentes do jogo}
+\label{sec:escolha-componentes}
 
-%% Versão online e versão física
+A dinâmica gamificada é composta por um conjunto de elementos projetados para facilitar a identificação e análise de riscos de forma interativa e engajadora. Os componentes principais são:
 
-%% \section{Desenvolvimento da plataforma gamificada}
+\begin{itemize}
+\item \textbf{Cartas de risco:} São o elemento central da dinâmica, totalizando 32 cartas. Este número foi definido a partir da taxonomia original de riscos \cite{Taxonomy}, que contém 64 riscos. A seleção das 32 cartas considerou os riscos mais citados tanto no Mapeamento Sistemático da Literatura (MSL) original do trabalho de \citeonline{garcia2023agreed} quanto na continuidade do mapeamento realizada neste estudo. A soma da frequência de citação em ambos os levantamentos resultou na ordenação e seleção dos 32 riscos mais proeminentes, contemplando 84,4\% dos riscos identificados nos mapeamentos.
+\begin{itemize}
+\item \textbf{Aspecto visual:} As cartas possuem ilustrações únicas, geradas com o auxílio de inteligência artificial generativa (Pixlr Image Generator - \url{https://pixlr.com/br/image-generator/}). Cada ilustração foi criada a partir de prompts adaptados, inspirados no estilo “Pokémon”, com personagens que representam o risco de forma lúdica e amigável. Por exemplo, um prompt base utilizado foi: “Create a Pokémon-style image of a character related to time control powers. The character must have a friendly expression. The character must explicitly include time-related elements, such as a clock, calendar or timeline. The image must have a solid white background.”
+\item \textbf{Layout e conteúdo:} O layout de cada carta foi desenvolvido para ser claro e funcional, contendo as seguintes informações:
+\begin{enumerate}
+\item \textbf{Nome lúdico:} Um nome criativo associado à ilustração, remetendo ao universo Pokémon (ex: “Cronoguiro” para riscos de Cronograma), visando aumentar o engajamento e a memorização.
+\item \textbf{Nome do risco formal:} O nome técnico do risco conforme a taxonomia (ex: “Cronograma”).
+\item \textbf{Pergunta principal:} Uma questão central que instiga a reflexão sobre a presença e a relevância do risco no projeto (ex: “O cronograma é adequado e realista?”).
+\item \textbf{Perguntas secundárias/auxiliares:} Questões complementares que ajudam a aprofundar a análise do risco, direcionando a discussão (ex: “Existem dependências externas que podem causar atrasos? O método de estimativa é baseado em dados históricos? Há margem para imprevistos ou o prazo está muito apertado?”).
+\item \textbf{Sinalizador de raridade:} Um símbolo visual (losango ou estrela) que indica a “raridade” da carta, um elemento gamificado inspirado nos jogos de cartas colecionáveis.
+\end{enumerate}
+\item \textbf{Categorias de risco:} As cartas são categorizadas de acordo com a taxonomia de riscos de \textit{software} \cite{Taxonomy}, abrangendo as categorias principais: \textit{Product Engineering}, \textit{Development Engineering} e \textit{Product Constraint}.
+\end{itemize}
+\item \textbf{Moedas para votação:} A dinâmica utiliza moedas (ou fichas representativas) para a etapa de votação dos riscos, permitindo aos participantes priorizar os riscos que consideram mais críticos para o projeto.
+\item \textbf{Manual de regras:} Um manual abrangente que provê todas as instruções necessárias para conduzir a dinâmica. Este manual detalha as etapas, as regras, as mecânicas do jogo, e sugestões para gerenciar a discussão e a interação entre os participantes.
+\item \textbf{\textit{Post-its} e canetas:} Materiais básicos auxiliares que permitem aos participantes escreverem riscos específicos associados a cada carta lida, fomentando a individualização e o detalhamento dos riscos no contexto do projeto.
+\end{itemize}
 
-%% \section{Gerenciamento, monitoramento e medição}
+Os componentes foram concebidos para serem facilmente reproduzíveis tanto em formato físico (impressão das cartas e uso de moedas/fichas simples) quanto adaptáveis para ambientes digitais colaborativos, como plataformas de quadro branco online (e.g., \textit{FigJam}).
+
+\subsection{Escolha das mecânicas do jogo}
+\label{sec:escolha-mecanicas}
+
+As mecânicas são os conjuntos de regras e interações que governam o fluxo da dinâmica, desde a apresentação dos riscos até a priorização. Elas foram projetadas para serem flexíveis e colaborativas, incentivando a participação ativa e o pensamento crítico sobre os riscos do projeto.
+
+A dinâmica é dividida em duas etapas principais, com mecânicas específicas:
+
+\subsubsection{Etapa 1: Leitura e Mapeamento dos Riscos}
+\label{sec:mecanicas-leitura-mapeamento}
+
+Esta etapa foca na identificação e associação de riscos genéricos (das cartas) a riscos reais e específicos do projeto da equipe.
+
+\begin{enumerate}
+  \item \textbf{Preparação e escolha do deck:} As cartas de risco, que representam os riscos potenciais, são embaralhadas e empilhadas em um único monte. Antes de iniciar, a equipe tem a flexibilidade de escolher o deck de cartas a ser utilizado, com base nas suas necessidades e contexto do projeto. As opções de deck incluem:
+  \begin{itemize}
+    \item \textbf{Deck completo:} Contém todas as 32 cartas de risco disponíveis.
+    \item \textbf{Deck básico (12 cartas):} Composto pelas cartas numeradas de 1 a 12, que representam aproximadamente 45\% dos riscos mais citados no Mapeamento Sistemático da Literatura (MSL) e na continuidade deste trabalho.
+    \item \textbf{Sub-decks temáticos (12 ou 8 cartas):} Permitem focar em categorias específicas de risco, alinhadas à taxonomia utilizada \cite{Taxonomy}:
+    \begin{itemize}
+      \item \textit{Product Engineering} (12 cartas): Avalia atividades intelectuais e físicas necessárias para construir o produto, desde requisitos até testes.
+      \item \textit{Development Environment} (12 cartas): Avalia o contexto de produção do \textit{software}, incluindo processos, ferramentas e gestão.
+      \item \textit{Program Constraint} (8 cartas): Avalia fatores externos que influenciam o projeto, como limitações de recursos e contratos.
+    \end{itemize}
+    A escolha do deck pode ser feita por um membro da equipe com papel de liderança (como \textit{Scrum Master}, \textit{Tech Lead}, \textit{Product Owner}) ou por consenso da equipe, garantindo a relevância dos riscos abordados.
+  \end{itemize}
+
+\item \textbf{Leitura e avaliação de aplicabilidade (Etapa 1.1):} O facilitador (ou um membro da equipe, em caso de auto-organização) pega a carta do topo do monte e a lê em voz alta. Após a leitura, a equipe avalia coletivamente se o risco apresentado na carta é aplicável ao seu projeto atual. Não é exigido um consenso formal para essa decisão; se qualquer parte da equipe identificar que o risco é uma preocupação real para o projeto, a carta é mantida na mesa para a próxima fase. Caso o risco seja unanimemente considerado não aplicável ao contexto da equipe, a carta é descartada e removida da dinâmica.
+
+\item \textbf{Mapeamento dos riscos reais (Etapa 1.2):}
+  \begin{itemize}
+    \item Para cada carta de risco considerada aplicável e mantida na mesa, os participantes iniciam individualmente a escrita de \textit{post-its}.
+    \item Nesses \textit{post-its}, cada membro da equipe registra os riscos reais e práticos de seu projeto que estão associados ou são referenciados pela carta lida. A ideia é transpor o risco genérico da carta para o contexto específico da equipe.
+    \item Os \textit{post-its} são então colados ao redor da carta correspondente na mesa, criando um aglomerado visual dos riscos específicos da equipe.
+    \item Após todos os participantes escreverem e colarem seus \textit{post-its}, o facilitador (ou um membro auto-organizado) lê os riscos registrados.
+    \item É aberto um momento para discussão e contestação, onde a equipe pode debater a probabilidade, o impacto ou até mesmo a existência de um risco específico apontado em um \textit{post-it}. É crucial que o facilitador intervenha para manter o foco da discussão na identificação e análise dos riscos, evitando desviar para discussões sobre como mitigar ou resolver os riscos neste momento. Não há um limite de tempo fixo para essa discussão, mas o facilitador deve intervir se a conversa deixar de ser produtiva.
+    \item O processo de leitura e mapeamento (Etapa 1.1 e 1.2) é repetido até que todas as cartas do deck escolhido sejam lidas e avaliadas.
+  \end{itemize}
+\end{enumerate}
+
+\subsubsection{Etapa 2: Votação e priorização}
+\label{sec:mecanicas-votacao}
+
+Após a identificação e o mapeamento dos riscos, a dinâmica avança para a fase de priorização, utilizando uma mecânica inspirada no “\textit{Buy a Feature}”.
+
+\begin{enumerate}
+\item \textbf{Distribuição de moedas:} Cada participante recebe um número inicial de 3 moedas para a votação. Para incentivar a contribuição na etapa anterior, cada 5 \textit{post-its} que o participante escreveu, ele ganha uma moeda adicional, recompensando a identificação proativa de riscos.
+\item \textbf{Investimento nos riscos:} Com as moedas em mãos, cada participante deve “investir” suas moedas nos \textit{post-its} ou nas cartas de risco que representam os riscos que considera mais críticos para o projeto. As moedas são fisicamente colocadas sobre os \textit{post-its} ou ao lado da carta de risco correspondente, indicando a preferência e o peso dado a cada risco. Todos os participantes devem utilizar suas moedas, distribuindo-as de acordo com sua percepção de criticidade.
+\item \textbf{Priorização:} Após a votação, os riscos são priorizados com base na quantidade de moedas que acumularam. Quanto mais moedas uma carta de risco tiver, maior a sua prioridade. A quantidade de riscos a serem priorizados pode ser flexível e definida pela equipe (ex: os 4 riscos mais votados, todos os riscos que receberam pelo menos um voto, etc.). Recomenda-se, para fins práticos e de foco, que a equipe priorize os 4 riscos com maior votação para que possa direcionar suas ações futuras. Em caso de empate na contagem de moedas, a equipe pode realizar uma discussão rápida ou uma votação de desempate.
+\end{enumerate}
+
+\subsubsection{Papel do facilitador}
+\label{sec:papel-facilitador}
+
+O facilitador (\textit{Scrum Master}, \textit{Tech Lead}, ou outro membro com habilidades de facilitação) desempenha um papel crucial para o sucesso da dinâmica. Suas responsabilidades incluem:
+\begin{itemize}
+\item Preparação: Escolha e organização do deck de cartas e dos materiais.
+\item Condução das etapas: Leitura das cartas, gerenciamento do fluxo das discussões, distribuição e contagem das moedas.
+\item Mediação: Garantir que a discussão permaneça focada na identificação e análise de riscos, intervindo quando necessário para evitar desvios para soluções ou mitigações excessivas.
+\item Gestão do tempo: Embora a dinâmica seja flexível, o facilitador deve monitorar o tempo para garantir que todas as etapas sejam concluídas de forma produtiva.
+\end{itemize}
+Alternativamente, a equipe pode optar pela auto-organização, onde os próprios membros se revezam nas funções do facilitador, lendo cartas e gerenciando a distribuição de moedas, promovendo ainda mais a autonomia e a colaboração.
+
+\subsection{Estabelecer a economia do jogo}
+\label{sec:economia-jogo}
+
+A economia dona dinâmica é um sistema simples e direto, projetado para incentivar a participação ativa dos jogadores e guiar a etapa de priorização dos riscos. Ela se baseia em um único tipo de recurso: as moedas de votação.
+
+\subsubsection{Recursos e Ganhos}
+O principal e único recurso manipulável pelos jogadores são as moedas. A distribuição de moedas segue um modelo fixo e meritocrático:
+\begin{itemize}
+\item \textbf{Distribuição inicial fixa:} No início da Etapa 2 (Votação), cada participante recebe uma quantidade fixa de 3 moedas. Este valor inicial garante que todos os jogadores tenham uma base para participar da priorização, independentemente de sua participação na etapa anterior.
+\item \textbf{Ganhos por contribuição:} Para estimular o engajamento e a contribuição na Etapa 1 (mapeamento dos riscos), os jogadores podem adquirir moedas adicionais. A mecânica de ganho é direta: 1 moeda adicional é concedida para cada 5 \textit{post-its} escritos pelo participante durante a fase de mapeamento dos riscos reais. Essa regra busca recompensar a proatividade na identificação de riscos específicos do projeto.
+\end{itemize}
+Não há outros tipos de recursos a serem ganhos ou perdidos, como pontos de experiência, reputação ou penalidades, mantendo a simplicidade da economia focada na priorização.
+
+As moedas são um recurso de uso único e são gastas de forma definitiva na Etapa 2 (Votação). Não há outras formas de gastar moedas além do investimento nos riscos priorizados, e as moedas não retornam para o jogador após a votação.
+
+A economia de moedas exerce um impacto significativo na estratégia dos jogadores, influenciando diretamente a dinâmica da priorização:
+\begin{itemize}
+\item \textbf{Estímulo à participação ativa:} A possibilidade de ganhar moedas adicionais incentiva os participantes a se engajarem na escrita de \textit{post-its} durante a fase de mapeamento. Isso não só aumenta a quantidade de riscos identificados, mas também aprofunda a análise individual e coletiva dos desafios do projeto.
+\item \textbf{Poder de voto e priorização forçada:} Ao ter um número limitado de moedas, os jogadores são compelidos a fazer escolhas difíceis e a priorizar os riscos que consideram mais críticos. Isso fomenta discussões mais focadas e um alinhamento sobre as verdadeiras preocupações da equipe.
+\item \textbf{Competitividade saudável:} \textit{Feedbacks} dos líderes indicaram que a mecânica de moedas adicionais gera uma leve e saudável competitividade entre os colaboradores para escrever mais \textit{post-its}. Isso, por sua vez, aumenta o engajamento geral e a quantidade de informações geradas.
+\end{itemize}
+
+\subsection{Estabelecer as dinâmicas do jogo (regras)}
+\label{sec:dinamicas-regras}
+
+As dinâmicas são definidas por um conjunto de regras que guiam a interação entre os participantes e os componentes do jogo, garantindo um fluxo colaborativo e produtivo. Diferente de jogos com turnos estritamente sequenciais, o Tarot opera em um modelo de avaliação de cartas em conjunto, onde as atividades são coordenadas principalmente pelo facilitador.
+
+\subsubsection{Fluxo da dinâmica e coordenação}
+O jogo não se estrutura em turnos individuais, mas sim em ciclos de avaliação de cada carta de risco. O fluxo é coordenado pelo facilitador e compreende as etapas citadas na Seção \ref{sec:mecanicas-leitura-mapeamento} e \ref{sec:mecanicas-votacao}.
+
+\subsubsection{Duração da dinâmica}
+A duração total da dinâmica é flexível e depende diretamente do número de cartas no deck selecionado, bem como da profundidade das discussões da equipe. As estimativas de tempo são as seguintes:
+\begin{itemize}
+\item \textbf{Deck completo:} Aproximadamente 90 minutos.
+\item \textbf{Sub-deck básico:} Aproximadamente 30 minutos.
+\item \textbf{Sub-deck \textit{Product Engineering}:} Aproximadamente 30 minutos.
+\item \textbf{Sub-deck \textit{Development Environment}:} Aproximadamente 30 minutos.
+\item \textbf{Sub-deck \textit{Program Constraint}:} Aproximadamente 20 minutos.
+\item A Etapa 2 (Votação) possui uma duração recomendada de 5 minutos, sendo uma fase mais objetiva após a discussão e mapeamento.
+\end{itemize}
+
+\subsubsection{Regras de discussão e finalização}
+\begin{itemize}
+\item \textbf{Gestão de divergências:} A dinâmica é projetada para capturar a diversidade de percepções. Se ao menos uma pessoa da equipe considerar que um risco é aplicável, a carta é mantida para que os \textit{post-its} relacionados possam ser gerados. Se um risco específico no \textit{post-it} for questionado, a equipe discute, mas o objetivo é identificar e mapear o máximo de riscos relevantes, não necessariamente buscar consenso sobre cada detalhe individualmente nesse momento. A ausência total de \textit{post-its} para uma carta após a discussão indica que o risco não é percebido pela equipe e a carta deve ser descartada.
+\item \textbf{Finalização da dinâmica:} A dinâmica é considerada finalizada quando todas as cartas do deck selecionado foram lidas, avaliadas e os riscos mapeados (Etapa 1.1 e 1.2), e a etapa de votação e priorização (Etapa 2) foi concluída.
+\item \textbf{Critério de sucesso:} Não há um critério formal de “vitória” ou “derrota” para a equipe. O sucesso da dinâmica é medido pela capacidade da equipe em gerar uma lista abrangente e priorizada de riscos relevantes ao seu projeto, promover a discussão colaborativa e aumentar a percepção coletiva sobre os desafios.
+\end{itemize}
+
+\subsubsection{Regras de conduta}
+Embora não haja regras explícitas de conduta formalizadas no manual da dinâmica, pressupõe-se um ambiente de respeito mútuo, escuta ativa e engajamento. A natureza colaborativa da dinâmica depende da participação efetiva e da abertura para a discussão por parte de todos os envolvidos.
+
+\subsection{Estabelecer a estética do jogo}
+\label{sec:estetica-jogo}
+
+A estética do “Tarot dos Riscos” foi desenvolvida para criar uma experiência que, apesar de tratar de um tema sério como riscos, seja leve, convidativa e engajadora. O sentimento geral transmitido é de diversão e informalidade, buscando desmistificar a gestão de riscos e torná-la mais acessível aos participantes.
+
+\begin{itemize}
+\item \textbf{Estilo visual principal:} A inspiração primária no universo Pokémon e a utilização de ilustrações geradas por inteligência artificial conferem às cartas um aspecto amigável e lúdico. Cada imagem é projetada para ser visualmente atraente e, ao mesmo tempo, associar-se de forma criativa ao risco que representa, com personagens em estilo Pokémon e elementos visuais pertinentes. Não há uma paleta de cores predominante única; as cores variam entre as cartas para diversificar a experiência visual.
+\item \textbf{Narrativa e temática implícita:} A dinâmica não possui uma história ou narrativa subjacente explícita além da inspiração visual das ilustrações. A temática é sugerida pelo nome “Tarot dos Riscos”, que evoca a ideia de “prever o futuro” e antecipar os desafios. Essa analogia com o ato de “ler as cartas” do tarot para insights sobre o futuro, combinado com a ação de “colocar as cartas na mesa” durante a dinâmica, reforça a ideia de uma análise proativa e reflexiva sobre os riscos que podem surgir no projeto.
+\item \textbf{Ambiente de aplicação:} Embora a dinâmica seja projetada para ambientes profissionais e equipes de desenvolvimento de \textit{software}, sua estética sugere um ambiente de aplicação mais descontraído. O objetivo é quebrar a formalidade que muitas vezes cerca o tema da gestão de riscos, promovendo um espaço onde a criatividade e a colaboração fluam mais livremente.
+\item \textbf{Elementos estéticos adicionais:} Além das ilustrações e dos nomes criativos, a raridade das cartas é visualmente representada por ícones de losango ou estrela posicionados abaixo das perguntas nas cartas. Este detalhe visual adiciona um elemento sutil de coleção e diferenciação, enriquecendo a experiência gamificada sem sobrecarregar o design.
+\end{itemize}
+
+\subsection{Elaborar os casos de uso do jogo}
+\label{sec:casos-de-uso}
+
+Os casos de uso do Tarot abrangem diversos cenários nos quais a dinâmica pode ser aplicada para maximizar seus benefícios, tanto em contextos de projeto quanto em ambientes de aprendizado. A flexibilidade do jogo permite sua adaptação a diferentes momentos e objetivos, sempre com o foco na identificação e análise de riscos.
+
+\begin{itemize}
+\item \textbf{Início de projeto ágil:}
+\begin{itemize}
+\item \textbf{Momento de aplicação:} Recomendada enfaticamente no \textbf{início de um novo projeto ágil}.
+\item \textbf{Objetivo específico:} O principal objetivo é identificar e priorizar os riscos potenciais que podem impactar o projeto desde suas fases iniciais. Isso permite que a equipe construa um entendimento coletivo dos desafios e possa encaminhá-los para a elaboração de planos de resposta proativos.
+\item \textbf{Resultados esperados:} Uma lista clara e priorizada dos riscos mais relevantes para o projeto, um maior alinhamento da equipe sobre os desafios e um aprendizado coletivo sobre o panorama de riscos.
+\end{itemize}
+\item \textbf{Aplicações periódicas:}
+\begin{itemize}
+\item \textbf{Momento de aplicação:} Pode ser utilizada \textbf{periodicamente ao longo do projeto}, em momentos como retrospectivas estendidas ou reuniões de \textit{review} de ciclo de vida.
+\item \textbf{Objetivo específico:} Nesta granularidade, o objetivo é mapear riscos para os próximos períodos de múltiplas \textit{sprints} (não necessariamente para uma única \textit{sprint} devido à granularidade potencial), e acompanhar o \textit{status} dos riscos previamente priorizados. Isso permite uma gestão contínua e adaptativa dos riscos.
+\item \textbf{Resultados esperados:} Atualização da lista de riscos priorizados, monitoramento da evolução dos riscos existentes e um ciclo contínuo de aprendizado e adaptação.
+\end{itemize}
+\item \textbf{Ambientes educacionais (sala de aula):}
+\begin{itemize}
+\item \textbf{Momento de aplicação:} A dinâmica pode ser útil em ambientes de sala de aula ou em workshops educacionais.
+\item \textbf{Objetivo específico:} Facilitar o aprendizado sobre gestão de riscos em projetos de \textit{software} para estudantes, proporcionando uma experiência prática e gamificada que torna o conceito de risco mais tangível e a identificação mais intuitiva.
+\item \textbf{Resultados esperados:} Maior compreensão dos diferentes tipos de riscos em projetos de \textit{software}, familiarização com o processo de identificação e análise de riscos, e desenvolvimento de habilidades de pensamento crítico e colaboração em cenários de risco.
+\end{itemize}
+\item \textbf{Variações e adaptações:} A flexibilidade da dinâmica é ampliada pela possibilidade de utilizar os \textbf{sub-decks temáticos}. Isso permite que a dinâmica seja aplicada com foco em tipos específicos de riscos (ex: riscos de \textit{Product Engineering}) ou com públicos específicos dentro da equipe (ex: apenas a equipe de desenvolvimento focando em riscos técnicos), tornando a atividade mais relevante e direcionada a necessidades particulares do projeto ou da equipe.
+\end{itemize}
+
+\section{Desenvolvimento da plataforma gamificada}
+\label{sec:desenvolvimento-plataforma-gamificada}
+
+A quinta etapa do \textit{framework} preconiza o desenvolvimento da plataforma gamificada, com tarefas que incluem gerenciamento do \textit{sprint}, desenvolvimento de \textit{sprint} (preparação, análise, design, implementação, criação de ativos) e testes (depuração, correção, melhoria e otimização). Este arcabouço é tipicamente direcionado à criação de soluções gamificadas que envolvem um componente de \textit{software} significativo, como aplicativos ou sistemas online.
+
+No contexto deste trabalho, a dinâmica gamificada proposta foi concebida primariamente como uma atividade presencial e baseada em materiais físicos. Portanto, não houve a necessidade de um desenvolvimento de \textit{software} no sentido tradicional de criação de uma plataforma online complexa ou de um sistema interativo com funcionalidades de código. A essência da dinâmica reside na interação facilitada por artefatos tangíveis, como cartas impressas, tabuleiros e outros recursos visuais, que são manuseados pelos participantes em um ambiente colaborativo.
+
+Contudo, para expandir a aplicabilidade da dinâmica e permitir sua utilização em cenários de equipes distribuídas ou remotas, foi realizada uma adaptação para um modelo digital. Esta adaptação consistiu na criação de uma versão dos materiais da dinâmica (cartas, áreas de trabalho) em uma ferramenta de quadro branco online, como o \href{https://www.figma.com/pt-br/figjam/}{\textit{FigJam}}, que pode ser utilizada em conjunto com ferramentas de videoconferência. Essa adaptação não implicou em desenvolvimento de \textit{software} complexo ou na codificação de funcionalidades gamificadas, mas sim na transposição dos elementos físicos para um formato digital manipulável e interativo. A principal tarefa aqui foi a criação de ativos digitais e a organização do espaço virtual para replicação das mecânicas da dinâmica física, em vez de um ciclo completo de desenvolvimento de \textit{software} de uma plataforma dedicada.
+
+Assim, embora a presente pesquisa não tenha envolvido o desenvolvimento de uma “plataforma gamificada” conforme o escopo tradicional do \textit{framework} de \citeonline{GARCIA201721} para soluções baseadas em \textit{software}, a etapa foi cumprida através da materialização da dinâmica em seu formato físico e da sua adaptação para o ambiente digital, visando a flexibilidade de aplicação
+
+\section{Gerenciamento, monitoramento e medição}
+
+A sexta e última etapa do \textit{framework} de gamificação em engenharia de \textit{software}, proposta por \citeonline{GARCIA201721}, concentra-se no gerenciamento, monitoramento e medição da solução gamificada. Esta fase é crucial para avaliar a eficácia da dinâmica após sua aplicação, identificar pontos de melhoria e verificar o cumprimento dos objetivos estabelecidos na fase inicial do projeto.
+
+No escopo deste trabalho, o processo de gerenciamento, monitoramento e medição da dinâmica proposta é contemplado integralmente no capítulo \ref{cap:avaliacao}. O referido capítulo detalha as estratégias e os resultados da verificação da eficácia, aplicabilidade e usabilidade da dinâmica em diferentes contextos e com distintos perfis de participantes.
+
+Especificamente, o capítulo \ref{cap:avaliacao} aborda:
+\begin{itemize}
+\item O planejamento da avaliação, incluindo a definição dos critérios, métodos e instrumentos de coleta de dados (como o questionário MEEGA+ adaptado e a coleta de \textit{feedback} qualitativo).
+\item A execução da avaliação, descrevendo os procedimentos e o contexto das aplicações com estudantes e profissionais do mercado.
+\item A análise dos dados coletados, apresentando os resultados quantitativos e qualitativos da percepção dos participantes em relação à dinâmica.
+\item A discussão aprofundada dos resultados, comparando as percepções dos diferentes grupos de aplicação e fornecendo insights sobre os pontos fortes e as áreas de aprimoramento da dinâmica.
+\item A identificação das ameaças à validade que podem influenciar as conclusões deste estudo, garantindo a transparência sobre as limitações da pesquisa.
+\item
+\end{itemize}
+
+Dessa forma, a presente seção se refere ao capítulo \ref{cap:avaliacao} para aprofundamento sobre como a etapa de gerenciamento, monitoramento e medição do \textit{framework} foi operacionalizada e analisada no contexto da avaliação da dinâmica gamificada.
 
 %------------------------------------------------------------------------------%
 %------------------------------------------------------------------------------%
 
-\chapter{Dinâmica}
+\chapter{Dinâmica: Guia de execução}
+\label{ch:dinamica-execucao}
 
-% Explicações gerais sobre a dinâmica e os materiais dela %
-A dinâmica
+Este capítulo tem como objetivo apresentar uma visão geral prática da dinâmica “Tarot dos Riscos”, servindo como um guia conciso para sua preparação e execução. Serão detalhados os objetivos da dinâmica, seus componentes essenciais (com foco nos materiais visuais), e o fluxo das etapas de aplicação. Para uma compreensão aprofundada sobre a concepção e o design das mecânicas do jogo, recomenda-se consultar o Capítulo \ref{cap:proposta}. Os materiais completos da dinâmica, incluindo o manual de regras detalhado e as cartas, estão disponíveis para download conforme indicado na Conclusão.
 
-\section{Objetivos}
+\section{Objetivos da dinâmica}
+\label{sec:objetivos-dinamica-cap5}
 
-\section{Detalhes da dinâmica presencial}
-\subsection{Materiais necessários}
+A dinâmica “Tarot dos Riscos” foi concebida para atender a objetivos específicos relacionados à gestão de riscos em equipes ágeis. Em suma, seus principais objetivos são:
 
-\section{Detalhes da dinâmica online}
-\subsection{Materiais necessários}
+\begin{itemize}
+\item \textbf{Facilitar a identificação de riscos:} Proporcionar um método interativo e acessível para que as equipes detectem riscos potenciais em seus projetos de \textit{software}.
+\item \textbf{Promover a análise colaborativa:} Estimular a discussão e o alinhamento entre os membros da equipe sobre a aplicabilidade, probabilidade e impacto dos riscos.
+\item \textbf{Priorizar riscos de forma eficiente:} Guiar a equipe na seleção dos riscos mais críticos que exigem atenção imediata e planejamento de respostas.
+\item \textbf{Engajar os participantes:} Transformar a tarefa de gestão de riscos, que pode ser percebida como árida, em uma atividade lúdica e motivadora.
+\item \textbf{Apoiar o aprendizado:} Servir como ferramenta pedagógica para equipes e estudantes que buscam compreender melhor os conceitos e a prática da gestão de riscos em um contexto ágil.
+\end{itemize}
 
-\section{Anatomia da carta}
+\section{Materiais da dinâmica}
+\label{sec:materiais-dinamica}
+
+A dinâmica pode ser executada tanto em formato presencial quanto online, utilizando materiais adaptados para cada contexto. O foco principal aqui é apresentar os elementos visuais que compõem a dinâmica.
+
+\subsection{Componentes Visuais}
+\label{sec:componentes-visuais}
+
+Os elementos visuais são cruciais para a experiência gamificada e para a compreensão das informações. Para detalhes completos sobre a concepção de cada componente, consultar a Seção \ref{sec:escolha-componentes} do Capítulo \ref{cap:proposta}.
+
+\begin{itemize}
+\item \textbf{Cartas de risco:} São o elemento central da dinâmica, representando riscos potenciais em projetos de \textit{software}. Cada carta foi projetada com uma estética lúdica, inspirada no universo Pokémon, e contém informações essenciais para a discussão. A Figura \ref{anatomia-carta} ilustra a estrutura de uma carta, e a Figura \ref{carta-exemplo-tarot} apresenta um exemplo concreto.
+\end{itemize}
 
 \begin{figure}[H]
-  \centering
-	\caption{\label{anatomia-carta} Anatomia da carta da dinâmica}
-  \includegraphics[width=0.7\textwidth]{anatomia-carta}
-	\legend{Fonte: Autora (2025)}
+\centering
+\caption{\label{anatomia-carta} Anatomia da carta}
+\includegraphics[width=0.5\textwidth]{anatomia-carta}
+\legend{Fonte: Autora (2025)}
 \end{figure}
-
-\section{Preparação para execução}
 
 \begin{figure}[H]
-  \centering
-	\caption{\label{manual-tarot} Manual de regras (formato \textit{flyer})}
-  \includegraphics[width=0.8\textwidth]{manual-tarot}
-	\legend{Fonte: Autora (2025)}
+\centering
+\caption{\label{carta-exemplo-tarot} Carta de exemplo (frente e verso)}
+\includegraphics[width=0.7\textwidth]{carta-exemplo-tarot}
+\legend{Fonte: Autora (2025)}
 \end{figure}
+
+\begin{itemize}
+\item \textbf{Manual de regras (Flyer):} Um guia conciso e visual, formatado como um flyer, que condensa as instruções para a execução da dinâmica. Este manual visa facilitar a preparação e dar uma compreensão rápida das regras para os participantes. A Figura \ref{manual-tarot} exibe o formato e o conteúdo principal deste material de apoio.
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\caption{\label{manual-tarot} Manual de regras (formato \textit{flyer})}
+\includegraphics[width=0.8\textwidth]{manual-tarot}
+\legend{Fonte: Autora (2025)}
+\end{figure}
+
+\begin{itemize}
+\item \textbf{Moedas de votação:} Utilizadas na etapa de priorização, as moedas são um componente tátil (em formato físico) ou visual (em formato digital) que permite aos participantes “investir” nos riscos que consideram mais relevantes.
+\item \textit{\textbf{Post-its:}} Essenciais para o mapeamento de riscos específicos do projeto, onde os participantes escrevem suas percepções e as associam às cartas de risco.
+\end{itemize}
+
+\subsection{Diferenças entre formato presencial e online}
+\label{sec:formato-presencial-online}
+
+A dinâmica foi concebida para ser predominantemente presencial, utilizando materiais físicos. No entanto, para ampliar sua aplicabilidade, foi desenvolvida uma adaptação para o ambiente online, sem a necessidade de uma plataforma de \textit{software} complexa, conforme detalhado na Seção \ref{sec:desenvolvimento-plataforma-gamificada} do Capítulo \ref{cap:proposta}.
+
+\begin{itemize}
+\item \textbf{Formato presencial:} Requer a impressão das cartas de risco, das moedas e a utilização de \textit{post-its}. A dinâmica é conduzida com os participantes reunidos em torno de uma mesa, onde as cartas são dispostas e os \textit{post-its} colados.
+\item \textbf{Formato online:} Os materiais (cartas, \textit{post-its}, moedas) são transpostos para uma ferramenta de quadro branco online (ex: \textit{FigJam}, \textit{Miro}). A comunicação e interação entre os participantes são mediadas por ferramentas de videoconferência. A funcionalidade é replicada pela manipulação dos elementos digitais no quadro branco compartilhado. A Figura \ref{dinamica-online} ilustra a dinâmica montada em um ambiente de quadro branco digital.
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\caption{\label{dinamica-online} Dinâmica em ambiente de quadro branco digital}
+\includegraphics[width=\textwidth]{dinamica-online}
+\legend{Fonte: Autora (2025)}
+\end{figure}
+
+\section{Preparação para a execução}
+\label{sec:preparacao-execucao}
+
+A preparação adequada é fundamental para o sucesso da dinâmica. Antes de iniciar, o facilitador deve:
+
+\begin{enumerate}
+\item \textbf{Escolher o deck de cartas:} Selecionar o deck mais adequado às necessidades da equipe (Deck Completo, Deck Básico ou Sub-decks temáticos), considerando o tempo disponível e o foco da sessão.
+\item \textbf{Organizar os materiais:} Preparar as cartas de risco (impressas ou no quadro online), as moedas (físicas ou representações digitais) e garantir a disponibilidade de \textit{post-its} e canetas.
+\item \textbf{Familiarizar-se com o manual de regras:} O facilitador deve ler e compreender o manual de regras (conforme Figura \ref{manual-tarot}) para guiar a dinâmica de forma eficaz e intervir quando necessário.
+\end{enumerate}
 
 \section{Execução da dinâmica}
-\subsection{Identificação e análise dos riscos}
-\subsection{Priorização dos riscos}
+\label{sec:execucao-dinamica}
 
+A execução do “Tarot dos Riscos” segue um fluxo lógico dividido em duas etapas principais, conforme detalhado na Seção \ref{sec:escolha-mecanicas} do Capítulo \ref{cap:proposta}.
+
+\subsection{Identificação e Análise dos Riscos}
+\label{sec:identificacao-analise-cap5}
+
+Esta é a primeira e mais extensa etapa da dinâmica, focada em expor a equipe a uma gama de riscos e incentivar a reflexão sobre sua aplicabilidade ao projeto.
+
+\begin{enumerate}
+\item \textbf{Leitura e avaliação das cartas:} O facilitador (ou membro auto-organizado) lê uma carta de risco por vez. A equipe discute se o risco é relevante para o projeto. Se houver relevância percebida por ao menos um membro, a carta é mantida na mesa. Caso contrário, é descartada.
 \begin{figure}[H]
-	\caption{\label{carta-exemplo-tarot} Carta de exemplo (frente e verso)}
-  \includegraphics[width=\textwidth]{carta-exemplo-tarot}
-	\legend{Fonte: Autora (2025)}
+  \centering
+  \caption{\label{mapeamento-riscos-postits} Mapeamento de riscos com \textit{post-its} (exemplo de aplicação)}
+  \includegraphics[width=0.6\textwidth]{mapeamento-riscos-postits}
+  \legend{Fonte: Autora (2025)}
 \end{figure}
+\item \textbf{Mapeamento com \textit{post-its}:} Para cada carta mantida na mesa, os participantes escrevem em \textit{post-its} os riscos reais e específicos do projeto que se relacionam à carta. Esses \textit{post-its} são então colados ao lado da carta correspondente.
+\item \textbf{Discussão e alinhamento:} Os \textit{post-its} são lidos e a equipe discute as percepções de risco. O facilitador modera para manter o foco na identificação e evitar soluções prematuras. Este processo se repete até que todas as cartas do deck selecionado tenham sido avaliadas.
+\end{enumerate}
 
+\subsection{Priorização dos Riscos}
+\label{sec:priorizacao-riscos-cap5}
+
+Após a identificação e o mapeamento, a equipe avança para a priorização dos riscos levantados.
+
+\begin{enumerate}
+\item \textbf{Distribuição de moedas:} Cada participante recebe 3 moedas, com a possibilidade de ganhar moedas adicionais (1 moeda a cada 5 \textit{post-its} escritos na etapa anterior), incentivando a contribuição.
+\item \textbf{Votação:} Os participantes utilizam suas moedas para “investir” nos \textit{post-its} ou cartas de risco que consideram mais críticos para o projeto. As moedas são posicionadas fisicamente sobre ou ao lado dos itens votados.
+\begin{figure}[H]
+  \centering
+  \caption{\label{votacao-moedas} Priorização de riscos com moedas de votação (exemplo de aplicação)}
+  \includegraphics[width=0.6\textwidth]{votacao-moedas}
+  \legend{Fonte: Autora (2025)}
+\end{figure}
+\item \textbf{Classificação e seleção:} Os riscos que acumularam mais moedas são considerados prioritários. Recomenda-se que a equipe selecione os 4 riscos mais votados para focar no planejamento de respostas subsequente.
+\end{enumerate}
 
 \section{Considerações finais}
+\label{sec:consideracoes-finais-cap5}
 
-%% TODO: Adicionar gravação de vídeo explicando a dinâmica
+A dinâmica “Tarot dos Riscos” oferece uma abordagem inovadora e prática para a gestão de riscos em equipes ágeis, promovendo a proatividade e a colaboração. Seu formato gamificado e a flexibilidade de adaptação para ambientes presenciais e online a tornam uma ferramenta valiosa para equipes que buscam otimizar seus processos de identificação e análise de riscos. Ao final da dinâmica, as equipes terão uma visão clara dos principais desafios e um ponto de partida sólido para o planejamento de ações mitigadoras, contribuindo para projetos mais resilientes e bem-sucedidos. Os resultados da aplicação da dinâmica e sua avaliação são detalhados no Capítulo \ref{cap:avaliacao}.
 
 Por se tratar de uma dinâmica que pode conter evoluções futuras, caso o usuário tenha sugestões ao criador deste trabalho, é possível que seja feito contato por e-mail: amanda.martins.oliveira@grad.ufsc.br para discutir tal evolução. A explicação de como a dinâmica pode
 ser implementada está disponibilizada por vídeo em: <>.
-De antemão, a autora agradece a utilização da dinâmica e espera que seja útil em seus respectivos projetos de software.
+
+De antemão, a autora agradece a utilização da dinâmica e espera que seja útil em seus respectivos projetos de \textit{software}.
+
+
+%% TODO: Adicionar gravação de vídeo explicando a dinâmica
 
 %------------------------------------------------------------------------------%
 %------------------------------------------------------------------------------%
 
 \chapter{Avaliação}
+\label{cap:avaliacao}
 
 Neste capítulo, é apresentada a avaliação da dinâmica proposta. A avaliação é um passo crucial para verificar a eficácia, aplicabilidade e usabilidade da dinâmica em diferentes contextos e com diferentes perfis de participantes.
 
-Será detalhado o planejamento da avaliação, incluindo a metodologia empregada e as adaptações realizadas no método MEEGA+. Em seguida, descreve-se a execução da avaliação, dividida em duas abordagens distintas: uma com a participação de estudantes e outra com profissionais da área de desenvolvimento de software. Para cada uma dessas avaliações, serão apresentados os métodos de coleta e análise dos dados. Por fim, o capítulo traz uma discussão aprofundada dos resultados obtidos, comparando as percepções dos grupos, e finaliza com a discussão das ameaças à validade que podem influenciar as conclusões deste estudo.
+Será detalhado o planejamento da avaliação, incluindo a metodologia empregada e as adaptações realizadas no método MEEGA+. Em seguida, descreve-se a execução da avaliação, dividida em duas abordagens distintas: uma com a participação de estudantes e outra com profissionais da área de desenvolvimento de \textit{software}. Para cada uma dessas avaliações, serão apresentados os métodos de coleta e análise dos dados. Por fim, o capítulo traz uma discussão aprofundada dos resultados obtidos, comparando as percepções dos grupos, e finaliza com a discussão das ameaças à validade que podem influenciar as conclusões deste estudo.
 
 \section{Planejamento da avaliação}
 
-Para garantir a validade e a robustez dos resultados da dinâmica proposta, foi empregado uso do modelo MEEGA+ (Method for an Extensive and Exhaustive Game Assessment) \cite{MEEGA}, um framework consolidado para a avaliação da qualidade de jogos e experiências gamificadas.
+Para garantir a validade e a robustez dos resultados da dinâmica proposta, foi empregado uso do modelo MEEGA+ (Method for an Extensive and Exhaustive Game Assessment) \cite{MEEGA}, um \textit{framework} consolidado para a avaliação da qualidade de jogos e experiências gamificadas.
 
 A escolha do MEEGA+ justifica-se por sua capacidade de fornecer um instrumento de medição confiável e estruturado. Sua abordagem abrangente se alinha aos objetivos desta pesquisa, permitindo avaliar a dinâmica gamificada do Tarot para identificação de riscos. O modelo desdobra fatores de qualidade em métricas relacionadas à motivação, experiência do usuário e aprendizado. Essa granularidade é fundamental para compreender o impacto da dinâmica e identificar pontos de melhoria, indo além de uma simples avaliação de engajamento, e adentrando em aspectos como a eficácia na facilitação do aprendizado e na análise de riscos.
 
@@ -1127,7 +1419,7 @@ De forma complementar, foram adicionadas perguntas customizadas, conforme a flex
 
 \section{Execução da avaliação}
 
-A avaliação da dinâmica proposta foi conduzida em duas etapas distintas, visando coletar feedback de diferentes perfis de participantes: estudantes e profissionais. Esta seção detalha a execução de cada uma dessas avaliações.
+A avaliação da dinâmica proposta foi conduzida em duas etapas distintas, visando coletar \textit{feedback} de diferentes perfis de participantes: estudantes e profissionais. Esta seção detalha a execução de cada uma dessas avaliações.
 
 \subsection{Avaliação com estudantes}
 
@@ -1145,7 +1437,7 @@ As aplicações foram divididas em dois turnos (matutino e noturno), seguindo um
 Detalhes específicos de cada turma:
 
 \begin{itemize}
-  \item Primeira turma (matutino): Contou com 18 alunos, que foram divididos em grupos de 4 ou 5 integrantes. Para a primeira etapa da dinâmica (leitura e mapeamento dos riscos), foram concedidos 30 minutos. Para a segunda etapa (votação/priorização dos riscos), foram alocados 5 minutos adicionais. Os grupos receberam os materiais necessários da dinâmica (cartas, manual, post-its e canetas) e uma folha contendo uma descrição fictícia de um projeto de software (\hyperref[apendiceD]{Apêndice D}), para contextualizar a aplicação.
+  \item Primeira turma (matutino): Contou com 18 alunos, que foram divididos em grupos de 4 ou 5 integrantes. Para a primeira etapa da dinâmica (leitura e mapeamento dos riscos), foram concedidos 30 minutos. Para a segunda etapa (votação/priorização dos riscos), foram alocados 5 minutos adicionais. Os grupos receberam os materiais necessários da dinâmica (cartas, manual, \textit{post-its} e canetas) e uma folha contendo uma descrição fictícia de um projeto de \textit{software} (\hyperref[apendiceD]{Apêndice D}), para contextualizar a aplicação.
   \item Segunda turma (noturno): Contou com 27 alunos, divididos em grupos de 5 ou 6 integrantes. O tempo alocado para a primeira etapa foi de 20 minutos, e para a segunda etapa, 5 minutos. O processo de aplicação e distribuição de materiais foi similar ao da primeira turma.
 \end{itemize}
 
@@ -1177,7 +1469,7 @@ Em termos de quantidade de riscos, os grupos do período noturno avaliaram, em m
 
 Os dados obtidos por meio dos questionários preenchidos pelos estudantes foram consolidados e analisados conforme o formato proposto pelo modelo MEEGA+. A partir desses dados, foram gerados gráficos (a serem apresentados nas Figuras subsequentes) que possibilitam uma análise detalhada dos aspectos avaliados em relação à Usabilidade, Experiência do Jogador e às afirmativas específicas da dinâmica.
 
-Em relação à avaliação da Usabilidade, a Figura \ref{ufsc-usabilidade} apresenta um gráfico consolidado com os resultados obtidos. É possível verificar que a dinâmica obteve resultados altamente positivos nesta categoria. Itens como atratividade visual, consistência de textos/cores/fontes, legibilidade das fontes e compreensão das cores obtiveram mediana 2 (Concordo fortemente). Esse insight reforça que o design é um ponto forte e unânime da dinâmica, sendo percebida como visual e funcionalmente atrativa, com uma apresentação clara e profissional que contribui positivamente para a imersão e a primeira impressão do público jovem. Especificamente, a afirmativa "Eu precisei aprender poucas coisas para poder começar a jogar" obteve a menor mediana geral, com 50\% dos participantes concordando ou concordando fortemente, 40\% indiferentes e 10\% discordantes. Esses dados indicam que, embora o formato atual da gamificação seja efetivo para engajar uma parcela dos participantes, uma simplificação adicional no processo nas regras pode ser benéfica para alcançar maior satisfação em um grupo mais amplo.
+Em relação à avaliação da Usabilidade, a Figura \ref{ufsc-usabilidade} apresenta um gráfico consolidado com os resultados obtidos. É possível verificar que a dinâmica obteve resultados altamente positivos nesta categoria. Itens como atratividade visual, consistência de textos/cores/fontes, legibilidade das fontes e compreensão das cores obtiveram mediana 2 (Concordo fortemente). Esse insight reforça que o design é um ponto forte e unânime da dinâmica, sendo percebida como visual e funcionalmente atrativa, com uma apresentação clara e profissional que contribui positivamente para a imersão e a primeira impressão do público jovem. Especificamente, a afirmativa  “Eu precisei aprender poucas coisas para poder começar a jogar” obteve a menor mediana geral, com 50\% dos participantes concordando ou concordando fortemente, 40\% indiferentes e 10\% discordantes. Esses dados indicam que, embora o formato atual da gamificação seja efetivo para engajar uma parcela dos participantes, uma simplificação adicional no processo nas regras pode ser benéfica para alcançar maior satisfação em um grupo mais amplo.
 
 \begin{figure}[H]
 	\caption{\label{ufsc-usabilidade} Resultados da avaliação de usabilidade com estudantes}
@@ -1193,11 +1485,11 @@ No critério Experiência do Jogador, a Figura \ref{ufsc-xp-jogador} ilustra os 
 	\legend{Fonte: Autora (2025)}
 \end{figure}
 
-Em relação à dinâmica e envolvimento, que analisa aspectos como desafio adequado, não-monotonia e sentimento de realização, os resultados apresentaram mediana 1 (Concordo) para a maioria desses itens. A análise da distribuição das respostas revela alguns votos negativos e uma concentração em valores medianos (0 e 1), indicando que, embora a dinâmica não seja percebida como entediante, ela não gerou um forte senso de desafio ou conquista entre os estudantes. Isso pode apontar para um desequilíbrio entre a simplicidade da dinâmica e o estímulo esperado, que talvez aguardasse uma experiência mais "gamificada" ou competitiva. Há, portanto, espaço para evoluir as mecânicas ou introduzir mais variações nas atividades para potencializar o engajamento emocional.
+Em relação à dinâmica e envolvimento, que analisa aspectos como desafio adequado, não-monotonia e sentimento de realização, os resultados apresentaram mediana 1 (Concordo) para a maioria desses itens. A análise da distribuição das respostas revela alguns votos negativos e uma concentração em valores medianos (0 e 1), indicando que, embora a dinâmica não seja percebida como entediante, ela não gerou um forte senso de desafio ou conquista entre os estudantes. Isso pode apontar para um desequilíbrio entre a simplicidade da dinâmica e o estímulo esperado, que talvez aguardasse uma experiência mais  “gamificada” ou competitiva. Há, portanto, espaço para evoluir as mecânicas ou introduzir mais variações nas atividades para potencializar o engajamento emocional.
 
 A dimensão da interação social foi avaliada com mediana 2 (Concordo fortemente) em todos os seus itens, incluindo interação com outras pessoas, cooperação/competição e sentimento positivo ao interagir. Essa é uma força notável da dinâmica, pois indica que, mesmo em um ambiente de sala de aula, houve um forte engajamento e conexão entre os colegas. Isso é excelente para promover habilidades interpessoais, trabalho em grupo e a comunicação eficaz, elementos cruciais no desenvolvimento de projetos.
 
-Nos itens relacionados ao engajamento e diversão, como "Me diverti com o jogo", "Senti vontade de sorrir" e "Me capturou no início", a mediana foi 1 (Concordo), e foi observada uma maior dispersão nas respostas. Esse insight sugere que, apesar da clareza visual e das boas interações sociais, o fator "diversão" teve uma intensidade moderada. Isso pode ser influenciado pelo ambiente de sala de aula ou pela não familiaridade dos participantes uns com os outros, que pode inibir o engajamento espontâneo. A introdução de elementos mais lúdicos, a promoção de um ambiente mais descontraído, ou a alocação de mais tempo livre para a exploração da dinâmica pode contribuir para aumentar o prazer e a imersão.
+Nos itens relacionados ao engajamento e diversão, como  “Me diverti com o jogo”,  “Senti vontade de sorrir” e  “Me capturou no início”, a mediana foi 1 (Concordo), e foi observada uma maior dispersão nas respostas. Esse insight sugere que, apesar da clareza visual e das boas interações sociais, o fator  “diversão” teve uma intensidade moderada. Isso pode ser influenciado pelo ambiente de sala de aula ou pela não familiaridade dos participantes uns com os outros, que pode inibir o engajamento espontâneo. A introdução de elementos mais lúdicos, a promoção de um ambiente mais descontraído, ou a alocação de mais tempo livre para a exploração da dinâmica pode contribuir para aumentar o prazer e a imersão.
 
 A conexão com o conteúdo pedagógico foi um ponto de destaque. Todos os itens relacionados a esta categoria, como clareza da relação com a disciplina, aprendizagem com o jogo, relevância e comparação positiva com outros métodos, obtiveram mediana 2 (Concordo fortemente). Esse resultado demonstra que a dinâmica cumpre com excelência seus objetivos pedagógicos, sendo reconhecida pelos estudantes como eficaz, aplicável e, em muitos casos, preferível a outros métodos tradicionais de ensino sobre gestão de riscos. Este é um grande diferencial didático da ferramenta.
 
@@ -1209,7 +1501,7 @@ Finalmente, para as afirmativas customizadas e específicas da dinâmica, a Figu
 	\legend{Fonte: Autora (2025)}
 \end{figure}
 
-Além dos dados quantitativos, a coleta de feedback aberto revelou percepções valiosas dos estudantes sobre a dinâmica. Os pontos mais elogiados incluíram:
+Além dos dados quantitativos, a coleta de \textit{feedback} aberto revelou percepções valiosas dos estudantes sobre a dinâmica. Os pontos mais elogiados incluíram:
 \begin{itemize}
   \item Qualidade e estética do material: O design atrativo das cartas e a qualidade do material foram frequentemente mencionados, contribuindo para uma experiência visualmente agradável.
   \item Interatividade e colaboração: A dinâmica promoveu a interação e discussão em equipe, sendo destacada como um facilitador para a troca de ideias e a classificação colaborativa de riscos.
@@ -1221,7 +1513,7 @@ Quanto aos aspectos que poderiam ser melhorados, as sugestões dos participantes
 \begin{itemize}
   \item Número e repetitividade das cartas: Alguns estudantes sentiram que o número de cartas era excessivo ou que algumas apresentavam temáticas muito similares/sobrepostas, o que poderia levar a respostas parecidas ou não agregar valor suficiente.
   \item Clareza das regras e tempo: Sugeriu-se que as regras poderiam ser mais claras e que o tempo de execução, especialmente da primeira etapa, poderia ser estendido para permitir uma leitura e discussão mais aprofundada. A ideia de um exemplo prático ou vídeo explicativo foi mencionada para facilitar o entendimento inicial.
-  \item Estruturação da análise: Houve sugestões para padronizar a forma de registrar os riscos (um post-it por risco) e, em alguns casos, para uma organização das cartas (ex.: diagrama de Ishikawa) que pudesse guiar a identificação de riscos de forma mais estruturada.
+  \item Estruturação da análise: Houve sugestões para padronizar a forma de registrar os riscos (um \textit{post-it} por risco) e, em alguns casos, para uma organização das cartas (ex.: diagrama de Ishikawa) que pudesse guiar a identificação de riscos de forma mais estruturada.
   \item Detalhes do cenário: Alguns participantes sugeriram que o caso de projeto fictício poderia ser mais detalhado ou que a dinâmica poderia exemplificar melhor o que considerar como risco.
 \end{itemize}
 
@@ -1231,13 +1523,13 @@ Essas percepções qualitativas complementam os dados quantitativos, oferecendo 
 
 \subsection{Avaliação com profissionais}
 
-Após a avaliação inicial conduzida com estudantes, uma segunda etapa da avaliação foi realizada com profissionais atuantes no mercado de tecnologia, visando obter feedback de um público com experiência prática em ambientes de desenvolvimento ágil. Nesta avaliação, também foi empregado o questionário do MEEGA+ adaptado, com o objetivo de avaliar a dinâmica de gamificação para a identificação e análise de riscos em equipes ágeis.
+Após a avaliação inicial conduzida com estudantes, uma segunda etapa da avaliação foi realizada com profissionais atuantes no mercado de tecnologia, visando obter \textit{feedback} de um público com experiência prática em ambientes de desenvolvimento ágil. Nesta avaliação, também foi empregado o questionário do MEEGA+ adaptado, com o objetivo de avaliar a dinâmica de gamificação para a identificação e análise de riscos em equipes ágeis.
 
-A aplicação ocorreu no contexto do Laboratório Bridge da UFSC, um ambiente focado em pesquisa e desenvolvimento de software, com ênfase em inovação e soluções tecnológicas com compromisso social.
+A aplicação ocorreu no contexto do Laboratório Bridge da UFSC, um ambiente focado em pesquisa e desenvolvimento de \textit{software}, com ênfase em inovação e soluções tecnológicas com compromisso social.
 
 Fizeram parte dessa avaliação 6 equipes de desenvolvimento ágil voluntárias, pertencentes a 2 projetos distintos do Laboratório Bridge, totalizando 43 participantes. Os participantes são profissionais experientes no mercado de tecnologia, com atuação em desenvolvimento ágil e gestão de projetos, incluindo cargos como \textit{Scrum Master}, \textit{Product Owner}, programador, \textit{tester} e \textit{designer}, variando de acordo com a configuração de cada equipe.
 
-A aplicação da dinâmica foi conduzida pelos \textit{Scrum Masters (SMs)} responsáveis pelas equipes, sem a participação direta da autora do trabalho durante a execução, com exceção da aplicação realizada na equipe da própria autora. Todas as equipes utilizaram o modelo digital/remoto da dinâmica, aproveitando plataformas de uso diário como Google Meet e Discord e o quadros colaborativos digital no FigJam para realizar a interação entre os participantes.
+A aplicação da dinâmica foi conduzida pelos \textit{Scrum Masters (SMs)} responsáveis pelas equipes, sem a participação direta da autora do trabalho durante a execução, com exceção da aplicação realizada na equipe da própria autora. Todas as equipes utilizaram o modelo digital/remoto da dinâmica, aproveitando plataformas de uso diário como Google Meet e Discord e o quadros colaborativos digital no \textit{FigJam} para realizar a interação entre os participantes.
 
 O procedimento para a realização da dinâmica no laboratório envolveu as seguintes etapas:
 \begin{enumerate}
@@ -1280,7 +1572,7 @@ Durante as aplicações, observaram-se algumas variações relevantes que caract
 
 A análise dos dados coletados a partir dos questionários e das observações das aplicações com profissionais forneceu insights valiosos sobre a aplicabilidade e percepção da dinâmica em um ambiente de trabalho real. Os dados obtidos por meio dos questionários foram consolidados no formato proposto pelo modelo MEEGA+ adaptado, permitindo a geração de gráficos para uma análise detalhada dos aspectos avaliados.
 
-Em relação à Usabilidade, a Figura \ref{bridge-usabilidade} apresenta um gráfico consolidado com os resultados obtidos. É possível verificar que a proposta de gamificação obteve resultados bastante positivos neste critério. Todos os itens relacionados à aparência visual, combinação de cores/fontes, legibilidade e organização do conteúdo obtiveram mediana 2, indicando uma forte concordância dos participantes. Este resultado sugere que a dinâmica é percebida como visual e funcionalmente atrativa, com uma apresentação clara e profissional que contribui positivamente para a imersão e a primeira impressão. O item com o menor índice de aprovação, embora ainda elevado (88,5\% dos participantes concordaram), foi "Eu precisei aprender poucas coisas para poder começar a jogar". Isso indica que, apesar da alta usabilidade geral, uma simplificação adicional no processo de onboarding ou uma maior clareza nas instruções iniciais pode ser benéfica para otimizar a experiência inicial de todos os grupos, especialmente considerando a restrição de tempo em ambientes profissionais.
+Em relação à Usabilidade, a Figura \ref{bridge-usabilidade} apresenta um gráfico consolidado com os resultados obtidos. É possível verificar que a proposta de gamificação obteve resultados bastante positivos neste critério. Todos os itens relacionados à aparência visual, combinação de cores/fontes, legibilidade e organização do conteúdo obtiveram mediana 2, indicando uma forte concordância dos participantes. Este resultado sugere que a dinâmica é percebida como visual e funcionalmente atrativa, com uma apresentação clara e profissional que contribui positivamente para a imersão e a primeira impressão. O item com o menor índice de aprovação, embora ainda elevado (88,5\% dos participantes concordaram), foi  “Eu precisei aprender poucas coisas para poder começar a jogar”. Isso indica que, apesar da alta usabilidade geral, uma simplificação adicional no processo de onboarding ou uma maior clareza nas instruções iniciais pode ser benéfica para otimizar a experiência inicial de todos os grupos, especialmente considerando a restrição de tempo em ambientes profissionais.
 
 \begin{figure}[H]
 	\caption{\label{bridge-usabilidade} Resultados da avaliação de usabilidade com profissionais}
@@ -1310,12 +1602,12 @@ Considerando os objetivos gerais diretamente relacionados à identificação e a
 	\legend{Fonte: Autora (2025)}
 \end{figure}
 
-Além dos dados quantitativos, o feedback qualitativo dos profissionais revelou pontos de destaque e oportunidades de aprimoramento.
+Além dos dados quantitativos, o \textit{feedback} qualitativo dos profissionais revelou pontos de destaque e oportunidades de aprimoramento.
 
 Os aspectos mais elogiados pelos participantes foram:
 \begin{itemize}
   \item Eficácia na identificação e análise de Rrscos: Muitos profissionais destacaram a capacidade da dinâmica de levantar riscos que não haviam sido previamente definidos ou formalmente discutidos pela equipe. A ferramenta foi vista como um catalisador para debates e análises conjuntas, contribuindo para uma reflexão sobre vulnerabilidades e para a priorização de riscos importantes.
-  \item Formato lúdico e engajador: A abordagem gamificada, com o design atrativo das cartas, personagens (como os "pokemons" e seus nomes) e o sistema de moedas, foi amplamente elogiada por tornar a discussão de riscos mais descontraída, divertida, dinâmica e engajadora, mesmo em temas complexos. A facilidade de jogar e a interatividade foram pontos frequentemente mencionados.
+  \item Formato lúdico e engajador: A abordagem gamificada, com o design atrativo das cartas, personagens (como os  “pokemons” e seus nomes) e o sistema de moedas, foi amplamente elogiada por tornar a discussão de riscos mais descontraída, divertida, dinâmica e engajadora, mesmo em temas complexos. A facilidade de jogar e a interatividade foram pontos frequentemente mencionados.
   \item Estímulo à interação e colaboração: A dinâmica foi reconhecida por promover a participação ativa de todos os integrantes da equipe e por facilitar a integração e o debate saudável, o que, em muitos casos, resultou na primeira oportunidade formal de discutir riscos em conjunto.
   \item Organização e clareza: A objetividade dos textos das cartas e a clareza das perguntas foram destacadas por facilitar a identificação dos riscos. A organização visual do material também foi mencionada como um facilitador.
 \end{itemize}
@@ -1323,8 +1615,8 @@ Os aspectos mais elogiados pelos participantes foram:
 Quanto aos aspectos que poderiam ser aprimorados, as sugestões dos profissionais incluíram:
 \begin{itemize}
   \item Duração e fadiga: Para o deck completo, alguns participantes relataram um certo cansaço ou queda na atenção ao longo da dinâmica, sugerindo que uma duração ideal poderia ser em torno de 1 hora.
-  \item Repetitividade e sobreposição de cartas: Similar ao feedback dos estudantes, houve menção a algumas cartas que pareciam ter temas muito parecidos ou elementos difíceis de diferenciar (ex: "Stakeon" e "Clientor"). A sugestão é revisar os textos ou o número de cartas para evitar redundâncias.
-  \item Clareza e formatação das perguntas: Algumas sugestões pontuais sobre a redação das perguntas nas cartas foram feitas, indicando que a frase poderia estar diretamente formatada como um "risco" em vez de uma pergunta, para evitar ambiguidades na interpretação da concordância.
+  \item Repetitividade e sobreposição de cartas: Similar ao \textit{feedback} dos estudantes, houve menção a algumas cartas que pareciam ter temas muito parecidos ou elementos difíceis de diferenciar (ex:  “Stakeon” e  “Clientor”). A sugestão é revisar os textos ou o número de cartas para evitar redundâncias.
+  \item Clareza e formatação das perguntas: Algumas sugestões pontuais sobre a redação das perguntas nas cartas foram feitas, indicando que a frase poderia estar diretamente formatada como um “risco” em vez de uma pergunta, para evitar ambiguidades na interpretação da concordância.
   \item Ferramenta digital e usabilidade da plataforma: Embora a aplicação remota tenha sido funcional, houve sugestões para aprimorar a experiência em plataformas digitais (ex: Figma), como o bloqueio de elementos de fundo e a consideração de um aplicativo interativo próprio, para evitar dificuldades técnicas.
   \item Aprofundamento pós-dinâmica: Alguns participantes apontaram a necessidade de uma sequência para a dinâmica, como um módulo ou ferramenta para organizar os planos de ação após o levantamento dos riscos, ou uma pré-seleção de cartas para focar em vulnerabilidades específicas antes da aplicação completa.
   \item Detalhes e explicabilidade: Sugeriu-se que o manual ou as explicações poderiam ser ainda mais detalhadas, com exemplos ou vídeos práticos de uma rodada, para facilitar o entendimento inicial, especialmente sobre como considerar e registrar os riscos.
@@ -1346,9 +1638,9 @@ Adicionalmente, os objetivos específicos da dinâmica foram consistentemente be
 A comparação entre os dois grupos revelou discrepâncias em dimensões específicas, que fornecem insights para o aprimoramento da dinâmica e sua adequação a diferentes contextos de aplicação. As principais discrepâncias observadas são:
 
 \begin{itemize}
-  \item \textbf{Facilidade de aprendizado:} Os estudantes indicaram uma dificuldade significativamente maior para aprender a jogar e compreender as regras, em contraste com a percepção dos profissionais. A afirmativa "Eu precisei aprender poucas coisas para começar a jogar o jogo", por exemplo, teve mediana 0 para estudantes, enquanto para profissionais foi 2. Similarmente, outras afirmativas como "Aprender a jogar este jogo foi fácil para mim", "Eu acho que a maioria das pessoas aprenderiam a jogar este jogo rapidamente", "Eu considero que o jogo é fácil de jogar" e "As regras do jogo são claras e compreensíveis" apresentaram mediana 1 para estudantes e 2 para profissionais. Essa discrepância pode estar relacionada ao tempo limitado para a aplicação em sala de aula, à pressão inerente a um contexto acadêmico ou a uma menor familiaridade com o formato de gamificação para fins práticos. Isso sugere a necessidade de desenvolver um processo de onboarding mais robusto e contextualizado para ambientes educacionais, talvez com a inclusão de um vídeo instrutivo ou de uma rodada de exemplo.
+  \item \textbf{Facilidade de aprendizado:} Os estudantes indicaram uma dificuldade significativamente maior para aprender a jogar e compreender as regras, em contraste com a percepção dos profissionais. A afirmativa “Eu precisei aprender poucas coisas para começar a jogar o jogo”, por exemplo, teve mediana 0 para estudantes, enquanto para profissionais foi 2. Similarmente, outras afirmativas como “Aprender a jogar este jogo foi fácil para mim”, “Eu acho que a maioria das pessoas aprenderiam a jogar este jogo rapidamente”, “Eu considero que o jogo é fácil de jogar” e “As regras do jogo são claras e compreensíveis” apresentaram mediana 1 para estudantes e 2 para profissionais. Essa discrepância pode estar relacionada ao tempo limitado para a aplicação em sala de aula, à pressão inerente a um contexto acadêmico ou a uma menor familiaridade com o formato de gamificação para fins práticos. Isso sugere a necessidade de desenvolver um processo de onboarding mais robusto e contextualizado para ambientes educacionais, talvez com a inclusão de um vídeo instrutivo ou de uma rodada de exemplo.
 
-  \item \textbf{Engajamento emocional e diversão:} Itens relacionados à diversão e ao sentimento de realização foram avaliados com medianas mais altas pelos profissionais. Afirmativas como "Me diverti com o jogo" e "Aconteceu algo no jogo que me fez sorrir" tiveram mediana 1 para estudantes e 2 para profissionais. O mesmo padrão foi observado para "O jogo não se torna monótono nas suas tarefas" e "Completar as tarefas do jogo me deu um sentimento de realização", que também apresentaram mediana 1 para estudantes e 2 para profissionais. Além disso, a recomendação geral do jogo ("Eu recomendaria este jogo para meus colegas") seguiu essa tendência, com mediana 1 para estudantes e 2 para profissionais. Isso indica que o aspecto lúdico e a sensação de conquista foram mais fortes fora da sala de aula. É provável que o ambiente mais formal da sala de aula tenha inibido o engajamento espontâneo e a expressividade emocional. Para otimizar o engajamento lúdico em contextos acadêmicos, seria benéfico criar um clima mais descontraído durante a aplicação e considerar a permissão de pausas para conversas livres, o que pode aumentar a imersão e o prazer na experiência.
+  \item \textbf{Engajamento emocional e diversão:} Itens relacionados à diversão e ao sentimento de realização foram avaliados com medianas mais altas pelos profissionais. Afirmativas como “Me diverti com o jogo” e “Aconteceu algo no jogo que me fez sorrir” tiveram mediana 1 para estudantes e 2 para profissionais. O mesmo padrão foi observado para “O jogo não se torna monótono nas suas tarefas” e “Completar as tarefas do jogo me deu um sentimento de realização”, que também apresentaram mediana 1 para estudantes e 2 para profissionais. Além disso, a recomendação geral do jogo (”Eu recomendaria este jogo para meus colegas”) seguiu essa tendência, com mediana 1 para estudantes e 2 para profissionais. Isso indica que o aspecto lúdico e a sensação de conquista foram mais fortes fora da sala de aula. É provável que o ambiente mais formal da sala de aula tenha inibido o engajamento espontâneo e a expressividade emocional. Para otimizar o engajamento lúdico em contextos acadêmicos, seria benéfico criar um clima mais descontraído durante a aplicação e considerar a permissão de pausas para conversas livres, o que pode aumentar a imersão e o prazer na experiência.
 \end{itemize}
 
 Em síntese, a maior discrepância entre os dois públicos reside na percepção da facilidade de aprendizado e no nível de engajamento lúdico. A dinâmica demonstra um desempenho visual e pedagógico consistentemente elevado, validando sua concepção e seus objetivos centrais. Contudo, para que a experiência em sala de aula atinja o mesmo nível de fluidez e diversão percebido em ambientes profissionais, são necessários ajustes no processo de onboarding e na ambientação da atividade. A promoção de um ambiente mais descontraído e a adequação das instruções iniciais são as principais vias para mitigar as diferenças observadas e maximizar o potencial da dinâmica em diferentes contextos de aplicação.
@@ -1362,7 +1654,7 @@ A condução de qualquer estudo empírico, incluindo a avaliação de uma dinâm
 
 A validade de construto refere-se à extensão em que as variáveis operacionais (como a forma de medir a usabilidade ou a diversão da dinâmica) realmente representam os construtos teóricos que se pretende medir.
 \begin{itemize}
-  \item \textbf{Subjetividade das percepções:} A principal ameaça aqui reside na natureza subjetiva das respostas aos questionários. A percepção de "diversão", "facilidade de uso" ou "relevância" pode variar amplamente entre os participantes, influenciada por fatores pessoais, expectativas prévias ou até mesmo o humor no momento da avaliação.
+  \item \textbf{Subjetividade das percepções:} A principal ameaça aqui reside na natureza subjetiva das respostas aos questionários. A percepção de “diversão”, “facilidade de uso” ou “relevância” pode variar amplamente entre os participantes, influenciada por fatores pessoais, expectativas prévias ou até mesmo o humor no momento da avaliação.
   \begin{itemize}
     \item \textit{Mitigação:} A utilização de um modelo de avaliação consolidado como o MEEGA+ (mesmo que adaptado) ajuda a padronizar a coleta de dados, mas a interpretação ainda é individual. A combinação de dados quantitativos (questionário) com dados qualitativos (comentários abertos) foi utilizada para fornecer uma visão mais completa e triangulada das percepções.
     \end{itemize}
@@ -1376,7 +1668,7 @@ A validade de construto refere-se à extensão em que as variáveis operacionais
     \end{itemize}
   \item \textbf{Efeito Hawthorne:} A participação em um estudo pode, por si só, alterar o comportamento ou as respostas dos indivíduos. Os participantes podem ter se esforçado mais na dinâmica ou fornecido respostas mais positivas no questionário simplesmente por saberem que estavam sendo avaliados.
   \begin{itemize}
-    \item \textit{Mitigação:} A garantia de anonimato nas respostas do questionário pode reduzir esse efeito, mas não eliminá-lo completamente. A aplicação por Scrum Masters, sem a presença constante da autora, também pode ter ajudado a reduzir a percepção de uma avaliação direta.
+    \item \textit{Mitigação:} A garantia de anonimato nas respostas do questionário pode reduzir esse efeito, mas não eliminá-lo completamente. A aplicação por \textit{Scrum Masters}, sem a presença constante da autora, também pode ter ajudado a reduzir a percepção de uma avaliação direta.
     \end{itemize}
 \end{itemize}
 
@@ -1392,7 +1684,7 @@ A validade interna preocupa-se com a extensão em que a relação de causa e efe
     \end{itemize}
   \item \textbf{Envolvimento e potencial viés do pesquisador:} A presença e influência do pesquisador nos momentos de avaliação podem representar uma ameaça. Como o autor esteve envolvido de maneira próxima e ativa no processo de coleta de dados e avaliação, especialmente na aplicação com sua própria equipe de profissionais do mercado, pode ter ocorrido uma influência inadvertida nos resultados. O pesquisador pode, mesmo que inconscientemente, introduzir seus próprios preconceitos, expectativas ou interpretações nos dados coletados, comprometendo a objetividade e a validade interna do estudo. Para uma validação mais robusta desses resultados, seria necessária uma avaliação prática sem a participação ativa do autor, por um terceiro imparcial.
   \begin{itemize}
-    \item \textit{Mitigação:} Como contorno desta limitação, o pesquisador buscou manter uma postura neutra e imparcial durante as aplicações, abstendo-se de influenciar as discussões ou respostas dos participantes. Além disso, a maioria das aplicações com profissionais foi conduzida pelos próprios Scrum Masters das equipes, o que reduziu a presença direta da autora.
+    \item \textit{Mitigação:} Como contorno desta limitação, o pesquisador buscou manter uma postura neutra e imparcial durante as aplicações, abstendo-se de influenciar as discussões ou respostas dos participantes. Além disso, a maioria das aplicações com profissionais foi conduzida pelos próprios \textit{Scrum Masters} das equipes, o que reduziu a presença direta da autora.
     \end{itemize}
   \item \textbf{Maturação:} O conhecimento prévio dos participantes sobre gestão de riscos ou sobre gamificação pode ter evoluído durante o período do estudo, influenciando suas respostas.
     \begin{itemize}
@@ -1414,7 +1706,7 @@ A validade externa refere-se à capacidade de generalizar os resultados do estud
     \begin{itemize}
     \item \textit{Mitigação:} Embora inerente a estudos com amostras de conveniência, a avaliação em dois públicos distintos (acadêmicos e profissionais) e com diferentes níveis de experiência tenta expandir um pouco a representatividade dos resultados. A descrição detalhada do perfil dos participantes busca fornecer transparência sobre as características da amostra.
     \end{itemize}
-  \item \textbf{Contexto específico da aplicação:} A dinâmica foi aplicada em um ambiente de sala de aula e em um laboratório de Pesquisa e Desenvolvimento (Laboratório Bridge). As características desses ambientes (e.g., cultura da equipe, tipo de projeto, familiaridade com ferramentas ágeis) podem não ser representativas de todos os cenários de desenvolvimento de software.
+  \item \textbf{Contexto específico da aplicação:} A dinâmica foi aplicada em um ambiente de sala de aula e em um laboratório de Pesquisa e Desenvolvimento (Laboratório Bridge). As características desses ambientes (e.g., cultura da equipe, tipo de projeto, familiaridade com ferramentas ágeis) podem não ser representativas de todos os cenários de desenvolvimento de \textit{software}.
     \begin{itemize}
     \item \textit{Mitigação:} A documentação detalhada do contexto de aplicação busca fornecer subsídios para que futuros pesquisadores possam avaliar a similaridade com seus próprios ambientes.
     \end{itemize}
@@ -1445,7 +1737,7 @@ Esta validade diz respeito à inferência correta da relação entre as variáve
 
 \chapter{Conclusão}
 
-O presente trabalho teve como objetivo principal desenvolver e avaliar uma dinâmica gamificada para auxiliar na análise e identificação de riscos em equipes ágeis de desenvolvimento de software. Para alcançar este propósito, o estudo foi estruturado em uma série de etapas metodológicas que permitiram a construção de uma base teórica sólida, o entendimento do estado da arte na gestão de riscos em contextos ágeis, o desenvolvimento da dinâmica e sua posterior avaliação em diferentes ambientes e com distintos públicos.
+O presente trabalho teve como objetivo principal desenvolver e avaliar uma dinâmica gamificada para auxiliar na análise e identificação de riscos em equipes ágeis de desenvolvimento de \textit{software}. Para alcançar este propósito, o estudo foi estruturado em uma série de etapas metodológicas que permitiram a construção de uma base teórica sólida, o entendimento do estado da arte na gestão de riscos em contextos ágeis, o desenvolvimento da dinâmica e sua posterior avaliação em diferentes ambientes e com distintos públicos.
 
 Inicialmente, a pesquisa realizou uma análise e fundamentação teórica abrangente, abordando conceitos essenciais de gerência de projetos, gestão de riscos, métodos ágeis e gamificação. Este embasamento conceitual, detalhado no Capítulo 2, foi crucial para contextualizar a problemática e guiar as etapas subsequentes do trabalho. Complementarmente, um mapeamento sistemático da literatura, apresentado no Capítulo 3, foi conduzido com o intuito de identificar e analisar os riscos mais comuns em projetos ágeis, as técnicas de gestão de riscos prevalentemente utilizadas e os resultados obtidos com a aplicação de tais práticas. Esse levantamento do estado da arte forneceu insights valiosos que fundamentaram a concepção e o desenvolvimento da dinâmica gamificada.
 
@@ -1457,7 +1749,7 @@ As avaliações com ambos os públicos, conforme discutido na seção \ref{sec:d
 
 Contudo, a comparação entre os grupos de estudantes e profissionais revelou discrepâncias notáveis. A facilidade de aprendizado e o engajamento emocional/diversão foram percebidos de forma mais acentuada pelos profissionais. As medianas mais baixas e a maior dispersão de respostas entre os estudantes sugerem que o ambiente acadêmico, com suas limitações de tempo e potencial pressão avaliativa, pode ter inibido parte do aspecto lúdico e intuitivo da dinâmica, demandando um processo adaptado mais direcionado e uma ambientação mais descontraída para esse público.
 
-Em síntese, este trabalho demonstra que a dinâmica gamificada desenvolvida é uma abordagem promissora e eficaz para a análise e identificação de riscos em equipes ágeis. Ela se mostrou capaz de engajar os participantes de forma interativa, promover a colaboração e, de maneira mais significativa, facilitar a compreensão e o reconhecimento de riscos em projetos de software. Os materiais necessários para a execução da dinâmica estão disponíveis para download em: \url{https://github.com/martinsamanda/tcc} e também nos Apêndices deste trabalho.
+Em síntese, este trabalho demonstra que a dinâmica gamificada desenvolvida é uma abordagem promissora e eficaz para a análise e identificação de riscos em equipes ágeis. Ela se mostrou capaz de engajar os participantes de forma interativa, promover a colaboração e, de maneira mais significativa, facilitar a compreensão e o reconhecimento de riscos em projetos de \textit{software}. Os materiais necessários para a execução da dinâmica estão disponíveis para download em: \url{https://github.com/martinsamanda/tcc} e também nos Apêndices deste trabalho.
 
 \section{Trabalhos futuros}
 \label{sec:trabalhos-futuros}
@@ -1465,9 +1757,9 @@ Em síntese, este trabalho demonstra que a dinâmica gamificada desenvolvida é 
 Como indicação para trabalhos futuros, sugere-se a expansão e o aprimoramento da dinâmica em diversas frentes:
 
 \begin{itemize}
-\item \textbf{Expansão do conteúdo das cartas:} A criação de cartas para os demais riscos identificados na taxonomia usada como base \cite{Taxonomy} (32 elementos menos citados na literatura ficaram de fora da dinâmica) pode enriquecer ainda mais a dinâmica, tornando-a mais abrangente e útil para equipes que enfrentam uma variedade maior de desafios em projetos de software.
-\item \textbf{Aplicação em outros contextos:} É recomendada a aplicação da dinâmica em outros contextos além dos investigados neste estudo, como em projetos de software não ágeis ou em empresas de diferentes portes e segmentos. Tal expansão pode ampliar a aplicabilidade da abordagem e validar sua eficácia em cenários mais diversificados.
-\item \textbf{Aprofundamento pós-dinâmica:} Um ponto de melhoria dos feedbacks foi a necessidade de uma sequência para a dinâmica. Sugere-se o desenvolvimento de um módulo ou ferramenta complementar que auxilie as equipes a organizar e planejar planos de ação após o levantamento e análise inicial dos riscos, transformando o input da dinâmica em saídas acionáveis para o projeto.
+\item \textbf{Expansão do conteúdo das cartas:} A criação de cartas para os demais riscos identificados na taxonomia usada como base \cite{Taxonomy} (32 elementos menos citados na literatura ficaram de fora da dinâmica) pode enriquecer ainda mais a dinâmica, tornando-a mais abrangente e útil para equipes que enfrentam uma variedade maior de desafios em projetos de \textit{software}.
+\item \textbf{Aplicação em outros contextos:} É recomendada a aplicação da dinâmica em outros contextos além dos investigados neste estudo, como em projetos de \textit{software} não ágeis ou em empresas de diferentes portes e segmentos. Tal expansão pode ampliar a aplicabilidade da abordagem e validar sua eficácia em cenários mais diversificados.
+\item \textbf{Aprofundamento pós-dinâmica:} Um ponto de melhoria dos \textit{feedbacks} foi a necessidade de uma sequência para a dinâmica. Sugere-se o desenvolvimento de um módulo ou ferramenta complementar que auxilie as equipes a organizar e planejar planos de ação após o levantamento e análise inicial dos riscos, transformando o input da dinâmica em saídas acionáveis para o projeto.
 \item \textbf{Desenvolvimento de plataforma online:} A criação de uma plataforma online para a dinâmica representaria um avanço significativo, permitindo que equipes distribuídas participem da atividade de forma assíncrona ou síncrona de maneira mais facilitada. Isso ampliaria o alcance e a flexibilidade da abordagem, oferecendo uma experiência mais dinâmica e interativa para ambientes remotos ou híbridos.
 \end{itemize}
 
@@ -1512,7 +1804,6 @@ Como indicação para trabalhos futuros, sugere-se a expansão e o aprimoramento
   \end{tabular}
 \end{table}
 
-
 \chapter{Estudos selecionados}
 \label{apendiceB}
 % \addcontentsline{toc}{chapter}{Apêndice B – Estudos selecionados}%
@@ -1540,11 +1831,11 @@ Como indicação para trabalhos futuros, sugere-se a expansão e o aprimoramento
   \hline
   S4 & Risk management framework in Agile software development methodology & Zahedi, Mohammad \& Kashanaki, Alireza \& Farahani, Elham. (2023). Risk management framework in Agile software development methodology. International Journal of Electrical and Computer Engineering (IJECE). 13. 4379. 10.11591/ijece.v13i4.pp4379-4387. \\
   \hline
-  S5 & SERGE – Serious Game for the Education of Risk Management in Software Project Management & G. Annunziata, S. Lambiase, F. Palomba and F. Ferrucci, "SERGE - Serious Game for the Education of Risk Management in Software Project Management," 2024 IEEE/ACM 46th International Conference on Software Engineering: Software Engineering Education and Training (ICSE-SEET), Lisbon, Portugal, 2024, pp. 264-273, doi: 10.1145/3639474.3640085. \\
+  S5 & SERGE – Serious Game for the Education of Risk Management in Software Project Management & G. Annunziata, S. Lambiase, F. Palomba and F. Ferrucci, “SERGE - Serious Game for the Education of Risk Management in Software Project Management,” 2024 IEEE/ACM 46th International Conference on Software Engineering: Software Engineering Education and Training (ICSE-SEET), Lisbon, Portugal, 2024, pp. 264-273, doi: 10.1145/3639474.3640085. \\
   \hline
   S6 & Do scaling agile frameworks address global software development risks? An empirical study & Beecham, Sarah \& Clear, Tony \& Lal, Ramesh \& Noll, John. (2021). Do scaling agile frameworks address global software development risks? An empirical study. Journal of Systems and Software. 171. 110823. 10.1016/j.jss.2020.110823. \\
   \hline
-  S7 & User Story Risk Prioritization Model for Agile Software Development & P. Thanomwong and T. Senivongse, "User Story Risk Prioritization Model for Agile Software Development," 2022 International Conference on Data and Software Engineering (ICoDSE), Denpasar, Indonesia, 2022, pp. 161-166, doi: 10.1109/ICoDSE56892.2022.9972041. \\
+  S7 & User Story Risk Prioritization Model for Agile Software Development & P. Thanomwong and T. Senivongse, “User Story Risk Prioritization Model for Agile Software Development,” 2022 International Conference on Data and Software Engineering (ICoDSE), Denpasar, Indonesia, 2022, pp. 161-166, doi: 10.1109/ICoDSE56892.2022.9972041. \\
   \hline
   S8 & Issues of Formalization of Risk Management Process in Software Design & BILOUSIVA, Liudmyla et al. Issues of formalization of risk management process in software design. In: IntelITSIS. 2023. p. 48-57. \\
   \hline
@@ -1639,7 +1930,10 @@ Como indicação para trabalhos futuros, sugere-se a expansão e o aprimoramento
 \chapter{Projeto fictício}
 \label{apendiceD}
 
-%TODO(adicionar apendice)
+\includepdf[pages=-]{documents/RedClinicas.pdf}
+% \centering
+% \includegraphics[scale=0.75,page=1]{documents/RedClinicas.pdf}
+% \includegraphics[scale=0.75,page=2]{documents/RedClinicas.pdf}
 
 %------------------------------------------------------------------------------%
 
@@ -1647,5 +1941,7 @@ Como indicação para trabalhos futuros, sugere-se a expansão e o aprimoramento
 \printindex
 
 %------------------------------------------------------------------------------%
+
+%TODO: Adicionar todas as cartas?
 
 \end{document}
