@@ -193,11 +193,16 @@
 \chapter{Introdução e objetivos} % Ideias gerais e por quê fazer?
 
 \section{Introdução}
-As metodologias ágeis têm se consolidado como uma das abordagens mais eficazes e flexíveis para o desenvolvimento de \textit{software} e gestão de projetos na área de tecnologia. Essas metodologias, que incluem frameworks como \textit{Scrum}, \textit{Kanban} e \textit{XP}, são amplamente adotadas pois promovem uma rápida adaptação às mudanças e entrega contínua de valor aos clientes/usuários. No entanto, um dos desafios associados a essas práticas é o da gestão de riscos, que muitas vezes não é realizada de maneira explícita, deixando as equipes vulneráveis a imprevistos que podem comprometer o sucesso dos projetos.
 
-O problema identificado neste trabalho é que as equipes ágeis, ao não possuírem um processo de gerenciamento de riscos explícito, podem sofrer consequências negativas que poderiam ser mitigadas se houvesse a implementação de um gerenciamento de riscos estruturado. Assim, a hipótese central do trabalho é que a criação e implementação de uma dinâmica lúdica e facilitada de gestão de riscos para equipes ágeis pode melhorar significativamente a identificação e a mitigação de riscos nessas equipes, resultando em uma entrega de valor mais consistente e eficiente. 
+As metodologias ágeis têm se consolidado como uma das abordagens mais eficazes e flexíveis para o desenvolvimento de \textit{software} e a gestão de projetos na área de tecnologia \cite{AgileManifest, AgileGuide}. Frameworks como \textit{Scrum}, \textit{Kanban} e \textit{XP} são amplamente adotados por promoverem adaptação rápida a mudanças, comunicação contínua com o cliente e entrega incremental de valor \cite{Poppendieck_Poppendieck_2003, Pressman_2014}.
 
-Este trabalho se mostra necessário devido à lacuna existente na integração de práticas explícitas de gestão de riscos no contexto das metodologias ágeis. A falta de um foco estruturado na gestão de riscos nessas metodologias pode levar a atrasos, aumento de custos e, em última instância, ao fracasso de projetos. A introdução de uma dinâmica lúdica para a gestão de riscos visa tornar o processo mais acessível e menos oneroso para as equipes, promovendo um ambiente de trabalho mais colaborativo e consciente dos riscos. Ao desenvolver e validar uma dinâmica lúdica para este fim, o trabalho pode contribuir para a melhoria das práticas de desenvolvimento de \textit{software}, tornando-as mais robustas e resilientes. Os resultados esperados incluem a criação de uma ferramenta prática e acessível que pode ser adotada por diversas equipes e organizações.
+Entretanto, um dos desafios associados a essas práticas é a gestão de riscos, que, embora reconhecida como essencial para o sucesso de projetos de software \cite{PMBOK, iso16085}, muitas vezes não é realizada de maneira estruturada ou explícita em contextos ágeis. Essa ausência pode deixar equipes vulneráveis a imprevistos que impactam negativamente prazos, custos e qualidade do produto \cite{Afshari, Zahedi}.
+
+O problema identificado neste trabalho é que muitas equipes ágeis não adotam processos sistemáticos de gerenciamento de riscos, o que contribui para a repetição de falhas que poderiam ser mitigadas ou evitadas. Considerando esse cenário, a hipótese central é que a criação e implementação de uma dinâmica lúdica, acessível e facilitada para a gestão de riscos pode apoiar as equipes ágeis na identificação e análise de riscos, resultando em entregas mais consistentes e resilientes.
+
+Esta pesquisa se justifica pela lacuna existente na integração de práticas explícitas de gestão de riscos ao contexto das metodologias ágeis \cite{LopesSamueldeSouza2022ARMF}. Embora existam modelos tradicionais e frameworks propostos na literatura, muitas dessas abordagens não se adaptam à cultura ágil por exigirem documentação extensa ou processos pesados \cite{Gold}. A proposta de uma dinâmica lúdica se alinha com iniciativas recentes que utilizam jogos sérios para promover engajamento e aprendizado em gestão de projetos de software \cite{SERGE, Caponetto, Alomari}, tornando o processo de identificação de riscos mais colaborativo e intuitivo.
+
+Ao desenvolver e validar uma dinâmica gamificada voltada para esse fim, este trabalho busca contribuir com uma ferramenta prática, replicável e de baixo custo que pode ser adotada por diferentes equipes e organizações. Espera-se que os resultados obtidos incentivem a adoção de práticas mais sistemáticas e acessíveis de gestão de riscos no desenvolvimento ágil de \textit{software}.
 
 \section{Objetivos gerais}
 
@@ -360,8 +365,9 @@ O plano de gerência de riscos consegue tratar apenas o primeiro grupo de riscos
 Por meio da ISO/IEC/IEEE 16085 é definido um modelo de processo de gerenciamento de riscos de 7 etapas. São elas: Processos técnicos e de gestão, Planejamento da gestão de riscos, Gerenciamento do perfil de risco, Análise de riscos, Tratamento de riscos, Monitoramento de riscos e Avaliação do processo de gestão de riscos.
 
 \begin{figure}[H]
+  \centering
 	\caption{\label{modelo-processo-gerenciamento-riscos}Modelo de processo de gerenciamento de riscos}
-  \includegraphics[width=\textwidth]{modelo-processo-gerenciamento-riscos}
+  \includegraphics[width=0.8\textwidth]{modelo-processo-gerenciamento-riscos}
 	\legend{Fonte: \citeonline{iso16085}}
 \end{figure}
 
@@ -502,8 +508,9 @@ Os princípios do Manifesto enfatizam a entrega contínua de \textit{software} f
 O \textit{Lean} é definido em \textit{Lean Software Development: An Agile Toolkit} \cite{Poppendieck_Poppendieck_2003} como uma abordagem que visa otimizar processos eliminando desperdícios e adicionando valor de acordo com a percepção do cliente. Entre seus princípios estão a eliminação de desperdícios, que envolve identificar e remover qualquer atividade que não agregue valor ao produto final. Amplificar o aprendizado é essencial, pois o desenvolvimento é um processo de descoberta contínua. Decidir o mais tarde possível permite tomar decisões mais informadas e com base em fatos concretos. A entrega rápida é fundamental para obter \textit{feedback} contínuo e atender rapidamente às necessidades dos clientes. A equipe deve ser empoderada para tomar decisões técnicas detalhadas, pois eles possuem o conhecimento mais profundo sobre o trabalho. Construir integridade no produto significa assegurar que ele atenda às expectativas do usuário e se mantenha útil ao longo do tempo. Finalmente, ver o todo é crucial para garantir que todas as partes do sistema trabalhem de forma coesa e otimizada, evitando a subotimização de componentes individuais.
 
 \begin{figure}[H]
+  \centering
 	\caption{\label{annual-agile-report}Frameworks utilizados pelos respondentes do Agile Report}
-  \includegraphics[width=\textwidth]{annual-agile-report}
+  \includegraphics[width=0.9\textwidth]{annual-agile-report}
 	\legend{Fonte: \textit{17th State of Agile Report} \cite{17_agile_report}}
 \end{figure}
 
@@ -552,8 +559,9 @@ A gamificação envolve um processo de definição do ponto de vista de um desig
 Pode ser observado na Figura 4 um exemplo do uso da técnica PBL (Points, Badges, Leaderboard) no aplicativo para aprendizado de línguas Duolingo.
 
 \begin{figure}[H]
+  \centering
 	\caption{\label{duolingo}Sistema PBL no Duolingo}
-  \includegraphics[width=\textwidth]{duolingo}
+  \includegraphics[width=0.9\textwidth]{duolingo}
 	\legend{Fonte: Duolingo, Inc.}
 \end{figure}
 
@@ -620,7 +628,7 @@ Para poder então criar um processo gamificado para uma atividade, \citeonline{G
 \chapter{Estado da arte}
 \label{cap:estado-arte}
 
-A fim de levantar o estado da arte, foi realizada uma replicação e atualização do estudo conduzido por \citeonline{garcia2023agreed} em seu trabalho de mestrado de Mapeamento Sistemático de Literatura (MSL). Nesta replicação as diferenças foram a realização da análise apenas de estudos publicados, analisando estudos publicado a partir de 2021, posteriormente ao mapeamento original, e a não aplicação da técnica de Snowballing no ciclo final.
+A fim de levantar o estado da arte, foi realizada uma replicação e atualização do de Mapeamento Sistemático de Literatura (MSL) conduzido por \citeonline{garcia2023agreed} em seu trabalho de mestrad. Nesta replicação as diferenças foram a realização da análise apenas de estudos publicados a partir de 2021, período posterior ao do mapeamento original, e a não aplicação da técnica de Snowballing no ciclo final.
 
 Assim como no mapeamento original, o MSL foi desenvolvido com o objetivo de analisar a integração de práticas explícitas de gestão de risco em métodos ágeis. Para isso, foram seguidos os procedimentos definidos por \citeonline{PETERSEN20151} e \citeonline{Petersen}, garantindo a aplicação de uma abordagem sistemática e rigorosa na condução da pesquisa.
 
@@ -658,7 +666,7 @@ A Tabela~\ref{tab:picoc} \cite{kitchenham2007guidelines} mostra os critérios e 
   \legend{Fonte: \citeonline{garcia2023agreed}}
 \end{table}
 
-A comparação é definida como “N/A” por se tratar de um mapeamento sistemático.
+% A comparação é definida como “N/A” por se tratar de um mapeamento sistemático.
 
 %------------------------------------------------------------------------------%
 
@@ -676,7 +684,7 @@ A string de busca foi aplicada nas bibliotecas digitais IEEEXplore, ACM Digital 
   \legend{Fonte: \citeonline{garcia2023agreed}}
 \end{table}
 
-Como não é possível realizar a pesquisa em todas as bibliotecas digitais usando a string de busca no mesmo formato, foram necessárias adaptações específicas da string de pesquisa para cada biblioteca digital, conforme descrito no \hyperref[apendiceA]{Apêndice A}.
+As adaptações específicas da string de pesquisa para cada biblioteca digital estão disponíveis no \hyperref[apendiceA]{Apêndice A}.
 
 %------------------------------------------------------------------------------%
 
@@ -719,8 +727,9 @@ Com base na questão de pesquisa principal, os seguintes critérios de inclusão
 A seleção dos estudos foi realizada em três ciclos, conforme Figura 5.
 
 \begin{figure}[H]
-	\caption{\label{numero-estudos-ciclo}Modelo de processo de gerenciamento de riscos}
-  \includegraphics[width=\textwidth]{numero-estudos-ciclo}
+	\centering
+  \caption{\label{numero-estudos-ciclo}Número de estudos por ciclo}
+  \includegraphics[width=0.7\textwidth]{numero-estudos-ciclo}
 	\legend{Fonte: Autora (2024)}
 \end{figure}
 
@@ -753,7 +762,7 @@ Os 7 estudos primários selecionados estão disponíveis no \hyperref[apendiceB]
 
 Os dados coletados dos estudos primários selecionados são apresentados e analisados de acordo com cada questão de análise pré-definida. Os dados brutos extraídos estão disponíveis em: \href{https://docs.google.com/spreadsheets/d/1YY_yjyBefJ3ZmnEY38TM_LnZLoJcKhrw_q0BdEvqx2E/edit?gid=1276800509#gid=1276800509}{MSL público}. Uma síntese do DEF está descrita na Tabela~\ref{sintese}.
 
-\begin{table}[h!]
+\begin{table}[H]
   \centering
   \caption{Síntese do DEF}
   \begin{tabular}{|p{2.4cm}|c|p{9.5cm}|}
@@ -822,11 +831,12 @@ Em S7, é descrito o problema de minimização de perdas por riscos no processo 
 
 Os estudos primários selecionados identificam um total de 97 riscos. Assim como no mapeamento original foram agrupados por meio da taxonomia de \citeonline{Taxonomy}, uma taxonomia de riscos que fornece três classes de riscos, seus elementos e atributos. Todos os riscos relatados nos estudos primários selecionados foram coletados, classificados de acordo com a taxonomia e resumidos no \hyperref[apendiceC]{Apêndice C}. A lista completa de riscos, suas fontes e as classificações escolhidas está disponível em: \href{https://docs.google.com/spreadsheets/d/1YY_yjyBefJ3ZmnEY38TM_LnZLoJcKhrw_q0BdEvqx2E/edit?usp=drivesdk}{link}.
 
-Apenas 5 dos 7 estudos listaram de forma explícita os riscos enfrentados nos projetos. Deste grupo, o estudo primário que relatou o maior número de riscos foi S5, com um total de 63 riscos, tendo alta distribuição entre as diferentes classes, elementos e atributos, como é possível observar na Figura 6.
+Apenas 5 dos 7 estudos listaram de forma explícita os riscos enfrentados nos projetos. Deste grupo, o estudo primário que relatou o maior número de riscos foi S5, com um total de 63 riscos, tendo alta distribuição entre as diferentes classes, elementos e atributos, como é possível observar na Figura \ref{dist-contagem-classe-atributo}.
 
 \begin{figure}[H]
+  \centering
 	\caption{\label{dist-contagem-classe-atributo}Distribuição de contagem por classe e atributo de S5}
-  \includegraphics[width=\textwidth]{dist-contagem-classe-atributo}
+  \includegraphics[width=0.9\textwidth]{dist-contagem-classe-atributo}
 	\legend{Fonte: Autora (2024)}
 \end{figure}
 
@@ -872,32 +882,32 @@ Seguindo o \textit{framework} de gamificação em engenharia de \textit{software
 
 \begin{enumerate}
   \item Identificação dos objetivos da gamificação;
-  \item Análise dos jogadores;
+  \item Análise dos participantes; 
   \item Definição do escopo da gamificação e estudo de viabilidade;
-  \item Análise e design do jogo;
+  \item Análise e design do jogo; 
   \item Desenvolvimento da plataforma gamificada;
-  \item Gerenciamento, monitoramento e medição.
+  \item Gerenciamento, monitoramento e medição. 
 \end{enumerate}
 
 \section{Identificação dos objetivos da gamificação}
 
-A primeira etapa do \textit{framework} busca estabelecer um conjunto de objetivos para a gamificação. Para isso, é necessário examinar o cenário atual e o desejado, identificando situações que podem ser aprimoradas por meio da gamificação e de que forma essas melhorias podem ocorrer. Por fim, os objetivos devem ser convertidos em metas SMART, que possibilitem a mensuração dos avanços. Idealmente, devem ser definidos indicadores quantitativos, mas isso nem sempre é viável — especialmente em organizações com sistemas de medição inexistentes ou imaturos.
+A primeira etapa do \textit{framework} busca estabelecer um conjunto de objetivos para a gamificação. Para isso, é necessário examinar o cenário atual e o desejado, identificando situações que podem ser aprimoradas por meio da gamificação e de que forma essas melhorias podem ocorrer. Por fim, os objetivos devem ser convertidos em metas SMART, que possibilitem a mensuração dos avanços.
 
 \begin{enumerate}
-  \item \textbf{Cenário atual}: Equipes ágeis atuam em modelos nos quais o gerenciamento de riscos é implícito, sem etapas estruturadas ou práticas específicas para a identificação e análise de riscos. Essa ausência de uma abordagem explícita pode levar à negligência de possíveis problemas, permitindo que riscos não tratados se concretizem, impactando negativamente o andamento dos projetos e a entrega de valor.
+  \item \textbf{Cenário atual}: Equipes ágeis atuam em modelos nos quais o gerenciamento de riscos é implícito, sem etapas estruturadas ou práticas específicas para a identificação e análise de riscos. Essa ausência pode levar à negligência de riscos potenciais, cuja concretização compromete o andamento dos projetos e a entrega de valor.
   
-  \item \textbf{Cenário-alvo}: Implementar uma dinâmica gamificada que facilite a identificação e análise de riscos no contexto de equipes ágeis. A intenção é oferecer um espaço estruturado e colaborativo para que os membros da equipe reconheçam riscos potenciais e os alinhem a possíveis ações de mitigação, promovendo maior clareza e previsibilidade no trabalho, sem comprometer a agilidade dos processos.
+  \item \textbf{Cenário-alvo}: Implementar uma dinâmica gamificada que facilite a identificação e análise de riscos no contexto de equipes ágeis. A intenção é oferecer um espaço estruturado e colaborativo para que os membros da equipe reconheçam riscos potenciais e alinhem ações de mitigação, promovendo maior clareza e previsibilidade no trabalho, sem comprometer a agilidade dos processos.
   
   \item \textbf{Meta}: Desenvolver uma dinâmica gamificada que possibilite às equipes ágeis compreender melhor os riscos associados aos seus projetos e ampliar a percepção coletiva sobre possíveis impactos, promovendo uma análise mais estruturada e eficaz em pelo menos uma equipe piloto. A validação será feita por meio de \textit{feedback} qualitativo dos participantes, considerando a clareza e a aplicabilidade da abordagem.
 \end{enumerate}
 
-\section{Análise de usuários}
+\section{Análise de participantes}
 
 A segunda etapa enfatiza a importância de analisar os participantes para os quais se está projetando a solução, visando criar experiências que melhorem sua motivação e engajamento. Essa análise considera os jogadores como elemento central do ambiente, avaliando suas motivações, objetivos e interação com as mecânicas propostas. O processo envolve a identificação da cultura organizacional e dos perfis de participantes, que podem ser categorizados segundo taxonomias como a de \citeonline{Bartle}, além de dados psicográficos e demográficos.
 
 No contexto brasileiro, segundo dados da \citeonline{jetbrains2023dev}, 51\% dos profissionais do setor de TI têm menos de 30 anos. Essa estatística é corroborada regionalmente pela pesquisa realizada em Santa Catarina \cite{acate}, que aponta uma média de idade em torno de 33 anos. O setor é majoritariamente masculino, com apenas 21,2\% de participação feminina, conforme dados da \citeonline{softex2023industriatic}. Em relação à formação acadêmica, mais de 85\% dos profissionais possuem graduação em áreas de tecnologia, com destaque para Sistemas de Informação, Análise e Desenvolvimento de Sistemas, Ciências da Computação e Engenharia \cite{revelo2021tecnologia}.
 
-Quanto às especialidades, 30,5\% dos profissionais se identificam como Full-stack, seguidos por Back-end (27,2\%) e Front-end (24,2\%) \cite{revelo2021tecnologia}. Os segmentos mais representativos de atuação são Serviços e Telecomunicações (25,9\%), Finanças (25,6\%) e Indústria (18,9\%) \cite{abes2023mercado}. Além disso, 63\% dos profissionais afirmam preferir o uso do \textit{Scrum} em nível de equipe, demonstrando a prevalência desse \textit{framework} como principal metodologia entre as equipes ágeis \cite{17_agile_report}.
+Quanto às especialidades, 30,5\% dos profissionais se identificam como Full-stack, seguidos por Back-end (27,2\%) e Front-end (24,2\%) \cite{revelo2021tecnologia}. Os segmentos mais representativos de atuação são Serviços e Telecomunicações (25,9\%), Finanças (25,6\%) e Indústria (18,9\%) \cite{abes2023mercado}. Além disso, 63\% dos profissionais afirmam preferir o uso do \textit{Scrum} em nível de equipe, demonstrando a prevalência desse \textit{framework} entre as equipes ágeis \cite{17_agile_report}.
 
 Como resumido na Tabela~\ref{tab:analise_usuario}, esses dados evidenciam um perfil majoritário de profissionais jovens, especializados em tecnologia e adaptados ao uso de metodologias ágeis, o que reforça a relevância de soluções gamificadas para esse público.
 
@@ -905,7 +915,7 @@ Como resumido na Tabela~\ref{tab:analise_usuario}, esses dados evidenciam um per
   \centering
   \caption{Análise de usuário}
   \label{tab:analise_usuario}
-  \begin{tabular}{|p{6.5cm}|}
+  \begin{tabular}{|p{8cm}|}
   \hline
   \textbf{Análise de usuário} \\ \hline
   Homem \\ \hline
@@ -921,15 +931,15 @@ Como resumido na Tabela~\ref{tab:analise_usuario}, esses dados evidenciam um per
 
 \section{Definição do escopo da gamificação e estudo de viabilidade}
 
-Na terceira etapa, as informações obtidas nas análises anteriores permitem definir uma abordagem inicial para a solução gamificada. Primeiramente, é necessário delimitar o escopo da solução, identificando quais processos, tipos de usuários e ferramentas serão impactados, com base nos objetivos estabelecidos na primeira etapa. A partir dos dados sobre os jogadores, coletados na segunda etapa, define-se o tipo de ambiente gamificado a ser criado, formulando alternativas iniciais para a solução. Por fim, é realizada a análise de viabilidade de cada alternativa proposta.
+Na terceira etapa, as informações obtidas nas análises anteriores permitem definir uma abordagem inicial para a solução gamificada. Primeiramente, é necessário delimitar o escopo da solução, identificando quais processos, tipos de usuários e ferramentas serão impactados, com base nos objetivos estabelecidos na primeira etapa. A partir dos dados sobre os participantes, coletados na segunda etapa, define-se o tipo de ambiente gamificado a ser criado, formulando alternativas iniciais para a solução. Por fim, é realizada a análise de viabilidade de cada alternativa proposta.
 
 \subsection{Escopo, motivadores, tipo de jogo e possíveis soluções}
 
 A dinâmica proposta tem como objetivo principal facilitar a identificação e análise de riscos em equipes ágeis, promovendo um ambiente mais interativo e colaborativo. Ao integrar elementos de gamificação ao processo de gerenciamento de riscos, espera-se engajar os participantes e fomentar uma compreensão mais profunda dos potenciais problemas que podem surgir durante os projetos.
 
-Com relação ao tipo de jogo, optou-se por uma abordagem predominantemente colaborativa, embora alguns elementos competitivos possam ser incorporados de forma secundária. O modelo colaborativo foi escolhido por refletir melhor a realidade das equipes ágeis, nas quais o sucesso depende do esforço conjunto para superar desafios e onde o trabalho multidisciplinar é valorizado. Esse formato também estimula a troca de ideias e o compartilhamento de diferentes perspectivas, enriquecendo o processo de identificação de riscos.
+Optou-se por um modelo predominantemente colaborativo, com possíveis elementos competitivos secundários. Essa escolha reflete melhor a realidade das equipes ágeis, nas quais o sucesso depende do esforço conjunto para superar desafios, e o trabalho multidisciplinar é valorizado. Esse formato também estimula a troca de ideias e o compartilhamento de diferentes perspectivas, enriquecendo o processo de identificação de riscos.
 
-A dinâmica busca contemplar, principalmente, as etapas iniciais do gerenciamento de riscos, com foco na identificação e análise. Essas etapas foram escolhidas por representarem um dos pontos mais críticos — e ao mesmo tempo negligenciados — em projetos conduzidos com métodos ágeis, dada a ausência de práticas explícitas para tratar riscos. Tal lacuna pode favorecer o surgimento de problemas inesperados que, em muitos casos, poderiam ter sido mitigados se identificados precocemente.
+A dinâmica busca contemplar, principalmente, as etapas iniciais do gerenciamento de riscos, com foco na identificação e análise. Essas etapas foram escolhidas por representarem pontos críticos — e frequentemente negligenciados — em projetos conduzidos com métodos ágeis, devido à ausência de práticas explícitas para o tratamento de riscos. Essa lacuna favorece o surgimento de problemas inesperados, muitas vezes evitáveis por meio de uma identificação antecipada.
 
 Foram idealizadas pela autora diversas alternativas de gamificação, descritas na Tabela~\ref{tab:dinamicas}.
 
@@ -969,8 +979,8 @@ A proposta do Tarot dos Riscos é inspirada no \href{https://tarotcardsoftech.ar
 A atividade é realizada em equipe: os participantes sorteiam cartas e discutem como cada risco poderia impactar o projeto em questão, promovendo o pensamento crítico e a antecipação de problemas. Com base nas discussões, espera-se que a equipe avance posteriormente para a análise e mitigação dos riscos identificados.
 
 \begin{itemize}
-  \item \textbf{Vantagens}: Incentiva o diálogo entre os membros da equipe e facilita o engajamento. A inclusão de exemplos concretos nas cartas auxilia na identificação de riscos que poderiam passar despercebidos.
-  \item \textbf{Desvantagens}: Pode ser limitada em relação a riscos muito específicos que não estejam contemplados nas cartas existentes, dependendo fortemente da qualidade da curadoria inicial. Equipes menos colaborativas podem apresentar baixa adesão à dinâmica.
+\item \textbf{Vantagens}: Incentiva o diálogo entre os membros da equipe e facilita o engajamento. A inclusão de exemplos concretos nas cartas auxilia na identificação de riscos que poderiam passar despercebidos. 
+\item \textbf{Desvantagens}: Pode ser limitada em relação a riscos muito específicos que não estejam contemplados nas cartas existentes, dependendo fortemente da qualidade da curadoria inicial. Equipes menos colaborativas podem apresentar baixa adesão à dinâmica.
 \end{itemize}
 
 A simplicidade de criação e aplicação torna essa dinâmica bastante viável, especialmente em ambientes com tempo limitado para atividades. As cartas podem ser impressas ou disponibilizadas digitalmente.
@@ -987,8 +997,8 @@ A simplicidade de criação e aplicação torna essa dinâmica bastante viável,
 O Amarelinha Game Board combina gamificação e análise de riscos em uma dinâmica interativa. A atividade segue uma trilha no estilo da amarelinha, em que cada participante, em sua vez, anuncia um risco identificado. Após o anúncio, os demais participantes classificam o risco e calculam um valor com base em sua probabilidade e severidade. Esse valor define o número de casas que o participante avança no tabuleiro. O objetivo é alcançar o “céu” antes dos demais jogadores.
 
 \begin{itemize}
-  \item \textbf{Vantagens}: Promove tanto a identificação quanto a categorização dos riscos, ensinando de forma prática como avaliar probabilidade e impacto. O caráter lúdico e competitivo pode aumentar a motivação dos participantes.
-  \item \textbf{Desvantagens}: A competitividade pode desviar o foco em grupos onde o objetivo principal é a colaboração. A mecânica de cálculo pode ser desafiadora para equipes com pouca experiência em análise de riscos, sendo recomendável a mediação de um facilitador.
+  \item \textbf{Vantagens}: Promove tanto a identificação quanto a categorização dos riscos, ensinando de forma prática como avaliar probabilidade e impacto. O caráter lúdico e competitivo pode aumentar a motivação dos participantes. 
+  \item \textbf{Desvantagens}: A competitividade pode desviar o foco em grupos onde o objetivo principal é a colaboração. A mecânica de cálculo pode ser desafiadora para equipes com pouca experiência em análise de riscos, sendo recomendável a mediação de um facilitador. 
 \end{itemize}
 
 Essa proposta apresenta viabilidade moderada. Requer preparação prévia para definição das categorias e montagem do tabuleiro, mas pode ser adaptada com recursos simples ou versões digitais.
@@ -1007,8 +1017,8 @@ O Poke Risk é uma dinâmica inspirada no universo dos jogos de Pokémon, em que
 Cada jogador compra cartas do monte principal até que todas tenham sido distribuídas. A seguir, os participantes enfrentam “batalhas de riscos”: em cada rodada, um jogador escolhe o atributo da sua carta com maior valor para tentar superar a carta do oponente. A carta vencedora integra um novo monte, que representa os riscos a serem priorizados na definição das estratégias de mitigação.
 
 \begin{itemize}
-  \item \textbf{Vantagens}: A abordagem lúdica torna a análise de riscos mais envolvente, especialmente para equipes que apreciam dinâmicas criativas e baseadas em jogos.
-  \item \textbf{Desvantagens}: Requer maior tempo de preparação e familiarização dos participantes com os conceitos de análise de risco. Sem um facilitador experiente, a atividade pode perder o foco ou se tornar menos produtiva.
+  \item \textbf{Vantagens}: A abordagem lúdica torna a análise de riscos mais envolvente, especialmente para equipes que apreciam dinâmicas criativas e baseadas em jogos. 
+  \item \textbf{Desvantagens}: Requer maior tempo de preparação e familiarização dos participantes com os conceitos de análise de risco. Sem um facilitador experiente, a atividade pode perder o foco ou se tornar menos produtiva. 
 \end{itemize}
 
 Essa proposta também apresenta viabilidade moderada. A criação inicial das cartas exige tempo e alinhamento prévio, mas pode ser realizada de forma colaborativa pela equipe, assegurando a relevância dos riscos representados.
@@ -1023,29 +1033,29 @@ Essa proposta também apresenta viabilidade moderada. A criação inicial das ca
 \subsection{Escolha da dinâmica}
 \label{sec:escolha-dinamica}
 
-As três dinâmicas levantadas na fase de refinamento -- Tarot dos Riscos, Amarelinha Game Board e Poke Risk -- foram avaliadas por critérios de aplicabilidade, potencial de engajamento dos participantes, duração da dinâmica e viabilidade de implementação. Para validar essa avaliação inicial e obter uma perspectiva prática sobre a aderência das propostas ao contexto de equipes ágeis, foram realizadas conversas com líderes de projeto do Laboratório Bridge. Suas percepções foram cruciais para a decisão final, conforme sumarizado a seguir.
+As três dinâmicas levantadas na fase de refinamento -- Tarot dos Riscos, Amarelinha Game Board e Poke Risk -- foram avaliadas com base em critérios como aplicabilidade, potencial de engajamento dos participantes, duração da dinâmica e viabilidade de implementação. Para validar essa análise inicial e obter uma perspectiva prática sobre a aderência das propostas ao contexto de equipes ágeis, foram realizadas conversas com líderes de projeto do Laboratório Bridge. Suas percepções foram essenciais para a decisão final, conforme detalhado a seguir.
 
-A avaliação conjunta das dinâmicas revelou uma clara preferência pelo \textit{Tarot dos Riscos}, principalmente devido à sua capacidade de promover um engajamento mais profundo e uma discussão mais rica sobre os riscos. Em contraste, o \textit{Poke Risk} (Super Trunfo) foi percebido como menos eficaz para o contexto do Laboratório Bridge.
+A avaliação conjunta das dinâmicas revelou uma preferência clara pelo \textit{Tarot dos Riscos}, especialmente por sua capacidade de promover maior engajamento e discussões mais aprofundadas sobre os riscos. Em contraste, o \textit{Poke Risk} (Super Trunfo) foi percebido como menos eficaz para o contexto do Laboratório Bridge.
 
-Os principais pontos que fundamentaram a escolha do \textit{Tarot dos Riscos} foram:
+Os principais fatores que fundamentaram a escolha do \textit{Tarot dos Riscos} foram:
 
 \begin{itemize}
-    \item \textbf{Engajamento e profundidade da discussão:} A líder de projeto 01 destacou que o \textit{Tarot} \textit{"incentiva bastante a discussão das pessoas"} e é percebido como mais \textit{"divertido"}. O formato com \textit{post-its} é visto como mais fácil para as pessoas \textit{"participarem, engajarem"}. Em contraponto, o \textit{Poke Risk} foi caracterizado como \textit{"robótico e sem aprofundamento"}.
-    \item \textbf{Adaptabilidade ao formato remoto:} Para um ambiente \textit{remote-first} como o Laboratório Bridge, a viabilidade \textit{online} foi um critério decisivo. O \textit{Tarot} foi considerado facilmente adaptável para ferramentas de quadro branco digital como o \textit{Figma} ou \textit{Miro}, enquanto o \textit{Poke Risk} \textit{"não funciona bem no contexto remoto"}.
-    \item \textbf{Mecanismo de priorização e visão geral:} A mecânica de votação com moedas do \textit{Tarot} foi bem recebida, sendo vista como uma forma que \textit{"faz sentido pra pensarem e responderem"} e que permite \textit{"cortar uma discussão longa demais pra chegar na prioridade"}. O líder de projeto 02 ressaltou a vantagem de \textit{"ter uma visão mais ampla de todos os riscos, ver essa mesa completa no final"} e de \textit{"tomar uma decisão vendo o todo, mais interessante para análise de risco de fato"}. O \textit{Poke Risk}, por outro lado, poderia levar a uma priorização baseada na sorte da carta ou no pessimismo, sem a oportunidade de comparação global dos riscos identificados.
-    \item \textbf{Reconhecimento e motivação:} A mecânica do \textit{Tarot}, especialmente com o uso das moedas, foi associada a um senso de reconhecimento e contribuição individual. A líder de projeto 01 observou que \textit{"o pessoal gosta muito de ranking, de reconhecimento"}, e que o \textit{Tarot} valoriza mais as contribuições para \textit{"ganhar"} em comparação com o \textit{Poke Risk}, onde \textit{"a pessoa vai jogar um número ali chutando"} e o \textit{"reconhecimento"} é menor.
+    \item \textbf{Engajamento e profundidade da discussão:} A líder de projeto 01 destacou que o \textit{Tarot} "incentiva bastante a discussão das pessoas" e é percebido como mais "divertido". O formato com \textit{post-its} é visto como mais fácil para que todos "participem e se envolvam". Por outro lado, o \textit{Poke Risk} foi descrito como "robótico e sem aprofundamento". 
+    \item \textbf{Adaptabilidade ao formato remoto:} Em um ambiente \textit{remote-first} como o do Laboratório Bridge, a viabilidade \textit{online} foi um fator decisivo. O \textit{Tarot} foi avaliado como facilmente adaptável a ferramentas de quadro branco digital, como \textit{FigJam} ou \textit{Miro}, enquanto o \textit{Poke Risk} "não funciona bem no contexto remoto". 
+    \item \textbf{Mecanismo de priorização e visão geral:} A mecânica de votação com moedas do \textit{Tarot} foi bem recebida, por ser considerada uma forma que "faz sentido para pensarem e responderem", além de "cortar discussões longas demais pra chegar na prioridade". O líder de projeto 02 ressaltou a vantagem de "ter uma visão ampla de todos os riscos, ver essa mesa completa no final" e "tomar uma decisão vendo o todo, [o que é] mais interessante para análise de riscos de fato". Já o \textit{Poke Risk} poderia gerar priorizações baseadas em sorte ou pessimismo, sem permitir uma visão global. 
+    \item \textbf{Reconhecimento e motivação:} A mecânica de moedas no \textit{Tarot} foi associada a um senso de reconhecimento e valorização das contribuições individuais. A líder de projeto 01 observou que "o pessoal gosta muito de ranking, de reconhecimento", e que o \textit{Tarot} recompensa melhor as contribuições para "ganhar", ao passo que no \textit{Poke Risk} "a pessoa vai jogar um número ali chutando e o reconhecimento é menor". 
 \end{itemize}
 
-Embora a dinâmica \textit{Amarelinha Game Board} apresentasse elementos de gamificação, suas características de competitividade e a necessidade de cálculos específicos para avaliação de risco não foram priorizadas nas discussões com os líderes, que focaram nas duas propostas mais contrastantes para a realidade de suas equipes.
+Embora a dinâmica \textit{Amarelinha Game Board} também apresentasse elementos de gamificação, suas características competitivas e a necessidade de cálculos específicos para avaliação de riscos não foram priorizadas nas conversas com os líderes, que concentraram a análise nas duas propostas mais contrastantes.
 
-Com base na avaliação e no valioso \textit{feedback} dos líderes do Laboratório Bridge, o \textit{Tarot dos Riscos} foi a dinâmica selecionada para desenvolvimento e aplicação. Esta escolha se alinha melhor aos objetivos de criar uma ferramenta lúdica, engajadora e eficaz para a identificação e análise colaborativa de riscos em projetos ágeis, especialmente em um ambiente que exige flexibilidade para formatos presenciais e remotos, que são comuns no mercado de desenvolvimento de \textit{software}.
+Com base nessa avaliação e no valioso \textit{feedback} dos líderes do Laboratório Bridge, o \textit{Tarot dos Riscos} foi selecionado como a dinâmica a ser desenvolvida e aplicada. Essa escolha está alinhada ao objetivo de criar uma ferramenta lúdica, engajadora e eficaz para a identificação e análise colaborativa de riscos em projetos ágeis, especialmente em contextos que exigem flexibilidade para formatos presenciais e remotos, como é comum no setor de desenvolvimento de \textit{software}.
 
-Durante as conversas, também foram levantadas sugestões para aprimoramento do \textit{Tarot dos Riscos}. Notou-se a necessidade de que as imagens das cartas tenham uma ligação mais clara com o conteúdo dos riscos. Adicionalmente, foi sugerido que a dinâmica forneça alguma orientação sobre a frequência ideal de repetição, como a cada nova demanda ou em intervalos de tempo definidos, para garantir sua relevância contínua no ciclo de vida do projeto.
+Durante as conversas, também foram levantadas sugestões para o aprimoramento do \textit{Tarot dos Riscos}. Foi apontada a importância de que as imagens das cartas estejam mais claramente relacionadas ao conteúdo dos riscos. Além disso, recomendou-se que a dinâmica forneça orientações sobre sua frequência ideal de aplicação — como a cada nova demanda ou em intervalos regulares — garantindo sua relevância contínua ao longo do ciclo de vida do projeto.
 
 \section{Análise e design}
 \label{sec:analise-design}
 
-Esta seção descreve o processo de análise e design da dinâmica gamificada, em conformidade com a quarta etapa do \textit{framework} de \citeonline{GARCIA201721}. São apresentados os elementos constitutivos da dinâmica, suas mecânicas de interação, estrutura econômica, regras, estética visual e casos de uso.
+Esta seção descreve o processo de análise e design da dinâmica gamificada, em conformidade com a quarta etapa do \textit{framework} de \citeonline{GARCIA201721}. São apresentados os elementos constitutivos da dinâmica, suas mecânicas de interação, estrutura econômica, regras, estética visual e casos de uso. 
 
 \subsection{Escolha dos componentes do jogo}
 \label{sec:escolha-componentes}
@@ -1055,7 +1065,7 @@ A dinâmica é composta por um conjunto de elementos projetados para facilitar a
 \begin{itemize}
   \item \textbf{Cartas de risco:} Elemento central da dinâmica, totalizando 32 cartas. Esse número foi definido com base na taxonomia de riscos de \cite{Taxonomy}, originalmente composta por 64 riscos. A seleção considerou os riscos mais citados tanto no Mapeamento Sistemático da Literatura (MSL) de \citeonline{garcia2023agreed}, quanto na continuidade do mapeamento realizada neste estudo. A soma da frequência de citação em ambos os levantamentos resultou na ordenação e seleção dos 32 riscos mais proeminentes, contemplando 84,4\% dos riscos identificados nos mapeamentos. Os dados detalhados da frequência de citação e a metodologia de seleção dos riscos podem ser consultados na planilha disponível em \href{https://docs.google.com/spreadsheets/d/1eAkx4HNaHIKhkq774zI2VREVNmeKtol5uXiC7Jg-0Sc/edit?usp=sharing}{Google Sheets}.
   \begin{itemize}
-    \item \textbf{Aspecto visual:} As cartas possuem ilustrações únicas, geradas com auxílio de inteligência artificial generativa (\href{https://pixlr.com/br/image-generator/}{Pixlr Image Generator}). Os prompts foram adaptados para seguir o estilo “Pokémon”, com personagens que representam os riscos de forma lúdica e amigável. Exemplo de prompt utilizado: “Create a Pokémon-style image of a character related to time control powers. The character must have a friendly expression. The character must explicitly include time-related elements, such as a clock, calendar or timeline. The image must have a solid white background.”
+    \item \textbf{Aspecto visual:} As cartas possuem ilustrações únicas, geradas com auxílio de inteligência artificial generativa (\href{https://pixlr.com/br/image-generator/}{Pixlr Image Generator}). Os prompts foram adaptados para seguir o estilo “Pokémon”, com personagens que representam os riscos de forma lúdica e amigável. Exemplo de prompt utilizado: “Create a Pokémon-style image of a character related to time control powers. The character must have a friendly expression. The character must explicitly include time-related elements, such as a clock, calendar or timeline. The image must have a solid white background.”.
     
     \item \textbf{Layout e conteúdo:} Cada carta contém:
     \begin{enumerate}
@@ -1074,78 +1084,19 @@ A dinâmica é composta por um conjunto de elementos projetados para facilitar a
     \end{itemize}
   \end{itemize}
 
-  \item \textbf{Moedas para votação:} A dinâmica utiliza moedas (ou fichas representativas) para a etapa de votação dos riscos, permitindo aos participantes priorizar os riscos que consideram mais críticos para o projeto.
+  \item \textbf{Moedas para votação:} A dinâmica utiliza moedas (ou fichas representativas) para a etapa de votação dos riscos, permitindo aos participantes priorizar os riscos que consideram mais críticos para o projeto. 
 
-  \item \textbf{Manual de regras:} Um manual abrangente que provê todas as instruções necessárias para conduzir a dinâmica. Este manual detalha as etapas, as regras, as mecânicas do jogo, e sugestões para gerenciar a discussão e a interação entre os participantes.
+  \item \textbf{Manual de regras:} Um manual abrangente que provê todas as instruções necessárias para conduzir a dinâmica. Este manual detalha as etapas, as regras, as mecânicas do jogo, e sugestões para gerenciar a discussão e a interação entre os participantes. 
 
-  \item \textbf{\textit{Post-its} e canetas:} Materiais básicos auxiliares que permitem aos participantes escreverem riscos específicos associados a cada carta lida, fomentando a individualização e o detalhamento dos riscos no contexto do projeto.
+  \item \textbf{\textit{Post-its} e canetas:} Materiais básicos auxiliares que permitem aos participantes escreverem riscos específicos associados a cada carta lida, fomentando a individualização e o detalhamento dos riscos no contexto do projeto. 
 \end{itemize}
 
-Os componentes foram concebidos para serem facilmente reproduzíveis tanto em formato físico (impressão das cartas e uso de moedas/fichas simples) quanto adaptáveis para ambientes digitais colaborativos, como plataformas de quadro branco online (e.g., \textit{FigJam}).
+Os componentes foram concebidos para serem facilmente reproduzíveis tanto em formato físico (impressão das cartas e uso de moedas/fichas simples) quanto adaptáveis para ambientes digitais colaborativos, como plataformas de quadro branco online (e.g., \textit{FigJam}). 
 
 \subsection{Escolha das mecânicas do jogo}
 \label{sec:escolha-mecanicas}
 
-As mecânicas determinam as interações e o fluxo da dinâmica, desde a apresentação dos riscos até sua priorização. Elas foram projetadas para serem flexíveis, colaborativas e promoverem o pensamento crítico. A dinâmica é composta por duas etapas principais:
-
-\subsubsection{Etapa 1: Leitura e mapeamento dos riscos}
-\label{sec:mecanicas-leitura-mapeamento}
-
-Essa etapa foca na associação entre riscos genéricos (das cartas) e riscos reais enfrentados pelo time.
-
-\begin{enumerate}
-  \item \textbf{Preparação e escolha do deck:} As cartas de risco, que representam os riscos potenciais, são embaralhadas e empilhadas em um único monte. Antes de iniciar, a equipe tem a flexibilidade de escolher o deck de cartas a ser utilizado, com base nas suas necessidades e contexto do projeto. As opções de deck incluem:
-  \begin{itemize}
-    \item \textbf{Deck completo:} Contém todas as 32 cartas de risco disponíveis.
-    \item \textbf{Deck básico (12 cartas):} Composto pelas cartas numeradas de 1 a 12, que representam aproximadamente 45\% dos riscos mais citados nos MSLs.
-    \item \textbf{Sub-decks temáticos (12 ou 8 cartas):} Permitem focar em categorias específicas de risco, alinhadas à taxonomia utilizada \cite{Taxonomy}:
-    \begin{itemize}
-      \item \textit{Product Engineering} (12 cartas): Avalia atividades intelectuais e físicas necessárias para construir o produto, desde requisitos até testes.
-      \item \textit{Development Environment} (12 cartas): Avalia o contexto de produção do \textit{software}, incluindo processos, ferramentas e gestão.
-      \item \textit{Program Constraint} (8 cartas): Avalia fatores externos que influenciam o projeto, como limitações de recursos e contratos.
-    \end{itemize}
-    A escolha do deck pode ser feita por um membro da equipe com papel de liderança (como \textit{Scrum Master}, \textit{Tech Lead}, \textit{Product Owner}) ou por consenso da equipe, garantindo a relevância dos riscos abordados.
-  \end{itemize}
-  A escolha pode ser feita por consenso ou pelo facilitador (ex: \textit{Scrum Master}, \textit{Tech Lead}, \textit{Product Owner}).
-
-  \item \textbf{Etapa 1.1 – Leitura e avaliação de aplicabilidade:} O facilitador (ou um membro da equipe, em caso de auto-organização) pega a carta do topo do monte e a lê em voz alta. Após a leitura, a equipe avalia coletivamente se o risco apresentado na carta é aplicável ao seu projeto atual. Não é exigido um consenso formal para essa decisão; se qualquer parte da equipe identificar que o risco é uma preocupação real para o projeto, a carta é mantida na mesa para a próxima fase. Caso o risco seja unanimemente considerado não aplicável ao contexto da equipe, a carta é descartada e removida da dinâmica.
-
-  \item \textbf{Etapa 1.2 – Mapeamento dos riscos reais:}
-  \begin{itemize}
-    \item Para cada carta de risco considerada aplicável e mantida na mesa, os participantes iniciam individualmente a escrita de \textit{post-its}.
-    \item Nesses \textit{post-its}, cada membro da equipe registra os riscos reais e práticos de seu projeto que estão associados ou são referenciados pela carta lida. A ideia é transpor o risco genérico da carta para o contexto específico da equipe.
-    \item Os \textit{post-its} são então colados ao redor da carta correspondente na mesa, criando um aglomerado visual dos riscos específicos da equipe.
-    \item Após todos os participantes escreverem e colarem seus \textit{post-its}, o facilitador lê os riscos registrados.
-    \item É aberto um momento para discussão e contestação, onde a equipe pode debater a probabilidade, o impacto ou até mesmo a existência de um risco específico apontado em um \textit{post-it}. É crucial que o facilitador intervenha para manter o foco da discussão na identificação e análise dos riscos, evitando desviar para discussões sobre como mitigar ou resolver os riscos neste momento. Não há um limite de tempo fixo para essa discussão, mas o facilitador deve intervir se a conversa deixar de ser produtiva.
-  \end{itemize}
-
-  O processo de leitura e mapeamento (Etapa 1.1 e 1.2) é repetido até que todas as cartas do deck escolhido sejam lidas e avaliadas.
-\end{enumerate}
-
-\subsubsection{Etapa 2: Votação e priorização}
-\label{sec:mecanicas-votacao}
-
-Após a identificação e o mapeamento dos riscos, a dinâmica avança para a fase de priorização, utilizando uma mecânica inspirada na técnica de priorização da gestão de produtos “\textit{Buy a Feature}”.
-
-\begin{enumerate}
-  \item \textbf{Distribuição de moedas:} Cada participante recebe um número fixo de moedas para a votação. Para incentivar a contribuição na etapa anterior, o participante é recompensado com moedas adicionais dependendo da quantidade de \textit{post-its} que escreveu.
-  \item \textbf{Investimento nos riscos:} Com as moedas em mãos, cada participante deve “investir” suas moedas nos \textit{post-its} ou nas cartas de risco que representam os riscos que considera mais críticos para o projeto. As moedas são fisicamente colocadas sobre os \textit{post-its} ou ao lado da carta de risco correspondente, indicando a preferência e o peso dado a cada risco. Todos os participantes devem utilizar suas moedas, distribuindo-as de acordo com sua percepção de criticidade.
-  \item \textbf{Priorização:} Após a votação, os riscos são priorizados com base na quantidade de moedas que acumularam. Quanto mais moedas uma carta de risco tiver, maior a sua prioridade. A quantidade de riscos a serem priorizados pode ser flexível e definida pela equipe (ex: os 4 riscos mais votados, todos os riscos que receberam pelo menos um voto, etc.). Recomenda-se, para fins práticos e de foco, que a equipe priorize os 4 riscos com maior votação para que possa direcionar suas ações futuras. Em caso de empate na contagem de moedas, a equipe pode realizar uma discussão rápida ou uma votação de desempate.
-\end{enumerate}
-
-\subsubsection{Papel do facilitador}
-\label{sec:papel-facilitador}
-
-O facilitador (\textit{Scrum Master}, \textit{Tech Lead}, ou outro membro com habilidades de facilitação) atua garantindo a condução eficaz da dinâmica. Suas responsabilidades incluem:
-
-\begin{itemize}
-  \item \textbf{Preparação}: Escolha e organização do deck de cartas e dos materiais.
-  \item \textbf{Condução das etapas}: Leitura das cartas, gerenciamento do fluxo das discussões, distribuição e contagem das moedas.
-  \item \textbf{Mediação}: Garantir que a discussão permaneça focada na identificação e análise de riscos, intervindo quando necessário para evitar desvios para soluções ou mitigações excessivas.
-  \item \textbf{Gestão do tempo}: Embora a dinâmica seja flexível, o facilitador deve monitorar o tempo para garantir que todas as etapas sejam concluídas de forma produtiva.
-\end{itemize}
-
-Alternativamente, a equipe pode optar pela auto-organização, onde os próprios membros se revezam nas funções do facilitador, lendo cartas e gerenciando a distribuição de moedas, promovendo ainda mais a autonomia e a colaboração.
+As mecânicas do jogo foram projetadas para guiar as interações e o fluxo da dinâmica, desde a apresentação dos riscos até sua priorização colaborativa. O design buscou criar um processo flexível que promovesse o pensamento crítico e a colaboração. Para isso, a dinâmica foi estruturada em duas fases principais. A primeira fase é focada na \textbf{identificação e mapeamento de riscos}, onde os participantes associam os riscos genéricos, apresentados nas cartas, ao contexto real de seus projetos. A segunda fase é a de \textbf{votação e priorização}, que utiliza uma mecânica inspirada na técnica “Buy a Feature” para que a equipe possa, de forma visual e consensual, determinar os riscos mais críticos. Um papel de facilitador também foi definido para guiar o processo, embora a dinâmica permita a auto-organização da equipe. O guia detalhado com o passo a passo para a condução de cada etapa encontra-se no Capítulo \ref{cap:dinamica-execucao}.
 
 \subsection{Estabelecimento da economia do jogo}
 \label{sec:economia-jogo}
@@ -1155,10 +1106,10 @@ A economia da dinâmica é um sistema simples e direto, projetado para incentiva
 \subsubsection{Recursos e ganhos}
 O principal e único recurso manipulável pelos jogadores são as moedas. A distribuição das moedas segue um modelo fixo e meritocrático:
 \begin{itemize}
-\item \textbf{Distribuição inicial fixa:} No início da Etapa 2 (Votação), cada participante recebe uma quantidade fixa de 3 moedas. Esse valor inicial garante que todos os jogadores tenham uma base para participar da priorização, independentemente de sua participação na etapa anterior.
-\item \textbf{Ganhos por contribuição:} Para estimular o engajamento e a contribuição na Etapa 1 (mapeamento dos riscos), os jogadores podem adquirir moedas adicionais. A mecânica de ganho é direta: 1 moeda adicional é concedida para cada 5 \textit{post-its} escritos pelo participante durante a fase de mapeamento dos riscos reais. Essa regra busca recompensar a proatividade na identificação de riscos específicos do projeto.
+\item \textbf{Distribuição inicial fixa:} No início da Etapa 2 (Votação), cada participante recebe uma quantidade fixa de moedas. Esse valor inicial garante que todos os jogadores tenham uma base para participar da priorização, independentemente de sua participação na etapa anterior.
+\item \textbf{Ganhos por contribuição:} Para estimular o engajamento e a contribuição na Etapa 1 (Mapeamento dos riscos), moedas adicionais podem ser concedidas de acordo com a quantidade de \textit{post-its} escritos pelo participante. Essa regra busca recompensar a proatividade na identificação de riscos específicos do projeto.
 \end{itemize}
-Não há outros tipos de recursos a serem ganhos ou perdidos, como pontos de experiência, reputação ou penalidades, mantendo a simplicidade da economia focada na priorização. As moedas são um recurso de uso único e são gastas de forma definitiva na Etapa 2 (Votação). Não existem outras formas de gastar moedas além do investimento nos riscos priorizados, e as moedas não retornam ao jogador após a votação.
+Não há outros tipos de recursos a serem ganhos ou perdidos, mantendo a simplicidade da economia focada na priorização. As moedas são um recurso de uso único e são gastas de forma definitiva na Etapa 2 (Votação). Não existem outras formas de gastar moedas além do investimento nos riscos priorizados, e as moedas não retornam ao jogador após a votação.
 
 A economia das moedas exerce impacto significativo na estratégia dos jogadores, influenciando diretamente a dinâmica da priorização:
 \begin{itemize}
@@ -1170,31 +1121,7 @@ A economia das moedas exerce impacto significativo na estratégia dos jogadores,
 \subsection{Estabelecimento das dinâmicas do jogo (regras)}
 \label{sec:dinamicas-regras}
 
-As dinâmicas são definidas por um conjunto de regras que orientam a interação entre os participantes e os componentes do jogo, garantindo um fluxo colaborativo e produtivo. Diferentemente de jogos com turnos estritamente sequenciais, o Tarot opera em um modelo de avaliação conjunta das cartas, onde as atividades são coordenadas principalmente pelo facilitador.
-
-\subsubsection{Fluxo da dinâmica e coordenação}
-O jogo não é estruturado em turnos individuais, mas sim em ciclos de avaliação de cada carta de risco. O fluxo é coordenado pelo facilitador e compreende as etapas citadas nas Seções \ref{sec:mecanicas-leitura-mapeamento} e \ref{sec:mecanicas-votacao}.
-
-\subsubsection{Duração da dinâmica}
-A duração total da dinâmica é flexível e depende diretamente do número de cartas no deck selecionado, bem como da profundidade das discussões da equipe. As estimativas de tempo são as seguintes:
-\begin{itemize}
-\item \textbf{Etapa 1 com deck completo:} aproximadamente 90 minutos.
-\item \textbf{Etapa 1 com sub-deck básico:} aproximadamente 30 minutos.
-\item \textbf{Etapa 1 com sub-deck \textit{Product Engineering}:} aproximadamente 30 minutos.
-\item \textbf{Etapa 1 com sub-deck \textit{Development Environment}:} aproximadamente 30 minutos.
-\item \textbf{Etapa 1 com sub-deck \textit{Program Constraint}:} aproximadamente 20 minutos.
-\item A Etapa 2 possui duração recomendada de 5 minutos, sendo uma fase mais objetiva após a discussão e o mapeamento.
-\end{itemize}
-
-\subsubsection{Regras de discussão e finalização}
-\begin{itemize}
-\item \textbf{Gestão de divergências:} A dinâmica é projetada para capturar a diversidade de percepções. Se ao menos uma pessoa da equipe considerar que um risco é aplicável, a carta é mantida para que os \textit{post-its} relacionados possam ser gerados. Caso um risco específico no \textit{post-it} seja questionado, a equipe discute, mas o objetivo é identificar e mapear o máximo de riscos relevantes, não necessariamente buscar consenso sobre cada detalhe individualmente nesse momento. A ausência total de \textit{post-its} para uma carta após a discussão indica que o risco não é percebido pela equipe, e a carta deve ser descartada.
-\item \textbf{Finalização da dinâmica:} A dinâmica é considerada finalizada quando todas as cartas do deck selecionado foram lidas, avaliadas e os riscos mapeados (Etapas 1.1 e 1.2), bem como quando a etapa de votação e priorização (Etapa 2) foi concluída.
-\item \textbf{Critério de sucesso:} Não há critério formal de “vitória” ou “derrota” para a equipe. O sucesso da dinâmica é medido pela capacidade da equipe em gerar uma lista abrangente e priorizada de riscos relevantes ao projeto, promover a discussão colaborativa e aumentar a percepção coletiva sobre os desafios.
-\end{itemize}
-
-\subsubsection{Regras de conduta}
-Embora não existam regras explícitas de conduta formalizadas no manual da dinâmica, pressupõe-se um ambiente de respeito mútuo, escuta ativa e engajamento. A natureza colaborativa da dinâmica depende da participação efetiva e da abertura para a discussão por parte de todos os envolvidos.
+As regras da dinâmica foram estabelecidas para orientar a interação dos participantes com os componentes do jogo, assegurando um fluxo de trabalho colaborativo e produtivo. O design das regras optou por um modelo de avaliação conjunta e facilitada, em vez de turnos individuais estritos, para reforçar a colaboração. Foram definidas diretrizes para gerenciar as discussões, garantindo que o foco permaneça na identificação de riscos e que as divergências de percepção sejam capturadas sem a necessidade de um consenso restrito. O critério de finalização e sucesso da dinâmica foi projetado para não ser uma condição de vitória ou derrota, mas sim a conclusão das etapas de mapeamento e a geração de uma lista priorizada de riscos, valorizando o resultado coletivo.
 
 \subsection{Estabelecer a estética do jogo}
 \label{sec:estetica-jogo}
@@ -1202,10 +1129,10 @@ Embora não existam regras explícitas de conduta formalizadas no manual da din�
 A estética do “Tarot dos Riscos” foi desenvolvida para criar uma experiência que, apesar de tratar de um tema sério como riscos, seja leve, convidativa e engajadora. O sentimento geral transmitido é de diversão e informalidade, buscando desmistificar a gestão de riscos e torná-la mais acessível aos participantes.
 
 \begin{itemize}
-\item \textbf{Estilo visual principal:} A inspiração primária no universo Pokémon e a utilização de ilustrações geradas por inteligência artificial conferem às cartas um aspecto amigável e lúdico. Cada imagem é projetada para ser visualmente atraente e, ao mesmo tempo, associar-se de forma criativa ao risco que representa. Não há uma paleta de cores predominante única; as cores variam entre as cartas para diversificar a experiência visual.
-\item \textbf{Narrativa e temática implícita:} A dinâmica não possui uma história ou narrativa subjacente explícita além da inspiração visual das ilustrações. A temática é sugerida pelo nome “Tarot dos Riscos”, que evoca a ideia de “prever o futuro” e antecipar os desafios. Essa analogia com o ato de “ler as cartas” do tarot para obter insights sobre o futuro, combinada com a ação de “colocar as cartas na mesa” durante a dinâmica, reforça a ideia de uma análise proativa e reflexiva dos riscos que podem surgir no projeto.
-\item \textbf{Ambiente de aplicação:} Embora a dinâmica seja projetada para ambientes profissionais e equipes de desenvolvimento de \textit{software}, sua estética sugere um ambiente de aplicação mais descontraído. O objetivo é quebrar a formalidade que muitas vezes cerca o tema da gestão de riscos, promovendo um espaço onde a criatividade e a colaboração fluam mais livremente.
-\item \textbf{Elementos estéticos adicionais:} Além das ilustrações e dos nomes criativos, a raridade das cartas é visualmente representada por ícones de losango ou estrela posicionados abaixo das perguntas nas cartas. Este detalhe visual adiciona um elemento sutil de coleção e diferenciação, enriquecendo a experiência gamificada sem sobrecarregar o design.
+\item \textbf{Estilo visual principal:} A inspiração primária no universo Pokémon e a utilização de ilustrações geradas por inteligência artificial conferem às cartas um aspecto amigável e lúdico. Cada imagem é projetada para ser visualmente atraente e, ao mesmo tempo, associar-se de forma criativa ao risco que representa. Não há uma paleta de cores predominante única; as cores variam entre as cartas para diversificar a experiência visual. 
+\item \textbf{Narrativa e temática implícita:} A dinâmica não possui uma história ou narrativa subjacente explícita além da inspiração visual das ilustrações. A temática é sugerida pelo nome “Tarot dos Riscos”, que evoca a ideia de “prever o futuro” e antecipar os desafios. Essa analogia com o ato de “ler as cartas” do tarot para obter insights sobre o futuro, combinada com a ação de “colocar as cartas na mesa” durante a dinâmica, reforça a ideia de uma análise proativa e reflexiva dos riscos que podem surgir no projeto. 
+\item \textbf{Ambiente de aplicação:} Embora a dinâmica seja projetada para ambientes profissionais e equipes de desenvolvimento de \textit{software}, sua estética sugere um ambiente de aplicação mais descontraído. O objetivo é quebrar a formalidade que muitas vezes cerca o tema da gestão de riscos, promovendo um espaço onde a criatividade e a colaboração fluam mais livremente. 
+\item \textbf{Elementos estéticos adicionais:} Além das ilustrações e dos nomes criativos, a raridade das cartas é visualmente representada por ícones de losango ou estrela posicionados abaixo das perguntas nas cartas. Este detalhe visual adiciona um elemento sutil de coleção e diferenciação, enriquecendo a experiência gamificada sem sobrecarregar o design. 
 \end{itemize}
 
 \subsection{Elaborar os casos de uso do jogo}
@@ -1216,23 +1143,23 @@ Os casos de uso do Tarot abrangem diversos cenários nos quais a dinâmica pode 
 \begin{itemize}
 \item \textbf{Início de projeto ágil:}
 \begin{itemize}
-\item \textbf{Momento de aplicação:} Recomendada enfaticamente no \textbf{início de um novo projeto ágil}.
-\item \textbf{Objetivo específico:} O principal objetivo é identificar e priorizar os riscos potenciais que podem impactar o projeto desde suas fases iniciais. Isso permite que a equipe construa um entendimento coletivo dos desafios e possa encaminhá-los para a elaboração de planos de resposta proativos.
-\item \textbf{Resultados esperados:} Uma lista clara e priorizada dos riscos mais relevantes para o projeto, maior alinhamento da equipe sobre os desafios e um aprendizado coletivo sobre o panorama de riscos.
+\item \textbf{Momento de aplicação:} Recomendada enfaticamente no \textbf{início de um novo projeto ágil}. 
+\item \textbf{Objetivo específico:} O principal objetivo é identificar e priorizar os riscos potenciais que podem impactar o projeto desde suas fases iniciais. Isso permite que a equipe construa um entendimento coletivo dos desafios e possa encaminhá-los para a elaboração de planos de resposta proativos. 
+\item \textbf{Resultados esperados:} Uma lista clara e priorizada dos riscos mais relevantes para o projeto, maior alinhamento da equipe sobre os desafios e um aprendizado coletivo sobre o panorama de riscos. 
 \end{itemize}
 \item \textbf{Aplicações periódicas:}
 \begin{itemize}
-\item \textbf{Momento de aplicação:} Pode ser utilizada \textbf{periodicamente ao longo do projeto}, em momentos como retrospectivas estendidas ou reuniões de \textit{review} de ciclo de vida.
+\item \textbf{Momento de aplicação:} Pode ser utilizada \textbf{periodicamente ao longo do projeto}, em momentos como retrospectivas estendidas ou reuniões de \textit{review} de ciclo de vida. 
 \item \textbf{Objetivo específico:} Nesta granularidade, o objetivo é mapear riscos para os próximos períodos de múltiplas \textit{sprints} (não necessariamente para uma única \textit{sprint} devido à granularidade potencial), e acompanhar o \textit{status} dos riscos previamente priorizados. Isso permite uma gestão contínua e adaptativa dos riscos.
-\item \textbf{Resultados esperados:} Atualização da lista de riscos priorizados, monitoramento da evolução dos riscos existentes e um ciclo contínuo de aprendizado e adaptação.
+\item \textbf{Resultados esperados:} Atualização da lista de riscos priorizados, monitoramento da evolução dos riscos existentes e um ciclo contínuo de aprendizado e adaptação. 
 \end{itemize}
 \item \textbf{Ambientes educacionais (sala de aula):}
 \begin{itemize}
-\item \textbf{Momento de aplicação:} A dinâmica pode ser útil em ambientes de sala de aula ou em workshops educacionais.
-\item \textbf{Objetivo específico:} Facilitar o aprendizado sobre gestão de riscos em projetos de \textit{software} para estudantes, proporcionando uma experiência prática e gamificada que torna o conceito de risco mais tangível e a identificação mais intuitiva.
-\item \textbf{Resultados esperados:} Maior compreensão dos diferentes tipos de riscos em projetos de \textit{software}, familiarização com o processo de identificação e análise de riscos, e desenvolvimento de habilidades de pensamento crítico e colaboração em cenários de risco.
+\item \textbf{Momento de aplicação:} A dinâmica pode ser útil em ambientes de sala de aula ou em workshops educacionais. 
+\item \textbf{Objetivo específico:} Facilitar o aprendizado sobre gestão de riscos em projetos de \textit{software} para estudantes, proporcionando uma experiência prática e gamificada que torna o conceito de risco mais tangível e a identificação mais intuitiva. 
+\item \textbf{Resultados esperados:} Maior compreensão dos diferentes tipos de riscos em projetos de \textit{software}, familiarização com o processo de identificação e análise de riscos, e desenvolvimento de habilidades de pensamento crítico e colaboração em cenários de risco. 
 \end{itemize}
-\item \textbf{Variações e adaptações:} A flexibilidade da dinâmica é ampliada pela possibilidade de utilizar os \textbf{sub-decks temáticos}. Isso permite que a dinâmica seja aplicada com foco em tipos específicos de riscos (ex: riscos de \textit{Product Engineering}) ou com públicos específicos dentro da equipe (ex: apenas a equipe de desenvolvimento focando em riscos técnicos), tornando a atividade mais relevante e direcionada a necessidades particulares do projeto ou da equipe.
+\item \textbf{Variações e adaptações:} A flexibilidade da dinâmica é ampliada pela possibilidade de utilizar os \textbf{sub-decks temáticos}. Isso permite que a dinâmica seja aplicada com foco em tipos específicos de riscos (ex: riscos de \textit{Product Engineering}) ou com públicos específicos dentro da equipe (ex: apenas a equipe de desenvolvimento focando em riscos técnicos), tornando a atividade mais relevante e direcionada a necessidades particulares do projeto ou da equipe. 
 \end{itemize}
 
 \section{Desenvolvimento da plataforma gamificada}
@@ -1251,14 +1178,14 @@ Assim, embora a presente pesquisa não tenha envolvido o desenvolvimento de uma 
 
 A sexta e última etapa do \textit{framework} de gamificação em engenharia de \textit{software}, proposta por \citeonline{GARCIA201721}, concentra-se no gerenciamento, monitoramento e medição da solução gamificada. Esta fase é crucial para avaliar a eficácia da dinâmica após sua aplicação, identificar pontos de melhoria e verificar o cumprimento dos objetivos estabelecidos na fase inicial do projeto. No escopo deste trabalho, este processo é contemplado integralmente no capítulo \ref{cap:avaliacao}. Abordando:
 \begin{itemize}
-\item O planejamento da avaliação, incluindo a definição dos critérios, métodos e instrumentos de coleta de dados (como o questionário MEEGA+ adaptado e a coleta de \textit{feedback} qualitativo).
-\item A execução da avaliação, descrevendo os procedimentos e o contexto das aplicações com estudantes e profissionais do mercado.
-\item A análise dos dados coletados, apresentando os resultados quantitativos e qualitativos da percepção dos participantes em relação à dinâmica.
-\item A discussão aprofundada dos resultados, comparando as percepções dos diferentes grupos de aplicação e fornecendo insights sobre os pontos fortes e as áreas de aprimoramento da dinâmica.
-\item A identificação das ameaças à validade que podem influenciar as conclusões deste estudo, garantindo a transparência sobre as limitações da pesquisa.
+\item O planejamento da avaliação, incluindo a definição dos critérios, métodos e instrumentos de coleta de dados (como o questionário MEEGA+ adaptado e a coleta de \textit{feedback} qualitativo). 
+\item A execução da avaliação, descrevendo os procedimentos e o contexto das aplicações com estudantes e profissionais do mercado. 
+\item A análise dos dados coletados, apresentando os resultados quantitativos e qualitativos da percepção dos participantes em relação à dinâmica. 
+\item A discussão aprofundada dos resultados, comparando as percepções dos diferentes grupos de aplicação e fornecendo insights sobre os pontos fortes e as áreas de aprimoramento da dinâmica. 
+\item A identificação das ameaças à validade que podem influenciar as conclusões deste estudo, garantindo a transparência sobre as limitações da pesquisa. 
 \end{itemize}
 
-Dessa forma, esta seção remete ao capítulo \ref{cap:avaliacao} para aprofundamento sobre como a etapa de gerenciamento, monitoramento e medição do \textit{framework} foi operacionalizada e analisada no contexto da avaliação da dinâmica gamificada.
+Dessa forma, esta seção remete ao capítulo \ref{cap:avaliacao} para aprofundamento sobre como a etapa de gerenciamento, monitoramento e medição do \textit{framework} foi operacionalizada e analisada no contexto da avaliação da dinâmica gamificada. 
 
 %------------------------------------------------------------------------------%
 %------------------------------------------------------------------------------%
@@ -1266,7 +1193,7 @@ Dessa forma, esta seção remete ao capítulo \ref{cap:avaliacao} para aprofunda
 \chapter{Guia de execução da dinâmica}
 \label{cap:dinamica-execucao}
 
-Este capítulo tem como objetivo apresentar uma visão geral prática da dinâmica “Tarot dos Riscos”, servindo como um guia conciso para sua preparação e execução. Serão detalhados os objetivos da dinâmica, seus componentes essenciais (com foco nos materiais visuais) e o fluxo das etapas de aplicação. Para compreensão aprofundada da concepção e do design das mecânicas do jogo, recomenda-se consultar o Capítulo \ref{cap:proposta}. Os materiais completos da dinâmica, incluindo o manual de regras detalhado e as cartas, tanto para versão digital quanto para versão física, estão disponíveis para download no \href{https://codigos.ufsc.br/gqs/tarot-dos-riscos}{repositório Códigos UFSC do Grupo GQS}.
+Este capítulo tem como objetivo apresentar uma visão geral prática da dinâmica “Tarot dos Riscos”, servindo como um guia conciso para sua preparação e execução. Para compreensão aprofundada da concepção e do design das mecânicas do jogo, recomenda-se consultar o Capítulo \ref{cap:proposta}. Os materiais completos da dinâmica, incluindo o manual de regras detalhado e as cartas, tanto para versão digital quanto para versão física, estão disponíveis para download no \href{https://codigos.ufsc.br/gqs/tarot-dos-riscos}{repositório Códigos UFSC do Grupo GQS}.
 
 \section{Objetivos da dinâmica}
 \label{sec:objetivos-dinamica-cap5}
@@ -1348,7 +1275,17 @@ A dinâmica foi concebida para ser predominantemente presencial, utilizando mate
 A preparação adequada é fundamental para o sucesso da dinâmica. Antes de iniciar, o facilitador deve:
 
 \begin{enumerate}
-    \item \textbf{Escolher o deck de cartas:} Selecionar o deck mais adequado às necessidades da equipe, considerando o tempo disponível e o foco da sessão.
+    \item \textbf{Escolher o deck de cartas:} Selecionar o deck mais adequado às necessidades da equipe, considerando o tempo disponível e o foco da sessão. A escolha do deck impacta a duração da atividade:
+    \begin{itemize}
+        \item \textbf{Deck completo (32 cartas):} Ideal para uma análise abrangente. Duração da Etapa 1: aprox. 90 minutos.
+        \item \textbf{Deck básico (12 cartas):} Para uma sessão rápida. Duração da Etapa 1: aprox. 30 minutos.
+        \item \textbf{Sub-decks temáticos:} Para análises focadas.
+        \begin{itemize}
+            \item \textit{Product Engineering} (12 cartas): aprox. 30 minutos.
+            \item \textit{Development Environment} (12 cartas): aprox. 30 minutos.
+            \item \textit{Program Constraint} (8 cartas): aprox. 20 minutos.
+        \end{itemize}
+    \end{itemize}
     \item \textbf{Organizar os materiais:} Preparar as cartas de risco, as moedas e garantir a disponibilidade de \textit{post-its} e canetas.
     \item \textbf{Familiarizar-se com o manual de regras:} O facilitador deve ler e compreender o manual de regras (conforme Figura \ref{manual-tarot}) para guiar a dinâmica de forma eficaz e intervir quando necessário.
 \end{enumerate}
@@ -1356,52 +1293,64 @@ A preparação adequada é fundamental para o sucesso da dinâmica. Antes de ini
 \section{Execução da dinâmica}
 \label{sec:execucao-dinamica}
 
-A execução do “Tarot dos Riscos” segue um fluxo lógico dividido em duas etapas principais, conforme detalhado na Seção \ref{sec:escolha-mecanicas} do Capítulo \ref{cap:proposta}.
+A execução do “Tarot dos Riscos” segue um fluxo lógico e interativo, dividido em duas etapas principais, detalhadas a seguir.
 
-\subsection{Identificação e análise dos riscos}
+\subsection{Etapa 1: Identificação e mapeamento de riscos}
 \label{sec:identificacao-analise-cap5}
 
-Esta é a primeira e mais extensa etapa da dinâmica, focada em expor a equipe a uma gama de riscos e incentivar a reflexão sobre sua aplicabilidade ao projeto.
+Esta etapa inicial foca na associação entre os riscos genéricos (apresentados nas cartas) e os riscos reais e específicos enfrentados pela equipe no seu projeto.
 
 \begin{enumerate}
-    \item \textbf{Leitura e avaliação das cartas:} O facilitador lê uma carta de risco por vez. A equipe discute se o risco é relevante para o projeto. Se houver relevância percebida por ao menos um membro, a carta é mantida na mesa. Caso contrário, é descartada.
-    \begin{figure}[H]
-        \centering
-        \caption{\label{mapeamento-riscos-postits} Mapeamento de riscos com \textit{post-its} (exemplo de aplicação)}
-        \includegraphics[width=0.5\textwidth]{mapeamento-riscos-postits}
-        \legend{Fonte: Autora (2025)}
-    \end{figure}
-    \item \textbf{Mapeamento com \textit{post-its}:} Para cada carta mantida na mesa, os participantes escrevem em \textit{post-its} os riscos reais e específicos do projeto que se relacionam à carta. Esses \textit{post-its} são então colados ao lado da carta correspondente.
-    \item \textbf{Discussão e alinhamento:} Os \textit{post-its} são lidos e a equipe discute as percepções de risco. O facilitador modera para manter o foco na identificação e evitar soluções prematuras. Este processo se repete até que todas as cartas do deck selecionado tenham sido avaliadas.
+  \item \textbf{Leitura e avaliação de aplicabilidade:} O facilitador pega uma carta do monte e a lê em voz alta. A equipe avalia coletivamente se o risco é aplicável ao projeto. Se qualquer membro identificar o risco como uma preocupação real, a carta é mantida na mesa. Caso contrário, é descartada.
+  \item \textbf{Mapeamento dos riscos reais:} Para cada carta aplicável, os participantes escrevem individualmente em \textit{post-its} os riscos práticos e específicos do projeto que se relacionam com a carta lida. Os \textit{post-its} são então agrupados ao redor da carta correspondente. Após a escrita, o facilitador lê os riscos registrados e abre um momento para discussão e alinhamento, mantendo o foco na análise e evitando desviar para a busca de soluções.
+  \begin{figure}[H]
+      \centering
+      \caption{\label{mapeamento-riscos-postits} Mapeamento de riscos com \textit{post-its} (exemplo de aplicação)}
+      \includegraphics[width=0.6\textwidth]{mapeamento-riscos-postits}
+      \legend{Fonte: Autora (2025)}
+  \end{figure}
 \end{enumerate}
+Este processo de leitura e mapeamento é repetido até que todas as cartas do deck escolhido sejam avaliadas.
 
-\subsection{Priorização dos riscos}
+\subsection{Etapa 2: Votação e priorização de riscos}
 \label{sec:priorizacao-riscos-cap5}
 
-Após a identificação e o mapeamento, a equipe avança para a priorização dos riscos levantados.
+Após o mapeamento, a equipe avança para a priorização, que utiliza uma mecânica inspirada na técnica “\textit{Buy a Feature}”. Esta etapa é mais rápida e objetiva, com uma duração recomendada de 5 minutos.
 
 \begin{enumerate}
-    \item \textbf{Distribuição de moedas:} Cada participante recebe 3 moedas, com a possibilidade de ganhar moedas adicionais (1 moeda a cada 5 \textit{post-its} escritos na etapa anterior), incentivando a contribuição.
-    \item \textbf{Votação:} Os participantes utilizam suas moedas para “investir” nos \textit{post-its} ou cartas de risco que consideram mais críticos para o projeto. As moedas são posicionadas fisicamente sobre ou ao lado dos itens votados.
-    \begin{figure}[H]
-        \centering
-        \caption{\label{votacao-moedas} Priorização de riscos com moedas de votação (exemplo de aplicação)}
-        \includegraphics[width=0.6\textwidth]{votacao-moedas}
-        \legend{Fonte: Autora (2025)}
-    \end{figure}
-    \item \textbf{Classificação e seleção:} Os riscos que acumularam mais moedas são considerados prioritários. Recomenda-se que a equipe selecione os 4 riscos mais votados para focar no planejamento de respostas subsequente.
+  \item \textbf{Distribuição de moedas:} Cada participante recebe uma quantidade inicial fixa de 3 moedas. Para incentivar a contribuição na etapa anterior, os jogadores recebem 1 moeda adicional a cada 5 \textit{post-its} que escreveram. Essa regra visa recompensar a proatividade e o engajamento na identificação de riscos.
+  \item \textbf{Investimento nos riscos:} Com as moedas em mãos, cada participante as distribui entre os \textit{post-its} ou as cartas de risco que considera mais críticos para o projeto. As moedas representam o "investimento" para tratar aquele risco, e o número limitado força uma priorização cuidadosa.
+  \begin{figure}[H]
+      \centering
+      \caption{\label{votacao-moedas} Priorização de riscos com moedas de votação (exemplo de aplicação)}
+      \includegraphics[width=0.6\textwidth]{votacao-moedas}
+      \legend{Fonte: Autora (2025)}
+  \end{figure}
+
+  \item \textbf{Priorização:} Após a votação, os riscos são classificados com base na quantidade de moedas que acumularam. Quanto mais moedas, maior a prioridade. Recomenda-se que a equipe selecione os 4 riscos mais votados para focar no planejamento de respostas. Em caso de empate, a equipe pode realizar uma discussão rápida ou uma votação de desempate.
 \end{enumerate}
 
-% TODO: Essas últimas seções ficam repetidas com o que já foi dito no Capítulo \ref{cap:proposta}, tem como evitar essa repetição? NO CAPÍTULO 4 EXPLICAR EM MENOS DETALHES
+\subsection{O papel do facilitador}
+
+O facilitador (\textit{Scrum Master}, \textit{Tech Lead}, ou outro membro com essa habilidade) é fundamental para garantir a condução eficaz da dinâmica. Suas responsabilidades incluem:
+
+\begin{itemize}
+  \item \textbf{Preparação}: Escolha e organização do deck de cartas e de todos os materiais necessários.
+  \item \textbf{Condução das etapas}: Leitura das cartas, gerenciamento do fluxo das discussões e coordenação da distribuição e contagem das moedas.
+  \item \textbf{Mediação}: Garantir que a discussão permaneça focada na identificação e análise de riscos, intervindo quando necessário para evitar desvios para soluções ou mitigações.
+  \item \textbf{Gestão do tempo}: Embora flexível, o facilitador deve monitorar o tempo para que todas as etapas sejam concluídas de forma produtiva.
+\end{itemize}
+
+Alternativamente, a equipe pode optar pela auto-organização, onde os próprios membros se revezam nas funções do facilitador, promovendo ainda mais a autonomia e a colaboração.
 
 \section{Considerações finais}
 \label{sec:consideracoes-finais-cap5}
 
 A dinâmica “Tarot dos Riscos” oferece uma abordagem inovadora e prática para a gestão de riscos em equipes ágeis, promovendo a proatividade e a colaboração. Seu formato gamificado e a flexibilidade de adaptação para ambientes presenciais e online a tornam uma ferramenta valiosa para equipes que buscam otimizar seus processos de identificação e análise de riscos. Ao final da dinâmica, as equipes terão uma visão clara dos principais desafios e um ponto de partida sólido para o planejamento de ações mitigadoras, contribuindo para projetos mais resilientes e bem-sucedidos. Os resultados da aplicação da dinâmica e sua avaliação são detalhados no Capítulo \ref{cap:avaliacao}.
 
-Por se tratar de uma dinâmica que pode conter evoluções futuras, caso o usuário tenha sugestões ao criador deste trabalho, é possível que seja feito contato por e-mail: \texttt{amanda.martins.oliveira@grad.ufsc.br} para discutir tal evolução. A explicação de como a dinâmica pode ser implementada está disponibilizada por vídeo em: <>.
+Por se tratar de uma dinâmica que pode conter evoluções futuras, caso o usuário tenha sugestões ao criador deste trabalho, é possível que seja feito contato por e-mail: \texttt{amanda.martins.oliveira@grad.ufsc.br} para discutir tal evolução. %A explicação de como a dinâmica pode ser implementada está disponibilizada por vídeo em: <>.
 
-De antemão, a autora agradece a utilização da dinâmica e espera que seja útil em seus respectivos projetos de \textit{software}.
+De antemão, a autora agradece a utilização da dinâmica e espera que seja útil em seus projetos de \textit{software}.
 
 % TODO: Adicionar gravação de vídeo explicando a dinâmica
 
@@ -1870,12 +1819,11 @@ Como indicação para trabalhos futuros, sugere-se a expansão e o aprimoramento
     \textbf{\Huge APÊNDICES}
 \end{center}
 \vspace*{\fill}
-\cleardoublepage
+%\cleardoublepage
 
 \begin{apendices}
 
 \chapter{Strings de busca adaptadas}\label{apendiceA}
-% \addcontentsline{toc}{chapter}{Apêndice A – Strings de busca adaptadas} %
 
 \vspace{-2em} % Ajusta o espaço negativo para reduzir a distância 
 
@@ -1896,7 +1844,6 @@ Como indicação para trabalhos futuros, sugere-se a expansão e o aprimoramento
 
 \chapter{Estudos selecionados}
 \label{apendiceB}
-% \addcontentsline{toc}{chapter}{Apêndice B – Estudos selecionados}%
 
 \vspace{-2em} % Ajusta o espaço negativo para reduzir a distância
 
@@ -2043,9 +1990,8 @@ Como indicação para trabalhos futuros, sugere-se a expansão e o aprimoramento
 
     \chapter{Declaração de concordância}
     \label{anexo:declaracao-concordancia}
-    %\centering
-    \includegraphics[scale=0.9,page=1,]{documents/declaracao_concordancia.pdf}
-    %\includepdf[pages={1-last}]{documents/declaracao_concordancia.pdf} % Exemplo de inclusão de PDF externo
+    %\includegraphics[scale=0.9,page=1]{documents/declaracao_concordancia.pdf}
+    \includepdf[pages={1-last}]{documents/declaracao_concordancia.pdf}
     %TODO alterar para versão final
 
 \end{anexos}
