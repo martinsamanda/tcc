@@ -829,7 +829,7 @@ Em S7, é descrito o problema de minimização de perdas por riscos no processo 
 
 \textbf{Q3. Que tipos de riscos são gerenciados?}
 
-Os estudos primários selecionados identificam um total de 97 riscos. Assim como no mapeamento original foram agrupados por meio da taxonomia de \citeonline{Taxonomy}, uma taxonomia de riscos que fornece três classes de riscos, seus elementos e atributos. Todos os riscos relatados nos estudos primários selecionados foram coletados, classificados de acordo com a taxonomia e resumidos no \hyperref[apendiceC]{Apêndice C}. A lista completa de riscos, suas fontes e as classificações escolhidas está disponível em: \href{https://docs.google.com/spreadsheets/d/1YY_yjyBefJ3ZmnEY38TM_LnZLoJcKhrw_q0BdEvqx2E/edit?usp=drivesdk}{link}.
+Os estudos primários selecionados identificam um total de 97 riscos. Assim como no mapeamento original foram agrupados por meio da taxonomia de \citeonline{carr_1993}, uma taxonomia de riscos que fornece três classes de riscos, seus elementos e atributos. Todos os riscos relatados nos estudos primários selecionados foram coletados, classificados de acordo com a taxonomia e resumidos no \hyperref[apendiceC]{Apêndice C}. A lista completa de riscos, suas fontes e as classificações escolhidas está disponível em: \href{https://docs.google.com/spreadsheets/d/1YY_yjyBefJ3ZmnEY38TM_LnZLoJcKhrw_q0BdEvqx2E/edit?usp=drivesdk}{link}.
 
 Apenas 5 dos 7 estudos listaram de forma explícita os riscos enfrentados nos projetos. Deste grupo, o estudo primário que relatou o maior número de riscos foi S5, com um total de 63 riscos, tendo alta distribuição entre as diferentes classes, elementos e atributos, como é possível observar na Figura \ref{dist-contagem-classe-atributo}.
 
@@ -1065,7 +1065,7 @@ Esta seção descreve o processo de análise e design da dinâmica gamificada, e
 A dinâmica é composta por um conjunto de elementos projetados para facilitar a identificação e análise de riscos de forma interativa e engajadora. Os principais componentes são:
 
 \begin{itemize}
-  \item \textbf{Cartas de risco:} Elemento central da dinâmica, totalizando 32 cartas. Esse número de cartas foi definido com base na taxonomia de riscos de \cite{Taxonomy}, originalmente composta por 64 riscos. A seleção considerou os riscos mais citados tanto no Mapeamento Sistemático da Literatura (MSL) de \citeonline{garcia2023agreed}, quanto na continuidade do mapeamento realizada neste estudo. A soma da frequência de citação em ambos os levantamentos resultou na ordenação e seleção dos 32 riscos mais proeminentes, contemplando 84,4\% dos riscos identificados nos mapeamentos. Os dados detalhados da frequência de citação e a metodologia de seleção dos riscos podem ser consultados na planilha disponível no \href{https://docs.google.com/spreadsheets/d/1eAkx4HNaHIKhkq774zI2VREVNmeKtol5uXiC7Jg-0Sc/edit?usp=sharing}{Google Sheets}.
+  \item \textbf{Cartas de risco:} Elemento central da dinâmica, totalizando 32 cartas. Esse número de cartas foi definido com base na taxonomia de riscos de \cite{carr_1993}, originalmente composta por 64 riscos. A seleção considerou os riscos mais citados tanto no Mapeamento Sistemático da Literatura (MSL) de \citeonline{garcia2023agreed}, quanto na continuidade do mapeamento realizada neste estudo. A soma da frequência de citação em ambos os levantamentos resultou na ordenação e seleção dos 32 riscos mais proeminentes, contemplando 84,4\% dos riscos identificados nos mapeamentos. Os dados detalhados da frequência de citação e a metodologia de seleção dos riscos podem ser consultados na planilha disponível no \href{https://docs.google.com/spreadsheets/d/1eAkx4HNaHIKhkq774zI2VREVNmeKtol5uXiC7Jg-0Sc/edit?usp=sharing}{Google Sheets}.
   \begin{itemize}
     \item \textbf{Aspecto visual:} As cartas possuem ilustrações únicas, geradas com auxílio de inteligência artificial generativa (utilizando a ferramenta \href{https://pixlr.com/br/image-generator/}{Pixlr Image Generator}). Os prompts foram adaptados para seguir o estilo “Pokémon”, com personagens que representam os riscos de forma lúdica e amigável. Exemplo de prompt utilizado:
     \begin{quote}
@@ -1089,7 +1089,7 @@ A dinâmica é composta por um conjunto de elementos projetados para facilitar a
       \item \textbf{Sinalizador de raridade:} Símbolo visual (losango ou estrela) que indica a “raridade” da carta, inspirado em jogos de cartas colecionáveis.
     \end{enumerate}
     
-    \item \textbf{Categorias de risco:} As cartas são seccionadas de acordo com as classes da taxonomia \cite{Taxonomy}, distribuídas entre:
+    \item \textbf{Categorias de risco:} As cartas são seccionadas de acordo com as classes da taxonomia \cite{carr_1993}, distribuídas entre:
     \begin{itemize}
       \item \textit{Product Engineering}
       \item \textit{Development Environment}
@@ -1824,7 +1824,7 @@ Em síntese, este trabalho levanta indícios iniciais de que a dinâmica gamific
 Como indicação para trabalhos futuros, sugere-se a expansão e o aprimoramento da dinâmica em diversas frentes:
 
 \begin{itemize}
-\item \textbf{Expansão do conteúdo das cartas:} A criação de cartas para os demais riscos identificados na taxonomia usada como base \cite{Taxonomy} (32 elementos menos citados na literatura ficaram de fora da dinâmica) pode enriquecer ainda mais a dinâmica, tornando-a mais abrangente e útil para equipes que enfrentam uma variedade maior de desafios em projetos de \textit{software}.
+\item \textbf{Expansão do conteúdo das cartas:} A criação de cartas para os demais riscos identificados na taxonomia usada como base \cite{carr_1993} (32 elementos menos citados na literatura ficaram de fora da dinâmica) pode enriquecer ainda mais a dinâmica, tornando-a mais abrangente e útil para equipes que enfrentam uma variedade maior de desafios em projetos de \textit{software}.
 \item \textbf{Aplicação em outros contextos:} É recomendada a aplicação da dinâmica em outros contextos além dos investigados neste estudo, como em projetos de \textit{software} não ágeis ou em empresas de diferentes portes e segmentos. Tal expansão pode ampliar a aplicabilidade da abordagem e validar sua eficácia em cenários mais diversificados.
 \item \textbf{Aprofundamento pós-dinâmica:} Um ponto de melhoria dos \textit{feedbacks} foi a necessidade de uma sequência para a dinâmica. Sugere-se o desenvolvimento de um módulo ou ferramenta complementar que auxilie as equipes a organizar e planejar planos de ação após o levantamento e análise inicial dos riscos, transformando o input da dinâmica em saídas acionáveis para o projeto.
 \item \textbf{Desenvolvimento de plataforma online:} A criação de uma plataforma online para a dinâmica representaria um avanço significativo, permitindo que equipes distribuídas participem da atividade de forma assíncrona ou síncrona de maneira mais facilitada. Isso ampliaria o alcance e a flexibilidade da abordagem, oferecendo uma experiência mais dinâmica e interativa para ambientes remotos ou híbridos.
